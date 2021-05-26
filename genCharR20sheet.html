@@ -288,10 +288,9 @@
                         <button type="action" name="act_dual-toggle" class='semi'>Dual Wield</button>
                         <button type="action" name="act_ranged-toggle" class='semi'>Secondary</button>
                         <br>
-                        <span style="font-size: 20px; color: #333333;" >Main-Hand:</span><button type='roll' value="?{Target's Endurance|0|1|2|3|4|5|6|7|8|9|10}
-                        &{template:default}{{name=Melee}}{{Wielding=@{primaryweapon}}}{{Employing=@{weapon_style}}}{{Hits=[[floor([[@{primaryweapon_acc}/100]])]]}}{{Extra Hits=[[{ceil([[([[@{primaryweapon_acc}%100]]-[[1d100]])/100]])}]]}}{{Base=@{primaryweapon_base}(+@{primaryweapon-positive-scaling}/-@{primaryweapon-negative-scaling})}}{{Total Damage=[[([[floor([[@{primaryweapon_acc}/100]])]]+[[{ceil([[([[@{primaryweapon_acc}%100]]-[[1d100]])/100]])}]])*{[[([[@{primaryweapon_base}]]+({([[@{power}]]-[[?{Target's Endurance}]]),0}kh1*[[@{primaryweapon-positive-scaling}]])+({([[@{power}]]-[[?{Target's Endurance}]]),0}kl1*[[@{primaryweapon-negative-scaling}]]))]],0}kh1]]}}"
-    
-                         class='semi'>Attack</button><br>
+                        <span style="font-size: 20px; color: #333333;" >Main-Hand:</span><button type='roll' 
+                        value= "&{template:default}{{name=Melee}}{{Wielding=@{primaryweapon}}}{{Employing=@{weapon_style}}}{{Hits=[[floor([[(@{primaryweapon_acc}-?{Target's Evasion})/100]])]]}}{{Extra Hits=[[{ceil([[([[(@{primaryweapon_acc}-?{Target's Evasion})%100]]-[[1d100]])/100]])}]]}}{{Base=@{primaryweapon_base}(+@{primaryweapon-positive-scaling}/-@{primaryweapon-negative-scaling})}}{{Total Damage=[[([[floor([[(@{primaryweapon_acc}-?{Target's Evasion})/100]])]]+[[{ceil([[([[(@{primaryweapon_acc}-?{Target's Evasion})%100]]-[[1d100]])/100]])}]])*{[[([[@{primaryweapon_base}]]+({([[@{power}]]-[[?{Target's Endurance|0|1|2|3|4|5|6|7|8|9|10}]]),0}kh1*[[@{primaryweapon-positive-scaling}]])+({([[@{power}]]-[[?{Target's Endurance}]]),0}kl1*[[@{primaryweapon-negative-scaling}]]))]],0}kh1]]}}"
+                        class='semi'>Attack</button><br>
                         <b>Name:</b><input style="font-size: 16px; width: 60%;" name="attr_primaryweapon" value="@{attr_primaryweapon}" title="Equiped Weapon" readonly="readonly" class="character-inputs"/>
                         <br>
                         <b>Style:</b><input style="font-size: 16px; width: 60%;" name="attr_weapon_style" value="@{attr_weapon_style}" title="Current Style" readonly="readonly" class="character-inputsleft"/>
@@ -321,10 +320,9 @@
                         <button type="action" name="act_dual-toggle" class='semi'>Dual Wield</button>
                         <button type="action" name="act_ranged-toggle" class='semi'>Secondary</button>
                         <br>
-                        <span style="font-size: 20px; color: #333333;">Off-Hand: </span><button type='roll' value="?{Target's Endurance|0|1|2|3|4|5|6|7|8|9|10}
-                        &{template:default}{{name=Melee}}{{Wielding=@{secondaryweapon}}}{{Employing=@{weapon_style}}}{{Hits=[[floor([[@{secondaryweapon_acc}/100]])]]}}{{Extra Hits=[[{ceil([[([[@{secondaryweapon_acc}%100]]-[[1d100]])/100]])}]]}}{{Base=@{secondaryweapon_base}(+@{secondaryweapon-positive-scaling}/-@{secondaryweapon-negative-scaling})}}{{Total Damage=[[([[floor([[@{secondaryweapon_acc}/100]])]]+[[{ceil([[([[@{secondaryweapon_acc}%100]]-[[1d100]])/100]])}]])*{[[([[@{secondaryweapon_base}]]+({([[@{power}]]-[[?{Target's Endurance}]]),0}kh1*[[@{secondaryweapon-positive-scaling}]])+({([[@{power}]]-[[?{Target's Endurance}]]),0}kl1*[[@{secondaryweapon-negative-scaling}]]))]],0}kh1]]}}"
-    
-                         class='semi'>Attack</button><br>
+                        <span style="font-size: 20px; color: #333333;">Off-Hand: </span><button type='roll' 
+                        value="&{template:default}{{name=Melee}}{{Wielding=@{secondaryweapon}}}{{Employing=@{weapon_style}}}{{Hits=[[floor([[(@{secondaryweapon_acc}-?{Target's Evasion})/100]])]]}}{{Extra Hits=[[{ceil([[([[(@{secondaryweapon_acc}-?{Target's Evasion})%100]]-[[1d100]])/100]])}]]}}{{Base=@{secondaryweapon_base}(+@{secondaryweapon-positive-scaling}/-@{secondaryweapon-negative-scaling})}}{{Total Damage=[[([[floor([[(@{secondaryweapon_acc}-?{Target's Evasion})/100]])]]+[[{ceil([[([[(@{secondaryweapon_acc}-?{Target's Evasion})%100]]-[[1d100]])/100]])}]])*{[[([[@{secondaryweapon_base}]]+({([[@{power}]]-[[?{Target's Endurance|0|1|2|3|4|5|6|7|8|9|10}]]),0}kh1*[[@{secondaryweapon-positive-scaling}]])+({([[@{power}]]-[[?{Target's Endurance}]]),0}kl1*[[@{secondaryweapon-negative-scaling}]]))]],0}kh1]]}}"
+                        class='semi'>Attack</button><br>
                         <b>Name:</b><input style="font-size: 16px; width: 60%;" name="attr_secondaryweapon" value="@{attr_secondaryweapon}" title="Equiped Weapon" readonly="readonly" class="character-inputs"/>
                         <br>
                         <b>Style:</b><input style="font-size: 16px; width: 60%;" name="attr_weapon_style" value="@{attr_weapon_style}" title="Current Style" readonly="readonly" class="character-inputsleft"/>
@@ -353,10 +351,9 @@
                         <button type="action" name="act_dual-toggle" class='semi'>Dual Wield</button>
                         <button type="action" name="act_ranged-toggle" class='semi'>Secondary</button>
                         <br>
-                        <span style="font-size: 20px; color: #333333;">Dual Wield: </span><button type='roll' value="?{Target's Endurance|0|1|2|3|4|5|6|7|8|9|10}
-                        &{template:default}{{name=Melee}}{{Wielding=@{primaryweapon} & @{secondaryweapon}}}{{Employing=@{weapon_style}}}{{Hits=[[floor([[@{dualweapon_acc}/100]])]]}}{{Extra Hits=[[{ceil([[([[@{dualweapon_acc}%100]]-[[1d100]])/100]])}]]}}{{Base=@{dualweapon_base}(+@{dualweapon-positive-scaling}/-@{dualweapon-negative-scaling})}}{{Total Damage=[[([[floor([[@{dualweapon_acc}/100]])]]+[[{ceil([[([[@{dualweapon_acc}%100]]-[[1d100]])/100]])}]])*{[[([[@{dualweapon_base}]]+({([[@{power}]]-[[?{Target's Endurance}]]),0}kh1*[[@{dualweapon-positive-scaling}]])+({([[@{power}]]-[[?{Target's Endurance}]]),0}kl1*[[@{dualweapon-negative-scaling}]]))]],0}kh1]]}}"
-    
-                         class='semi'>Attack</button><br>
+                        <span style="font-size: 20px; color: #333333;">Dual Wield: </span><button type='roll' 
+                        value="&{template:default}{{name=Melee}}{{Wielding=@{primaryweapon} & @{secondaryweapon}}}{{Employing=@{weapon_style}}}{{Hits=[[floor([[(@{dualweapon_acc}-?{Target's Evasion})/100]])]]}}{{Extra Hits=[[{ceil([[([[(@{dualweapon_acc}-?{Target's Evasion})%100]]-[[1d100]])/100]])}]]}}{{Base=@{dualweapon_base}(+@{dualweapon-positive-scaling}/-@{dualweapon-negative-scaling})}}{{Total Damage=[[([[floor([[@{dualweapon_acc}/100]])]]+[[{ceil([[([[@{dualweapon_acc}%100]]-[[1d100]])/100]])}]])*{[[([[@{dualweapon_base}]]+({([[@{power}]]-[[?{Target's Endurance|0|1|2|3|4|5|6|7|8|9|10}]]),0}kh1*[[@{dualweapon-positive-scaling}]])+({([[@{power}]]-[[?{Target's Endurance}]]),0}kl1*[[@{dualweapon-negative-scaling}]]))]],0}kh1]]}}"
+                        class='semi'>Attack</button><br>
 
                         <b>Style:</b><input style="font-size: 16px; width: 60%;" name="attr_weapon_style" value="@{attr_weapon_style}" title="Current Style" readonly="readonly" class="character-inputs"/>
                         <br>
@@ -381,10 +378,9 @@
                         <button type="action" name="act_secondary-toggle" class='semi'>Off Hand</button>
                         <button type="action" name="act_dual-toggle" class='semi'>Dual Wield</button>
                         <button type="action" name="act_ranged-toggle" class='semi'>Secondary</button>
-                        <span style="font-size: 20px; color: #333333;">Secondary: </span><button type='roll' value="?{Target's Endurance|0|1|2|3|4|5|6|7|8|9|10}
-                        &{template:default}{{name=Melee}}{{Wielding=@{rangedweapon}}}{{Base=@{ranged_base}(+@{ranged_pscaling}/-@{ranged_nscaling})}}{{Total Damage=[[{[[([[@{ranged_base}]]+({([[@{power}]]-[[?{Target's Endurance}]]),0}kh1*[[@{ranged_pscaling}]])+({([[@{power}]]-[[?{Target's Endurance}]]),0}kl1*[[@{ranged_nscaling}]]))]],0}kh1]]}}"
-    
-                         class='semi'>Attack</button>
+                        <span style="font-size: 20px; color: #333333;">Secondary: </span><button type='roll' 
+                        value="&{template:default}{{name=Melee}}{{Wielding=@{rangedweapon}}}{{Base=@{ranged_base}(+@{ranged_pscaling}/-@{ranged_nscaling})}}{{Total Damage=[[{[[([[@{ranged_base}]]+({([[?{Attack Power|0|1|2|3|4|5|6|7|8|9|10}]]-[[?{Target's Endurance|0|1|2|3|4|5|6|7|8|9|10}]]),0}kh1*[[@{ranged_pscaling}]])+({([[?{Attack Power}]]-[[?{Target's Endurance}]]),0}kl1*[[@{ranged_nscaling}]]))]],0}kh1]]}}"
+                        class='semi'>Attack</button>
                         <br>
                         <b>Name:</b><input style="font-size: 16px; width: 60%;" name="attr_rangedweapon" value="@{attr_rangedweapon}" title="Equiped Weapon" readonly="readonly" class="character-inputs"/>
                         <br>
@@ -422,7 +418,7 @@
             <div class='menuborder' style="height: 100%;">
                 <label>Catalysts</label>
                 <div class="energies">
-                    <input type="hidden" class="energy" name="attr_Energy_type" value="" />
+                    <input type="hidden" class="energy" name="attr_Energy_type" value="None" />
                     <input class='halfbreed' type='hidden' name='attr_halfbreed' value='0' >
                     <input class='deathcovenant' type='hidden' name='attr_deathcovenant' value='0' >
                         <b><span name="attr_Energy_type"></span></b><br>
@@ -991,7 +987,7 @@
                     </td>
                 </tr>
         </table>
-        <span style='text-align: center' class="label-general">S P E L L S</span><br>
+            <span style='text-align: center' class="label-general">S P E L L S</span><br>
         </div>
         <br>
         <fieldset class="repeating_spells">
@@ -999,30 +995,30 @@
                 <b>Name:</b><input type='text' name='attr_spells-name' title='Name' placeholder="Name" class="entry-inputs"/>
                 <b>Branch:</b><input type='text' name='attr_spells-branch' title='School Branch' placeholder="School Branch" class="entry-inputs"/>
                 <br>
-                <b>School:</b><select name='attr_spells-school' style="width: 20%" value='None' />
+                <b>School:</b><select name='attr_spells-school' style="width: 25%" value='None' />
                     <option value='None'>None</option>
-                    <option value='Elementalism (Covenant)'>Elementalism (Covenant)</option>
-                    <option value='Plying Arts (Basic)'>Plying Arts (Basic)</option>
-                    <option value='Enchanting (Basic)'>Enchanting (Basic)</option>
-                    <option value='High Magic (Basic)'>High Magic (Basic)</option>
-                    <option value='Kinetics (Basic)'>Kinetics (Basic)</option>
-                    <option value='Prayer (Covenant)'>Prayer (Covenant)</option>
-                    <option value='Sealing (Advanced)'>Sealing (Advanced)</option>
-                    <option value='Transcendalism (Advanced)'>Transcendalism (Advanced)</option>
-                    <option value='Deliverance (Advanced)'>Deliverance (Advanced)</option>
-                    <option value='Elder Magic (Advanced)'>Elder Magic (Advanced)</option>
-                    <option value='Arcane (Covenant)'>Arcane (Covenant)</option>
-                    <option value='Sorcery (Forbidden)'>Sorcery (Forbidden)</option>
-                    <option value='Ghosting Arts (Forbidden)'>Ghosting Arts (Forbidden)</option>
-                    <option value='Demonic Magic (Forbidden)'>Demonic Magic (Forbidden)</option>
-                    <option value='Alchemy (Forbidden)'>Alchemy (Forbidden)</option>
+                    <option value='Elementalism'>Elementalism (Covenant)</option>
+                    <option value='Plying Arts'>Plying Arts (Basic)</option>
+                    <option value='Enchanting'>Enchanting (Basic)</option>
+                    <option value='High Magic'>High Magic (Basic)</option>
+                    <option value='Kinetics'>Kinetics (Basic)</option>
+                    <option value='Prayer'>Prayer (Covenant)</option>
+                    <option value='Sealing'>Sealing (Advanced)</option>
+                    <option value='Transcendalism'>Transcendalism (Advanced)</option>
+                    <option value='Deliverance'>Deliverance (Advanced)</option>
+                    <option value='Elder Magic'>Elder Magic (Advanced)</option>
+                    <option value='Arcane'>Arcane (Covenant)</option>
+                    <option value='Sorcery'>Sorcery (Forbidden)</option>
+                    <option value='Ghosting Arts'>Ghosting Arts (Forbidden)</option>
+                    <option value='Demonic Magic'>Demonic Magic (Forbidden)</option>
+                    <option value='Alchemy'>Alchemy (Forbidden)</option>
                     <option value='Godden Magic'>Godden Magic</option>
                 </select>
-                <b>Mastery:</b><select name='attr_spells-mastery' style="width: 20%" value='N/A'/>
+                <b>Mastery:</b><select name='attr_spells-mastery' style="width: 20%" value='N/A' />
                     <option value='N/A'>N/A</option>
-                    <option>Novice</option>
-                    <option>Intermediate</option>
-                    <option>Mastered</option>
+                    <option value='Novice'>Novice</option>
+                    <option value='Intermediate'>Intermediate</option>
+                    <option value='Mastered'>Mastered</option>
                 </select>
                 <b>Potency:</b><select name='attr_spells-potency' style="width: 20%" value='N/A' />
                     <option value='N/A'>N/A</option>
@@ -1031,10 +1027,31 @@
                     <option value='Extreme'>Extreme</option>
                     <option value='Cataclysmic'>Cataclysmic</option>
                 </select>
+                <b>Int Req:</b><select name='attr_spell-req' title="Intelligence Requirement" style="width: 5%" value='1'/>
+                    <option value='1'>1</option>
+                    <option value='2'>2</option>
+                    <option value='3'>3</option>
+                    <option value='4'>4</option>
+                    <option value='5'>5</option>
+                    <option value='6'>6</option>
+                    <option value='7'>7</option>
+                    <option value='8'>8</option>
+                    <option value='9'>9</option>
+                    <option value='10'>10</option>
+                </select>
                 <br>
-                <b>Cost:</b><input type='text' name='attr_spells-cost' title='Spell Cost' placeholder="Spell Cost" class="entry-inputs"/>
-                <b>Cast-Time:</b><input type='text' name='attr_spells-cast-time' title="Cast Time" placeholder="Cast Time" class="entry-inputs"/>
-                <textarea name="attr_inventory-text" placeholder="description" style='width: 95%'></textarea>
+                <button class='semi' type="roll" name="castspell" value="
+                &{template:default}{{name=@{spells-name}}}{{School=@{spells-school}}}{{Branch=@{spells-branch}}}{{Mastery=@{spells-mastery}}}{{Potency=@{spells-potency}}}{{Manna Cost=@{spells-cost}}}{{Cast Time=@{spells-cast-time}}}{{TTT Cost=@{spells-ttt}}}{{Flavor=@{spell-flavor}}}">
+                  CAST SPELL</button>
+                <button type="action" name="act_applyspell" class='semi'>Apply</button>
+                <b>Cost:</b><input type='text' name='attr_spells-cost' title='Spell Cost' placeholder="Spell Cost" class="entry-inputssmall"/>
+                <b>Cast-Time:</b><input type='text' name='attr_spells-cast-time' title="Cast Time" placeholder="Cast Time" class="entry-inputssmall"/>
+                <b>TTT:</b><input type='text' name='attr_spells-ttt' title="Turn-to-Turn" placeholder="TTT" class="entry-inputssmall"/>
+                <br>
+                <input type="hidden" name="attr_spells-warining">
+                <span name="attr_spell-warining"></span>
+                <textarea name="attr_spells-flavor" placeholder="Flavor..." style='width: 95%; height: 5%' ></textarea>
+                <textarea name="attr_spells-text" placeholder="Details & Info..." style='width: 95%; height: 10%' ></textarea>
             </div>
         </fieldset>
     </div>
@@ -1085,7 +1102,7 @@
         <fieldset class="repeating_energytech">
             <div class='menuborder'> 
                 <b>Name:</b><input type='text' name='attr_etech-name' title='Name' placeholder="Name" class="entry-inputs"/>
-                <b>Req:</b><select name='attr_etech-requirement' title='Requirement'/>
+                <b>Req:</b><select name='attr_etech-requirement' style="width: 10%" title='Requirement'/>
                     <option>0</option>
                     <option>5</option>
                     <option>10</option>
@@ -1108,16 +1125,24 @@
                     <option>95</option>
                     <option>100</option>
                 </select>
-                <br>
-                <b>Cost:</b><input type='text' name='attr_etech-cost' title='Cost' placeholder="Cost" class="entry-inputs"/>
-                <b>Lv:</b><select name='attr_etech-level' value=''/>
+                <b>Lv:</b><select name='attr_etech-level' style="width: 10%" value=''/>
                     <option>N/A</option>
                     <option>1</option>
                     <option>2</option>
                     <option>3</option>
                 </select>
                 <br>
-                <textarea name="attr_etech-text" placeholder="description" style='width: 95%'></textarea>
+                <button class='semi' type="roll" name="execute" value="
+                &{template:default}{{name=@{etech-name}}}{{Manna Cost=@{etech-cost}}}{{Turn Eco=@{etech-tcost}}}{{Flavor=@{etech-flavor}}}">
+                    Execute</button>
+                <button type="action" name="act_applyetech" class='semi'>Apply</button>
+                <b>Cost:</b><input type='text' name='attr_etech-cost' title='Cost' placeholder="Cost" class="entry-inputssmall"/>
+                <b>Turn Eco:</b><input type='text' name='attr_etech-tcost' title='Turn Cost' placeholder="Turn Cost" class="entry-inputssmall"/>
+                <br>
+                <input type="hidden" name='attr_etech-warning'>
+                <span name="attr_etech-warning"></span>
+                <textarea name="attr_etech-flavor" placeholder="Flavor Text..." style='height: 10%; width: 95%'></textarea>
+                <textarea name="attr_etech-text" placeholder="Details & Notes..." style='height: 10%; width: 95%'></textarea>
             </div>
         </fieldset>
     </div>
@@ -1298,7 +1323,7 @@ raceRadioValues.forEach(value => {
         //console.log(value);
     });
 });
-//unfortunately, there is no way to incremenant an attribute without the API
+//unfortunately, there is no other way to incremenant an attribute without the API
 const statButtons = ["constitution","discipline","resistance","intelligence"];
 statButtons.forEach(value => {
     on(`clicked:add_${value}`, () => {
@@ -1332,7 +1357,7 @@ statButtons.forEach(value => {
         })
     });
 });
-//unfortunately, there is no way to incremenant an attribute without the API
+//unfortunately, there is no other way to incremenant an attribute without the API
 const skillsButtons = ["weapon_arts","combat_arts","magitech","tech"];
 skillsButtons.forEach(value => {
      on(`clicked:add_${value}`, () => {
@@ -1368,7 +1393,7 @@ skillsButtons.forEach(value => {
         })
     });
 });
-//unfortunately, there is no way to incremenant an attribute without the API
+//unfortunately, there is no other way to incremenant an attribute without the API
 const CatalystButtons = ["catalyst_mental","catalyst_body","catalyst_spirit","catalyst_memory","catalyst_demon","catalyst_necro"];
 CatalystButtons.forEach(value => {
     on(`clicked:add_${value}`, () => {
@@ -2018,6 +2043,96 @@ on("clicked:repeating_combat-styles:equip-combat-style", function(eventInfo) {
         
     });
 });
+//applys the cost of spells
+on("clicked:repeating_spells:applyspell", function(eventInfo) {
+    
+    const rowid = eventInfo.sourceAttribute.split('_')[2];
+    
+    getAttrs([`repeating_spells_${rowid}_spells-cost`,
+    `repeating_spells_${rowid}_spells-cast-time`,
+    `repeating_spells_${rowid}_spells-ttt`,
+    "Char_Manna","economy","adttt"], function(value) {
+        
+        Object.values(value).forEach(V => {
+            if(V ==="" || typeof V ==="undefined")
+            {
+                setAttrs({[`repeating_spells_${rowid}_spells-warning`]: "Character or Spell is incomplete."});
+                    return
+            }
+        })
+        
+        if(value[`repeating_spells_${rowid}_spells-cost`] > value.Char_Manna)
+        {
+            setAttrs({[`repeating_spells_${rowid}_spells-warning`]: "Insufficient Manna supply."});
+                return
+        }
+        
+        let apply = {
+            Char_Manna: value.Char_Manna - value[`repeating_spells_${rowid}_spells-cost`],
+            economy: value.economy,
+            adttt: parseInt(value.adttt) + parseInt(value[`repeating_spells_${rowid}_spells-ttt`]),
+            [`repeating_spells_${rowid}_spells-warning`]: ""
+        };
+        
+        if(value[`repeating_spells_${rowid}_spells-cast-time`] >= value.economy)
+        {
+            if(value[`repeating_spells_${rowid}_spells-cast-time`] < 100)
+            {
+                apply[`repeating_spells_${rowid}_spells-warning`] = "WARNING. 0 REMAINING TURN ECONOMY.";
+                apply.economy = 0;
+            }
+            else
+                apply[`repeating_spells_${rowid}_spells-warning`] = "WARNING. Spell will take more than one turn to cast. Increment MANUALLY.";
+        }else
+        apply.economy = value.economy - value[`repeating_spells_${rowid}_spells-cast-time`];
+        
+        setAttrs(apply);
+    })
+});
+//applys the cost of spells
+on("clicked:repeating_energytech:applyetech", function(eventInfo) {
+    
+    const rowid = eventInfo.sourceAttribute.split('_')[2];
+    
+    getAttrs([`repeating_energytech_${rowid}_etech-cost`,
+    `repeating_energytech_${rowid}_etech-tcost`,
+    "Char_Manna","economy"], function(value) {
+        
+        Object.values(value).forEach(V => {
+            if(V ==="" || typeof V ==="undefined")
+            {
+                setAttrs({[`repeating_spells_${rowid}_etech-warning`]: "Character or Tech is incomplete."});
+                    return
+            }
+        })
+        
+        if(value[`repeating_energytech_${rowid}_etech-cost`] > value.Char_Manna)
+        {
+            setAttrs({[`repeating_energytech_${rowid}_etech-warning`]: "Insufficient Manna supply."});
+                return
+        }
+        
+        let apply = {
+            Char_Manna: value.Char_Manna - value[`repeating_energytech_${rowid}_etech-cost`],
+            economy: value.economy,
+            [`repeating_spells_${rowid}_etech-warning`]: ""
+        };
+        
+        if(value[`repeating_energytech_${rowid}_etech-tcost`] >= value.economy)
+        {
+            if(value[`repeating_energytech_${rowid}_etech-tcost`] <= 100)
+            {
+                apply[`repeating_energytech_${rowid}_etech-warning`] = "WARNING. 0 REMAINING TURN ECONOMY.";
+                apply.economy = 0;
+            }
+            else
+                apply[`repeating_energytech_${rowid}_etech-warning`] = "WARNING. Technique will take more than one turn to perform. Increment MANUALLY.";
+        }else
+        apply.economy = value.economy - value[`repeating_energytech_${rowid}_etech-tcost`];
+        
+        setAttrs(apply);
+    })
+});
 //updates progress bars for meleetechs
 on("clicked:repeating_meleetech:execute", function(eventInfo) {
    const rowid = eventInfo.sourceAttribute.split('_')[2];
@@ -2434,7 +2549,7 @@ Vitalize=function()
             vital.Disruption = value.Char_Level + dis + (value.char_constitution + value.char_resistance) * 5;
             vital.Pain = value.Char_Level + (value.char_constitution + value.char_discipline) * 10;
             vital["primaryweapon-rem-dur"] = parseInt(value["primaryweapon-max-dur"]);
-            vital["weapon-rem-dur"] = parseInt(value["primaryweapon-max-dur"]);
+            vital["weapon-rem-dur"] = parseInt(value["primaryweapon-max-dur"]) || 0;
             vital["armor-current-dur"] = parseInt(value["armor-max-dur"]);
             vital["equippedarmor-current-dur"] = parseInt(value["armor-max-dur"]);
             vital.economy = 100;
@@ -3363,7 +3478,6 @@ Adjust_Battle=function(mainHand, offHand, style)
     });
 }
 
-//not used
 function Async_Battle (mainHand, offHand, style)
 {
    
@@ -3393,7 +3507,7 @@ function Async_Battle (mainHand, offHand, style)
         
         setTimeout(setAttrs({Adjust}),3000);
     });
-}
+}//not used
 
 Adjust_Energy=function(manna = true)
 {

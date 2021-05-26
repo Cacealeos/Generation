@@ -69,8 +69,8 @@ button.sheet-semi {
 .sheet-tabstoggle[value="equipment"] ~ button.sheet-equipment-semi,
 .sheet-tabstoggle[value="spells"] ~ button.sheet-spells-semi,
 .sheet-tabstoggle[value="styles"] ~ button.sheet-styles-semi,
-.sheet-tabstoggle[value="meleetechniques"] ~ button.sheet-meleetechniques-semi,
-.sheet-tabstoggle[value="energytechniques"] ~ button.sheet-energytechniques-semi,
+.sheet-tabstoggle[value="meleetechniques"] ~ button.sheet-melee-techniques-semi,
+.sheet-tabstoggle[value="energytechniques"] ~ button.sheet-energy-techniques-semi,
 .sheet-tabstoggle[value="training"] ~ button.sheet-training-semi,
 button.sheet-semi:hover,
  {
@@ -196,7 +196,17 @@ input.sheet-entry-inputs {
   width: 40%;
   font-size: 20px;
 }
-
+input.sheet-entry-inputssmall {
+  padding: 3px;
+  background: linear-gradient(to top right, mediumseagreen, rgba(0,0,0,0));
+  text-align: center;
+  border-color: mediumspringgreen;
+  border-right: 35px;
+  border-top: 35px;
+  color: lime;
+  width: 15%;
+  font-size: 20px;
+}
 table.sheet-vitality-status {
     border-style: groove; 
     position: relative; 
