@@ -1,14 +1,14 @@
 /*In the CSS file, all class-names must have a.-prefix in their name, or Roll20 won't recognize the classes.
 In the HTML file, this prefix is not needed. */
 :root {
-  --body: url('https://raw.githubusercontent.com/Cacealeos/roll20-character-sheets/master/Generation/BodyCircle.png');
-  --mental: url('https://raw.githubusercontent.com/Cacealeos/roll20-character-sheets/master/Generation/MindCircle.png');
-  --spirit: url('https://raw.githubusercontent.com/Cacealeos/roll20-character-sheets/master/Generation/SpiritCircle.png');
-  --memory: url('https://raw.githubusercontent.com/Cacealeos/roll20-character-sheets/master/Generation/MemoryCircle.png');
-  --demon: url('https://raw.githubusercontent.com/Cacealeos/roll20-character-sheets/master/Generation/DemonCircle.png');
-  --necro: url('https://raw.githubusercontent.com/Cacealeos/roll20-character-sheets/master/Generation/NecroCircle.png');
-  --neutral: url('https://raw.githubusercontent.com/Cacealeos/roll20-character-sheets/master/Generation/Avatar.png');
-  --borderimg: url('https://raw.githubusercontent.com/Cacealeos/Generation/master/ColoredMetalAvatarBorder1.png');
+  --body: url('https://raw.githubusercontent.com/Cacealeos/roll20-character-sheets/master/Generation/Circles&Borders/BodyCircle.png');
+  --mental: url('https://raw.githubusercontent.com/Cacealeos/roll20-character-sheets/master/Generation/Circles&Borders/MindCircle.png');
+  --spirit: url('https://raw.githubusercontent.com/Cacealeos/roll20-character-sheets/master/Generation/Circles&Borders/SpiritCircle.png');
+  --memory: url('https://raw.githubusercontent.com/Cacealeos/roll20-character-sheets/master/Generation/Circles&Borders/MemoryCircle.png');
+  --demon: url('https://raw.githubusercontent.com/Cacealeos/roll20-character-sheets/master/Generation/Circles&Borders/DemonCircle.png');
+  --necro: url('https://raw.githubusercontent.com/Cacealeos/roll20-character-sheets/master/Generation/Circles&Borders/NecroCircle.png');
+  --neutral: url('https://raw.githubusercontent.com/Cacealeos/roll20-character-sheets/master/Generation/Circles&Borders/Avatar.png');
+  --borderimg: url('https://raw.githubusercontent.com/Cacealeos/Generation/master/Generation/Circles&Borders/ColoredMetalAvatarBorder1.png');
   --bdcolor:  #FF8C00;
   --mncolor:  #8A2BE2;
   --spcolor:  #00FFFF;
@@ -25,6 +25,16 @@ In the HTML file, this prefix is not needed. */
   --bgcolor2:  mediumseagreen;
   --togglecatalyst:  toggleenergy;
 
+}
+
+/* @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+importing icons doesn't work??? */
+
+.material-icons {
+  font-family: 'Material Icons';
+  color:  yellow;
+  font-weight: 400;
+  display: none;
 }
 
 .App {
@@ -54,7 +64,7 @@ In the HTML file, this prefix is not needed. */
   --bgcolor:  var(--ncolor);
   --bgcolor2:  var(--mncolor);
   --huefilter: 120deg;
-  --huefilter2: 100deg;
+  --huefilter2: 80deg;
   --grayscale: 0;
 }
 
@@ -69,7 +79,7 @@ In the HTML file, this prefix is not needed. */
   --bgcolor:  var(--ncolor);
   --bgcolor2:  var(--bdcolor);
   --huefilter: 265deg;
-  --huefilter2: 225deg;
+  --huefilter2: 210deg;
   --grayscale: 0;
 }
 
@@ -99,7 +109,7 @@ In the HTML file, this prefix is not needed. */
   --bgcolor:  var(--ncolor);
   --bgcolor2:  var(--mmcolor);
   --huefilter: 0deg;
-  --huefilter2: 300deg;
+  --huefilter2: 345deg;
   --grayscale: 75%;
 }
 
@@ -114,7 +124,7 @@ In the HTML file, this prefix is not needed. */
   --bgcolor:  var(--ncolor);
   --bgcolor2:  var(--nccolor);
   --huefilter: 330deg;
-  --huefilter2: 265deg;
+  --huefilter2: 285deg;
   --grayscale: 0;
 }
 
@@ -129,7 +139,7 @@ In the HTML file, this prefix is not needed. */
   --bgcolor:  var(--ncolor);
   --bgcolor2:  var(--dmcolor);
   --huefilter: 200deg;
-  --huefilter2: 175deg;
+  --huefilter2: 185deg;
   --grayscale: 0;
 }
 
@@ -145,7 +155,7 @@ In the HTML file, this prefix is not needed. */
   position: fixed;
   z-index: 15;
   top:  25%;
-  width:  20%;
+  width:  25%;
   display:  flex;
   flex-flow: column;
   /*transform: rotateY(30deg);*/
@@ -593,7 +603,8 @@ url('https://raw.githubusercontent.com/Cacealeos/Generation/master/SpiritBorder.
   border-image-outset: 5px;
   border-width: 15px;
   border-radius: 3%;
-  background-image: url('https://raw.githubusercontent.com/Cacealeos/Generation/master/BlueType1/bluewallside10.jpg'),
+  background-image: 
+  url('https://raw.githubusercontent.com/Cacealeos/Generation/master/BlueType1/bluewallside10.jpg'),
   url('https://raw.githubusercontent.com/Cacealeos/Generation/master/BlueType1/bluewallside11.jpg'),
   url('https://raw.githubusercontent.com/Cacealeos/Generation/master/BlueType1/bluewallside10-2.jpg'),
   url('https://raw.githubusercontent.com/Cacealeos/Generation/master/BlueType1/bluewallside11-2.jpg');
@@ -644,6 +655,152 @@ span.label-energy, span.label-skills, span.label-stats, span.label-general {
 }
 /****************************************************************END STAT SECTION ***********************************************************/
 
+b.pictos-icons {
+  font-size: 20px; 
+  font-family: 'Pictos';
+  background-color: yellow;
+  margin-left: 5px;
+  border-radius: 75%;
+  padding: 2px;
+}
+b.pictos-icons-three {
+  font-size: 20px; 
+  font-family: 'Pictos Three';
+  background-color: yellow;
+  margin-left: 5px;
+  border-radius: 75%;
+  padding: 2px;
+}
+b.pictos-icons-custom {
+  font-size: 20px; 
+  font-family: 'Pictos Custom';
+  background-color: yellow;
+  margin-left: 5px;
+  border-radius: 75%;
+  padding: 2px;
+}
+/*********************************************************ECONOMY SECTION *******************************************************************/
+
+.Economy {
+  text-align: center;
+  display: flex;
+  position: relative;
+  width: 60%;
+  opacity: 0;
+  background-color: #04020C;
+  border-image-slice: 30%;
+  border-image-width: 25px;
+  border-image-outset: 10px;
+  height: 0px;
+  border-image-source: url('https://raw.githubusercontent.com/Cacealeos/Generation/master/Particles/eletricborder.png');
+  left: 22%;
+  transition: 2s all;
+}
+input.hiddeneco[value="EXIT COMBAT"] ~ .Economy {
+  opacity: 1;
+  height: 400px;
+  transition: height 1s ease-out opacity .5s ease-out;
+}
+input.hiddeneco[value="EXIT COMBAT"] ~ .economy-inline,
+input.hiddeneco[value="EXIT COMBAT"] ~ .economy-inline2,
+input.hiddeneco[value="EXIT COMBAT"] ~ .ecobtn {
+  opacity: 1;
+  transition: opacity 1.5s ease-out;
+  transition-delay: 1.5s;
+}
+.economy-TTT {
+  position: absolute;
+  left: 10%;
+  top: 0%;
+  z-index: 2;
+}
+.economy-TTTX {
+  position: absolute;
+  right: 10%;
+  top: 0%;
+  z-index: 2;
+}
+.economy-ECO {
+  position: absolute;
+  left: 33%;
+  top: 15%;
+  z-index: 1;
+}
+.economy-LF {
+  position: absolute;
+  top: 35%;
+  z-index: 2;
+}
+.economy-MN {
+  position: absolute;
+  left: 50%;
+  top: 35%;
+  z-index: 2;
+}
+.economy-inline {
+  display: inline-block;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 5px;
+  padding-right: 5px;
+  width:  30%;
+  overflow: hidden;
+  margin: 0px;
+  flex-basis: auto;
+  background-image: url('https://raw.githubusercontent.com/Cacealeos/Generation/master/Particles/ParticleCircle.gif');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 130%;
+  border-radius: 50%;
+  opacity: 0;
+}
+.economy-inline2 {
+  display: inline-block;
+  padding-top: 40px;
+  padding-bottom: 50px;
+  padding-right: 40px;
+  padding-left: 40px;
+  width:  30%;
+  overflow: hidden;
+  margin: 0px;
+  flex-basis: auto;
+  background-image: url('https://raw.githubusercontent.com/Cacealeos/Generation/master/Particles/blue-flame-flame.gif');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 150%;
+  border-radius: 50%;
+  opacity: 0;
+}
+.economy-inputs {
+  background-color: transparent;
+  text-align: center;
+  color: deeppink;
+  border-style: none;
+  width: 15%;
+  opacity: 75%;
+  font-size: 25px;
+}
+.ecoBar {
+  width:  90%;
+  height: 10%;
+  position: absolute;
+  bottom: 10%;
+  left:  5%;
+  border-radius: 50%;
+  border-style: groove;
+  border-color: white;
+  background: radial-gradient(black, silver);
+  box-shadow: white -5px -15px 25px -15px;
+}
+.ecobtn {
+  text-align: center; 
+  position: absolute;
+  left: 13%;
+  bottom: 0%;
+  opacity: 0;
+}
+
+/*********************************************************END ECONOMY SECTION *******************************************************************/
 
 input.character-inputs {
   padding: 3px;
@@ -685,8 +842,7 @@ input.entry-inputssmall {
 }
 table.vitality-status {
     border-style: groove; 
-    position: relative; 
-    left: 2%; 
+    position: relative;
     border-width: 5px; 
     background: black;
 }
@@ -765,10 +921,12 @@ button.semi:hover {
 .training-semi {
   position: relative;
   background-color: teal;
+  border-width: 0px;
+  border-radius: 15px;
   color:  black;
   text-align: right;
   font-weight: bold;
-  font-size: 11px;
+  font-size: 12px;
   filter: hue-rotate(var(--huefilter2))
 }
 /*button hover effects*/
@@ -794,11 +952,12 @@ button.semi:hover {
 .tabstoggle[value="meleetechniques"] ~ button.melee-techniques-semi,
 .tabstoggle[value="energytechniques"] ~ button.energy-techniques-semi,
 .tabstoggle[value="training"] ~ button.training-semi {
+  padding:  10px;
   background: black;
   font-weight: bold;
   color: teal;
   transition: all 0.2s ease-in;
-  transform: translateX(30%);
+  transform: translateX(20%);
   filter: hue-rotate(var(--huefilter2));
 }
 
@@ -897,7 +1056,6 @@ button.mod > span.checked {
   background-size: 50%;
   background-repeat: no-repeat round;
   box-shadow:  inset 0 5px 15px 20px black;
-  
 }
 
 input.catalyst {
@@ -970,6 +1128,19 @@ input.catalyst {
   box-shadow: 0px 0px 3px 5px forestgreen; 
 }
 
+.combat_btn {
+  position:  absolute;
+  bottom:  -5%;
+  left: 40%;
+  border-radius: 25%;
+  font-weight: bold;
+  color: crimson; 
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  box-shadow: 0 0 15px red;
+  background-image: url('https://raw.githubusercontent.com/Cacealeos/Generation/master/Particles/redflame.png');
+  background-size: contain;
+}
+
 /******************************************************************* END CATALYST SECTION ********************************************************************/
 
 /* Hide the "checked" section of the radio if the attribute value does not match the radio */
@@ -1026,4 +1197,300 @@ input.toggle:not([value="1"]) ~ button.toggle > span.checked {
   align-items: center;
 }
 
+/* Hide the "checked" section of the toggle if the attribute value is not "1". */
+input.checkbox:not([value="1"]) ~ button.checkbox > span.checked {
+  display: none;
+}
+div.cooldown {
+    width: 35%;
+    height: 20px;
+    border: 1px solid black;
+    color: gray;
+    text-align: center;
+}
+input.cooldown[value="8"] ~ div.cooldown {
+    background: purple;
+    width: 100%;
+}
+input.cooldown[value="8"] ~ div.cooldown:before {
+        content: "8 Turns of Cooldown";
+}
+input.cooldown[value="7"] ~ div.cooldown {
+    background: purple;
+    width: 100%;
+}
+input.cooldown[value="7"] ~ div.cooldown:before {
+        content: "7 Turns of Cooldown";
+}
+input.cooldown[value="6"] ~ div.cooldown {
+    background: red;
+    width: 100%;
+}
+input.cooldown[value="6"] ~ div.cooldown:before {
+        content: "6 Turns of Cooldown";
+}
+input.cooldown[value="5"] ~ div.cooldown {
+    background: red;
+    width: 100%;
+}
+input.cooldown[value="5"] ~ div.cooldown:before {
+        content: "5 Turns of Cooldown";
+}
+input.cooldown[value="4"] ~ div.cooldown {
+    background: yellow;
+    width: 100%;
+}
+input.cooldown[value="4"] ~ div.cooldown:before {
+        content: "4 Turns of Cooldown";
+}
+input.cooldown[value="3"] ~ div.cooldown {
+    background: yellow;
+    width: 100%;
+}
+input.cooldown[value="3"] ~ div.cooldown:before {
+        content: "3 Turns of Cooldown";
+}
+input.cooldown[value="2"] ~ div.cooldown {
+    background: green;
+    width: 100%;
+}
+input.cooldown[value="2"] ~ div.cooldown:before {
+        content: "2 Turns of Cooldown";
+}
+input.cooldown[value="1"] ~ div.cooldown {
+    background: green;
+    width: 100%;
+}
+input.cooldown[value="1"] ~ div.cooldown:before {
+        content: "1 Turns of Cooldown";
+}
+input.cooldown[value=""] ~ div.cooldown {
+        display: none;
+        width: 100%;
+}
 
+div.techbar {
+    width: 90%;
+    height: 20px;
+    border: 1px solid black;
+    color: gray;
+    text-align: center;
+}
+
+input.techbar[value="5"] ~ div.techbar {
+    background: purple;
+}
+input.techbar[value="5"] ~ div.techbar:before {
+        content: "5 Turns of Cooldown";
+}
+input.techbar[value="4"] ~ div.techbar {
+    background: red;
+}
+input.techbar[value="4"] ~ div.techbar:before {
+        content: "4 Turns of Cooldown";
+}
+input.techbar[value="3"] ~ div.techbar {
+    background: orange;
+}
+input.techbar[value="3"] ~ div.techbar:before {
+        content: "3 Turns of Cooldown";
+}
+input.techbar[value="2"] ~ div.techbar {
+    background: yellow;
+}
+input.techbar[value="2"] ~ div.techbar:before {
+        content: "2 Turns of Cooldown";
+}
+input.techbar[value="1"] ~ div.techbar {
+    background: green;
+}
+input.techbar[value="1"] ~ div.techbar:before {
+        content: "1 Turns of Cooldown";
+}
+input.techbar[value=""] ~ div.techbar:before {
+    background: white;
+}
+input.techbar[value=""] ~ div.techbar:before {
+        content: "N/A";
+}
+
+div.durbar {
+    width: 90%;
+    height: 20px;
+    border: 1px solid black;
+    color: gray;
+    text-align: center;
+}
+
+input.durbar[value="5"] ~ div.durbar {
+    background: green;
+}
+input.durbar[value="5"] ~ div.durbar:before {
+        content: "~ 100%";
+}
+input.durbar[value="4"] ~ div.durbar {
+    background: yellow;
+}
+input.durbar[value="4"] ~ div.durbar:before {
+        content: "~ 80%";
+}
+input.durbar[value="3"] ~ div.durbar {
+    background: orange;
+}
+input.durbar[value="3"] ~ div.durbar:before {
+        content: "~ 60%";
+}
+input.durbar[value="2"] ~ div.durbar {
+    background: red;
+}
+input.durbar[value="2"] ~ div.durbar:before {
+        content: "~ 40%";
+}
+input.durbar[value="1"] ~ div.durbar {
+    background: purple;
+}
+input.durbar[value="1"] ~ div.durbar:before {
+        content: "~ 20%";
+}
+
+.progressM,
+.progressDM,
+.progressD,
+.progressP,
+.progressLF,
+.progressSTF,
+.progressSLF {
+  position: relative;
+  border-width: 2px;
+  border-color: white;
+  border-style: groove;
+  border-radius: 25px;
+  background-color: black;
+  width: 100%;
+  height: 10px;
+  }
+
+.progressBars {
+  flex: column; width: 50%; margin: 15px;
+}
+
+.progress {
+    position: relative;
+    overflow: hidden;
+    bottom: 20%;
+    background-color: cyan;
+    margin: 5px;
+    height: 50%;
+    
+}
+
+.progressM[value="10"] ~ div.progress,
+.progressDM[value="10"] ~ div.progress,
+.progressD[value="10"] ~ div.progress,
+.progressP[value="10"] ~ div.progress,
+.progressLF[value="10"] ~ div.progress,
+.progressSTF[value="10"] ~ div.progress,
+.progressSLF[value="10"] ~ div.progress {
+    content: "100%";
+    width: 100%;
+}
+.progressM[value="9"] ~ div.progress,
+.progressDM[value="9"] ~ div.progress,
+.progressD[value="9"] ~ div.progress,
+.progressP[value="9"] ~ div.progress,
+.progressLF[value="9"] ~ div.progress,
+.progressSTF[value="9"] ~ div.progress,
+.progressSLF[value="9"] ~ div.progress {
+    content: "~90%";
+    width: 90%;
+}
+.progressM[value="8"] ~ div.progress,
+.progressDM[value="8"] ~ div.progress,
+.progressD[value="8"] ~ div.progress,
+.progressP[value="8"] ~ div.progress,
+.progressLF[value="8"] ~ div.progress,
+.progressSTF[value="8"] ~ div.progress,
+.progressSLF[value="8"] ~ div.progress {
+    content: "~80%";
+    width: 80%;
+}
+.progressM[value="7"] ~ div.progress,
+.progressDM[value="7"] ~ div.progress,
+.progressD[value="7"] ~ div.progress,
+.progressP[value="7"] ~ div.progress,
+.progressLF[value="7"] ~ div.progress,
+.progressSTF[value="7"] ~ div.progress,
+.progressSLF[value="7"] ~ div.progress {
+    content: "~70%";
+    width: 70%;
+}
+.progressM[value="6"] ~ div.progress,
+.progressDM[value="6"] ~ div.progress,
+.progressD[value="6"] ~ div.progress,
+.progressP[value="6"] ~ div.progress,
+.progressLF[value="6"] ~ div.progress,
+.progressSTF[value="6"] ~ div.progress,
+.progressSLF[value="6"] ~ div.progress {
+    content: "~60%";
+    width: 60%;
+}
+.progressM[value="5"] ~ div.progress,
+.progressDM[value="5"] ~ div.progress,
+.progressD[value="5"] ~ div.progress,
+.progressP[value="5"] ~ div.progress,
+.progressLF[value="5"] ~ div.progress,
+.progressSTF[value="5"] ~ div.progress,
+.progressSLF[value="5"] ~ div.progress {
+    content: "~50%";
+    width: 50%;
+}
+.progressM[value="4"] ~ div.progress,
+.progressDM[value="4"] ~ div.progress,
+.progressD[value="4"] ~ div.progress,
+.progressP[value="4"] ~ div.progress,
+.progressLF[value="4"] ~ div.progress,
+.progressSTF[value="4"] ~ div.progress,
+.progressSLF[value="4"] ~ div.progress {
+    content: "~40%";
+    width: 40%;
+}
+.progressM[value="3"] ~ div.progress,
+.progressDM[value="3"] ~ div.progress,
+.progressD[value="3"] ~ div.progress,
+.progressP[value="3"] ~ div.progress,
+.progressLF[value="3"] ~ div.progress,
+.progressSTF[value="3"] ~ div.progress,
+.progressSLF[value="3"] ~ div.progress {
+    content: "~30%";
+    width: 30%;
+}
+.progressM[value="2"] ~ div.progress,
+.progressDM[value="2"] ~ div.progress,
+.progressD[value="2"] ~ div.progress,
+.progressP[value="2"] ~ div.progress,
+.progressLF[value="2"] ~ div.progress,
+.progressSTF[value="2"] ~ div.progress,
+.progressSLF[value="2"] ~ div.progress {
+    content: "~20%";
+    width: 20%;
+}
+.progressM[value="1"] ~ div.progress,
+.progressDM[value="1"] ~ div.progress,
+.progressD[value="1"] ~ div.progress,
+.progressP[value="1"] ~ div.progress,
+.progressLF[value="1"] ~ div.progress,
+.progressSTF[value="1"] ~ div.progress,
+.progressSLF[value="1"] ~ div.progress {
+    content: "~10%";
+    width: 100%;
+}
+.progressM[value="0"] ~ div.progress,
+.progressDM[value="0"] ~ div.progress,
+.progressD[value="0"] ~ div.progress,
+.progressP[value="0"] ~ div.progress,
+.progressLF[value="0"] ~ div.progress,
+.progressSTF[value="0"] ~ div.progress,
+.progressSLF[value="0"] ~ div.progress {
+    content: "Critical";
+    width: 0%;
+}

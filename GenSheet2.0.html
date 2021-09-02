@@ -21,17 +21,17 @@
     <div class="selector">
         <input type='hidden' class='tabstoggle' name='attr_sheetTab' value='character' />
 
-        <button type="action" name="act_inventory" class='inventory-semi' style="left: -85%">INV</button>
-        <button type="action" name="act_training" class='training-semi' style="left: -80%">TRAIN</button>
-        <button type="action" name="act_passives"  class='passives-semi' style="left: -75%">PASS</button>
-        <button type="action" name="act_styles"  class='styles-semi' style="left: -70%">STYLES</button>
-        <button type="action" name="act_character" class='character-semi' style="left: -65%">CHARACTER</button>
-        <button type="action" name="act_battle" class='battle-semi' style="left: -60%; height: 35px; font-size: 20px;">BATTLE</button>
-        <button type="action" name="act_health" class='health-semi' style="left: -65%">HEALTH</button>
-        <button type="action" name="act_equipment" class='equipment-semi' style="left: -70%">EQUIPMENT</button>
-        <button type="action" name="act_energytechniques" class='energy-techniques-semi' style="left: -75%">E TECH</button>
-        <button type="action" name="act_meleetechniques" class='melee-techniques-semi' style="left: -80%">M. TECH</button>
-        <button type="action" name="act_spells"  class='spells-semi' style="left: -85%">SPELLS</button>
+        <button type="action" name="act_inventory" class='inventory-semi' style="left: -80%">INV<b class="pictos-icons">n</b></button>
+        <button type="action" name="act_training" class='training-semi' style="left: -75%">TRAIN<b class="pictos-icons">j</b></button>
+        <button type="action" name="act_passives"  class='passives-semi' style="left: -70%">PASSIVES<b class="pictos-icons">t</b></button>
+        <button type="action" name="act_styles"  class='styles-semi' style="left: -65%">STYLES<b class="pictos-icons">E</b></button>
+        <button type="action" name="act_character" class='character-semi' style="left: -60%">CHARACTER<b class="pictos-icons">U</b></button>
+        <button type="action" name="act_battle" class='battle-semi' style="left: -55%; height: 30px;">BATTLE<b class="pictos-icons-three">l</b></button>
+        <button type="action" name="act_health" class='health-semi' style="left: -60%">HEALTH<b class="pictos-icons">Y</b></button>
+        <button type="action" name="act_equipment" class='equipment-semi' style="left: -65%">EQUIPMENT<b class="pictos-icons-three">b</b></button>
+        <button type="action" name="act_energytechniques" class='energy-techniques-semi' style="left: -70%">E TECH<b class="pictos-icons">e</b></button>
+        <button type="action" name="act_meleetechniques" class='melee-techniques-semi' style="left: -75%">M. TECH<b class="pictos-icons-custom">t</b></button>
+        <button type="action" name="act_spells"  class='spells-semi' style="left: -80%">SPELLS<b class="pictos-icons-three">g</b></button>
     </div>
 
     <input type="hidden" name='attr_sheetTab' id="t0">
@@ -253,46 +253,109 @@
     </div>
     
     <div class='health' id="tab1">
+        <span class="label-general">VITALITY & STATUS</span><br><br>
         
-        <div class='menuborder' style="text-align: center;">
-            <span class="label-general">VITALITY & STATUS</span><br><br>
-            <table class="vitality-status">
-                <td><span>Life-Force:</span></td><td><input type="number" name="attr_Char_Life_Force" value="@{attr_Char_Life_Force}" style='width:  55px;' title="Life-Force"  /></td>
-                <td><span>Spirit:</span></td><td><input type="number" name="attr_Char_Spirit_Force" value="200" title="Spirit" style='width:  55px;' max=500 min=0 /></td>
-                <td><span>Soul:</span></td><td><input type="number" name="attr_Char_Soul_Force" value="300" title="Soul" style='width:  55px;' max=1000 min=0 /></td>
-                <td><span>Manna:</span></td><td><input type="number" name="attr_Char_Manna" value="@{attr_Char_Manna}" title="Manna" style='width:  55px;' /></td>
-                <td><div class='demon' style='display: inline-block'>
-                    <span>Essence:</span><input type="number" name="attr_Char_Demon" value="@{attr_Char_Demon}" title="Demonic Essence" style='width:  55px;'/>
-                </div></td>
-                <td><span>Disruption:</span></td><td><input type="number" name="attr_Disruption" value="@{attr_Disruption}" title="Disruption Meter"  style='width:  55px;'/></td>
-                <td><span>Pain:</span></td><td><input type="number" name="attr_Pain" value="@{attr_Pain}" title="Pain Meter" style='width:  55px;'/></td>
-                <input type='hidden' name="attr_Capacity" value="@{attr_Capacity}" title="Mental Capacity" readonly="readonly"  />
-            </table>
-            <br>
-            
-            <label style="color: mediumspringgreen; text-align: center">Conditions:
+        <input type="hidden" class="hiddeneco" name="attr_combatstate" value="ENTER COMBAT">
+        <div class="Economy" style="width: 75%">
+            <div style="flex-flow: row;">
+                <input type="hidden" class="hiddeneco" name="attr_combatstate" value="ENTER COMBAT">
+                <div class="economy-inline economy-ECO">
+                    <span>TURN ECO</span>
+                    <br>
+                    <input type=number name='attr_economy' class="economy-inputs" value=100 max=100 min=0 />
+                </div>
+                <br>
+                <div class="economy-inline economy-TTT">
+                    <span>TTT</span><br>
+                    <input type='number' name="attr_Char_TTT" value="@{attr_Char_TTT}" class="economy-inputs" />
+                </div>
+                <div class="economy-inline economy-TTTX">
+                    <span>Ex. TTT</span><br>
+                    <input type='number' name="attr_adTTT" value='0' class="economy-inputs"/>
+                </div>
+                <div class="economy-inline2 economy-LF">
+                    <span>Life-Force</span><br>
+                    <input type="number" name="attr_Char_Life_Force" value="@{attr_Char_Life_Force}" class="economy-inputs"/>
+                </div>
+                <div class="economy-inline2 economy-MN">
+                    <span>Manna</span><br>
+                    <input type="number" name="attr_Char_Manna" value="@{attr_Char_Manna}" class="economy-inputs"/>
+                </div>
+                <div class="ecoBar"></div>
+            </div>
+            <input type="hidden" class="hiddeneco" name="attr_combatstate" value="ENTER COMBAT">
+            <div class="ecobtn">
+                <button type=action name='act_gather' style='height: 25px; width:  70px; font-size: 15px' class='semi'>GATHER</button>
+                <button type=action name='act_endTurn' style='height: 35px; width:  140px; font-size: 25px' class='semi'>END TURN</button>
+                <button type=action name='act_vitalize' style='height: 25px; width:  70px; font-size: 15px' class='semi'>VITALIZE</button>
+            </div>
+        </div>
+
+        <div class='menuborder' style="border-radius: 5%; display: flex; width: 120%;">
+            <input type="hidden" name="attr_maxChar_Life_Force">
+            <input type="hidden" name="attr_maxChar_Spirit_Force">
+            <input type="hidden" name="attr_maxChar_Soul_Force">
+            <input type="hidden" name="attr_maxChar_Manna">
+            <input type="hidden" name="attr_maxChar_Demon">
+            <input type="hidden" name="attr_maxDisruption">
+            <input type="hidden" name="attr_maxPain">
+
+            <div class="progressBars">
+                
+                <span>Manna:</span><input type="number" name="attr_Char_Manna" value="@{attr_Char_Manna}" style='width:  55px; border-radius: 50%;' />
+                <div class="progressM" value="@{maxChar_Char_Manna}">
+                    <div class="progress"></div>
+                </div>
+                <span>Demonic Essence:</span><input type="number" name="attr_Char_Demon" value="@{attr_Char_Demon}" style='width:  55px; border-radius: 50%;'/>
+                <div class="progressDM" value="@{maxChar_Demon}">
+                    <div class="progress"></div>
+                </div>
+                <span>Disruption:</span><input type="number" name="attr_Disruption" value="@{attr_Disruption}" style='width:  55px; border-radius: 50%;'/>
+                <div class="progressD" value="@{maxDisruption}">
+                    <div class="progress"></div>
+                </div>
+                <span>Pain:</span><input type="number" name="attr_Pain" value="@{attr_Pain}" title="Pain Meter" style='width:  55px; border-radius: 50%;'/>
+                <div class="progressP" value="@{maxPain}">
+                    <div class="progress"></div>
+                </div>
+
+            </div>
+            <div class="progressBars">
+                <span>Life-Force:</span><input type="number" name="attr_Char_Life_Force" value="@{attr_Char_Life_Force}" style='width:  55px; border-radius: 50%;'/><br>
+                <div class="progressLF" value="@{maxChar_Life_Force}">
+                    <div class="progress"></div>
+                </div>
+                <span>Spirit:</span><input type="number" name="attr_Char_Spirit_Force" value="200" style='width:  55px; border-radius: 50%;' max=500 min=0 /><br>
+                <div class="progressSTF" value="@{maxChar_Spirit_Force}">
+                    <div class="progress"></div>
+                </div>
+                <span>Soul:</span><input type="number" name="attr_Char_Soul_Force" value="300" style='width:  55px; border-radius: 50%;' max=1000 min=0 /><br>
+                <div class="progressSLF" value="@{maxChar_Soul_Force}">
+                    <div class="progress"></div>
+                </div>
+                <span>Mental Capacity</span><input type='number' name="attr_Capacity" value="@{attr_Capacity}" style='width:  55px; border-radius: 50%;' readonly="readonly"  />
+                <div class="progressMC" value="@{Capacity}">
+                    <div class="progress"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="menuborder" style="width: 120%;">
+            <label style="color: mediumspringgreen; text-align: center; display: inline-block;">Conditions:
                 <input type='radio' name='attr_airborn' value='1'><span>Airborn</span>
                 <input type='radio' name='attr_airborn' value='0'><span>Grounded</span>
                 <input type='checkbox' name='attr_halfbreed'><span>Half-Demon</span>
                 <input type='checkbox' name='attr_defense'><span>Defensive</span>
-                <select style='width: 15%' name='attr_dismembered'>
+                <br><span>(Dismemberment)</span>
+                <select style='width: 20%' name='attr_dismembered'>
                     <option>None</option>
                     <option>Arm</option>
                     <option>Leg</option>
                     <option>Arm & Leg</option>
                     <option>Decapitation</option>
                 </select>
-                <span>(Dismemberment)</span>
+                
             </label>
-        </div>
-        
-        <div class='center'>
-            <button class='semi'>TURN ECONOMY:</button><input type=number name='attr_economy' value=100 style='width:  50px;' max=100 min=0>
-        </div>
-        <div class='center'>
-            <button type=action name='act_gather' style='height: 25px; width:  100px; font-size: 10px' class='semi'>GATHER</button>
-            <button type=action name='act_endTurn' style='height: 35px; width:  200px; font-size: 20px' class='semi'>END TURN</button>
-            <button type=action name='act_vitalize' style='height: 25px; width:  100px; font-size: 10px' class='semi'>VITALIZE</button>
         </div>
     </div>
 
@@ -361,19 +424,46 @@
                 <input name="attr_Flight" value="@{attr_Flight}" title="Flight" readonly="readonly" 
                 class="catalyst"
                 style="width: 15%;"/>
-                <br>
-                <br>
-                <button class='semi'>TURN ECONOMY:</button><input type=number name='attr_economy' value=100 style='width:  50px;' max=100 min=0>
-                <b><span>TTT :</span><b/><input name="attr_Char_TTT" value="@{attr_Char_TTT}" title="Turn-to-Turn Cost (TTT)" readonly="readonly" 
-                class="character-inputs" style="width: 10%; color: red;"/>
-                <b><span>Ex. TTT :</span><b/><input type='number' name="attr_adTTT" value='0' class="character-inputs" style="width: 10%; color: blue;"/>
-                <br>
-            <button type=action name='act_gather' style='height: 25px; width:  100px; font-size: 10px' class='semi'>GATHER</button>
-            <button type=action name='act_endTurn' style='height: 35px; width:  200px; font-size: 20px' class='semi'>END TURN</button>
-            <button type=action name='act_vitalize' style='height: 25px; width:  100px; font-size: 10px' class='semi'>VITALIZE</button>
-
+                <br><br><br>
             </div>
-
+            
+            <button type="action" name="act_ecocombat" class="combat_btn"><span name="attr_combatstate"></span></button>
+        </div>
+        <br>
+        <input type="hidden" class="hiddeneco" name="attr_combatstate" value="ENTER COMBAT">
+        <div class="Economy">
+            <div style="flex-flow: row;">
+                <input type="hidden" class="hiddeneco" name="attr_combatstate" value="ENTER COMBAT">
+                <div class="economy-inline economy-ECO">
+                    <span>TURN ECO</span>
+                    <br>
+                    <input type=number name='attr_economy' class="economy-inputs" value=100 max=100 min=0 />
+                </div>
+                <br>
+                <div class="economy-inline economy-TTT">
+                    <span>TTT</span><br>
+                    <input type='number' name="attr_Char_TTT" value="@{attr_Char_TTT}" class="economy-inputs" />
+                </div>
+                <div class="economy-inline economy-TTTX">
+                    <span>Ex. TTT</span><br>
+                    <input type='number' name="attr_adTTT" value='0' class="economy-inputs"/>
+                </div>
+                <div class="economy-inline2 economy-LF">
+                    <span>Life-Force</span><br>
+                    <input type="number" name="attr_Char_Life_Force" value="@{attr_Char_Life_Force}" class="economy-inputs"/>
+                </div>
+                <div class="economy-inline2 economy-MN">
+                    <span>Manna</span><br>
+                    <input type="number" name="attr_Char_Manna" value="@{attr_Char_Manna}" class="economy-inputs"/>
+                </div>
+                <div class="ecoBar"></div>
+            </div>
+            <input type="hidden" class="hiddeneco" name="attr_combatstate" value="ENTER COMBAT">
+            <div class="ecobtn">
+                <button type=action name='act_gather' style='height: 25px; width:  70px; font-size: 15px' class='semi'>GATHER</button>
+                <button type=action name='act_endTurn' style='height: 35px; width:  140px; font-size: 25px' class='semi'>END TURN</button>
+                <button type=action name='act_vitalize' style='height: 25px; width:  70px; font-size: 15px' class='semi'>VITALIZE</button>
+            </div>
         </div>
     
         <!--*************************************************************************************-->        
@@ -924,17 +1014,17 @@
                         <input type="hidden" name="attr_weapon-style-warning" value='' />
                         <span style="color: deeppink" name="attr_weapon-style-warning"></span>
                         <br>
-                        <b>Style:</b><input type="text" name="attr_style-name" value='' title="Style" placeholder="Name" class="entry-inputs"/>
+                        <b>Style:</b><input type="text" name="attr_style-name" value='' style="width: 75%" title="Style" placeholder="Name" class="entry-inputs"/>
                         <br>
                         <b>Acc:</b><input type="text" name="attr_style-acc" value='' title="Accuracy" placeholder="Accuracy" class="entry-inputs"/>
-                        <br>
+                        
                         <b>Eva:</b><input type="text" name="attr_style-eva" value='' title="Evasion" placeholder="Evasion" class="entry-inputs"/>
-                        <br>
+                        
                         <b>GG:</b><input type="text" name="attr_style-gg" value='' title="Guard Gauge" placeholder="Guard Guage" class="entry-inputs"/>
                         <br>
-                        <b>Req:</b><input type="text" name="attr_style-req" value='' title="Weapon Arts Requirement" placeholder="W.A. Requirement" class="entry-inputs"/>
-                        <br>
-                        <b>Rank:</b><select type="text" placeholder="Rank" >
+                        <b>Req:</b><input type="text" name="attr_style-req" value='' title="Weapon Arts Requirement" placeholder="W.A." class="entry-inputs"/>
+                        
+                        <b>Rank:</b><select type="text" placeholder="Rank" style="width: 50%">
                             <option>D</option>
                             <option>C</option>
                             <option>B</option>
@@ -974,17 +1064,17 @@
                         <input type='hidden' name='attr_combat-style-warning' value='' class="entry-inputs"/>
                         <span style="color: deeppink" name='attr_combat-style-warning'></span>
                         <br>
-                        <b>Style:</b><input type='text' name='attr_style-name' value='' title="Style" placeholder="Name" class="entry-inputs"/>
+                        <b>Style:</b><input type='text' name='attr_style-name' value='' style="width: 75%" title="Style" placeholder="Name" class="entry-inputs"/>
                         <br>
                         <b>Acc:</b><input type='text' name='attr_style-acc' value='' title="Accuracy" placeholder="Accuracy" class="entry-inputs"/>
-                        <br>
+                        
                         <b>Eva:</b><input type='text' name='attr_style-eva' value='' title="Evasion" placeholder="Evasion" class="entry-inputs"/>
-                        <br>
+                        
                         <b>GG:</b><input type='text' name='attr_style-gg' value='' title="Guard Gauge" placeholder="Guard Guage" class="entry-inputs"/>
                         <br>
-                        <b>Req:</b><input type="text" name="attr_style-req" value='' title="Combat Arts Requirement" placeholder="C.A. Requirement" class="entry-inputs"/>
-                        <br>
-                        <b>Rank:</b><select type="text" placeholder="Rank" >
+                        <b>Req:</b><input type="text" name="attr_style-req" value='' title="Combat Arts Requirement" placeholder="C.A." class="entry-inputs"/>
+                        
+                        <b>Rank:</b><select type="text" placeholder="Rank" style="width: 50%">
                             <option>D</option>
                             <option>C</option>
                             <option>B</option>
@@ -999,7 +1089,8 @@
     </div>
 
     <div class='spells' id="tab9" style="width: 85%;">
-        <div style='text-align: center; margin-left: auto; margin-right: auto;'>
+        <span style='text-align: center' class="label-general">S P E L L S</span><br>
+        <div  class="menuborder" style="border-radius: 5%; text-align: center; margin-left: auto; margin-right: auto;">
             <span style='text-align: center' class="label-general">Spell Techniques</span><br>
             
             <table border="1" style='width: 95%'>
@@ -1060,7 +1151,7 @@
                     </td>
                 </tr>
         </table>
-            <span style='text-align: center' class="label-general">S P E L L S</span><br>
+            
         </div>
         <br>
         <fieldset class="repeating_spells">
@@ -1131,45 +1222,49 @@
 
     <div class='energytechniques' id="tab7">
         <span class="label-general">ENERGY TECHNQIUES</span><br>
-        <br>
-        <b>Defaults:</b>
-        <div class='dualcell'>
-            <div class='cell'>
-                <b>Mental</b>
-                <ul>
-                <li>Cognitive Telekinesis (Req: 5)</li>
+        <div class="menuborder" style="border-radius: 5%;">
+            
+            <br>
+            
+            <div class='dualcell'>
+                <div class='cell'>
+                    <b style="color: deeppink">Default Mental Energy Tech</b>
                     <ul>
-                        <li>Base: 0</li>
-                        <li>Power Cap: 2</li>
-                        <li>Turn Eco: 3</li>
-                        <li>Cost 3 (+3 TTT)</li>
+                    <li>Telepathy (Req: 5)</li>
+                    <li>Cognitive Telekinesis (Req: 5)</li>
+                        <ul>
+                            <li>Base: 0</li>
+                            <li>Power Cap: 2</li>
+                            <li>Turn Eco: 3</li>
+                            <li>Cost 3 (+3 TTT)</li>
+                        </ul>
+                    </ul>
+                </div>
+                <div class='cell'>
+                <b style="color: deeppink">Default Body Energy Forms(Scaling: 20%/25%)</b>
+                <ul>
+                    <li><b>Light Form (Req: 5)</b></li>
+                    <ul>
+                        <li>Base: 8</li>
+                        <li>Cost: 10</li>
+                        <li>Turn Eco: 20</li>
+                    </ul>
+                    <li><b>Heavy Form (Req: 10)</b></li>
+                    <ul>
+                        <li>Base: 40</li>
+                        <li>Cost: 35</li>
+                        <li>Turn Eco: 70</li>
+                        <li>Small AOE</li>
+                    </ul>
+                    <li><b>Immense Form (Req: 15)</b></li>
+                    <ul>
+                        <li>Base: 80</li>
+                        <li>Cost: 65</li>
+                        <li>Turn Eco: 130</li>
+                        <li>Moderate AOE</li>
                     </ul>
                 </ul>
-            </div>
-            <div class='cell'>
-            <b>Body (Scaling: 20%/25%)</b>
-            <ul>
-                <li>Light Form (Req: 5)</li>
-                <ul>
-                    <li>Base: 8</li>
-                    <li>Cost: 10</li>
-                    <li>Turn Eco: 20</li>
-                </ul>
-                <li>Heavy Form (Req: 10)</li>
-                <ul>
-                    <li>Base: 40</li>
-                    <li>Cost: 35</li>
-                    <li>Turn Eco: 70</li>
-                    <li>Small AOE</li>
-                </ul>
-                <li>Immense Form (Req: 15)</li>
-                <ul>
-                    <li>Base: 80</li>
-                    <li>Cost: 65</li>
-                    <li>Turn Eco: 130</li>
-                    <li>Moderate AOE</li>
-                </ul>
-            </ul>
+                </div>
             </div>
         </div>
         <br>
@@ -1223,42 +1318,44 @@
 
     <div class='meleetechniques' id="tab6">
         <span class="label-general">MELEE TECHNQIUES</span><br>
-         <div class='dualcell'>
-            <div class='cell'>
-                <br>
-                <b>Melee-Tech Sequences:</b>
-                <ul>
-                    <li>Lunges & Spikes</li>
-                        <ul>
-                            <li>Lunges</li>
-                            <li>Lauchers</li>
-                            <li>Enders</li>
-                        </ul>
-                    <li>Lauchers & Streaks</li>
-                        <ul>
-                            <li>Streaks</li>
-                            <li>Spikes</li>
-                            <li>Enders</li>
-                        </ul>
-                    <li>Enders</li>
-                        <b>None</b>
-                    <li>Counter & Parries</li>
-                        <b>Used as Defensive Actions and do not Combo</b>
-                </ul>
-            </div>
-            <div class='cell'>
-                <input type= 'hidden' name="attr_techwarning" value=''>
-        
-                <span class="label-general" style="text-align: right">Combo Counter:</span>
-                <input type='text' name="attr_combo_counter" value='@{attr_combo_counter}' readonly='readonly' style="width: 45px;" class="entry-inputs"/>
-                <br>
-                <span class="label-general" style="text-align: right">Weapon Durability:</span>
-                <input type='text' name="attr_weapon-rem-dur" value='@{attr_weapon-rem-dur}' readonly='readonly' style="width: 45px;" class="entry-inputs"/>
-                
-                <span style="color: deeppink;" name="attr_techwarning"></span>
-                <div class="progress">
-                    <input type="hidden" value="0" name="attr_dur-bar" class="durbar">
-                    <div class="durbar"></div>
+        <div  class="menuborder" style="border-radius: 5%;">
+            <div class='dualcell'>
+                <div class='cell'>
+                    <br>
+                    <b style="color: deeppink">Melee-Tech Combo Sequences:</b>
+                    <ul>
+                        <li>Lunges & Spikes Chain into:</li>
+                            <ul>
+                                <li>Lunges</li>
+                                <li>Lauchers</li>
+                                <li>Enders</li>
+                            </ul>
+                        <li>Lauchers & Streaks Chain into:</li>
+                            <ul>
+                                <li>Streaks</li>
+                                <li>Spikes</li>
+                                <li>Enders</li>
+                            </ul>
+                        <li>Enders</li>
+                            <b>None</b>
+                        <li>Counter & Parries</li>
+                            <b style="color: deeppink">Used as Defensive Actions and do not Combo</b>
+                    </ul>
+                </div>
+                <div class='cell'>
+                    <input type= 'hidden' name="attr_techwarning" value=''>
+            
+                    <span class="label-general" style="text-align: right">Combo Counter:</span>
+                    <input type='text' name="attr_combo_counter" value='@{attr_combo_counter}' readonly='readonly' style="width: 45px;" class="entry-inputs"/>
+                    <br>
+                    <span class="label-general" style="text-align: right">Weapon Durability:</span>
+                    <input type='text' name="attr_weapon-rem-dur" value='@{attr_weapon-rem-dur}' readonly='readonly' style="width: 45px;" class="entry-inputs"/>
+                    
+                    <span style="color: deeppink;" name="attr_techwarning"></span>
+                    <div class="progress">
+                        <input type="hidden" value="0" name="attr_dur-bar" class="durbar">
+                        <div class="durbar"></div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -1375,6 +1472,18 @@ energyRadioValues.forEach(value => {
     on(`clicked:Energy_type_${value}`, function() {
         setAttrs({
             Energy_type: value
+        });
+    });
+});
+//governs the increments of progress bars on Health tab. Roll20 won't allow for normal meter or progress HTML tags
+const progressBarList = ["Char_Life_Force","Char_Spirit_Force","Char_Soul_Force","Char_Manna","Char_Demon","Disruption","Pain"];
+progressBarList.forEach(button => {
+    on(`change:${button}`, function() {
+        getAttrs([`max${button}`, button], v => {
+            var ratio = parseInt(parseFloat(v.button/v[`max${button}`])/.10);
+            setAttrs({
+            [`${button}ratio`]: ratio || 0
+            });
         });
     });
 });
@@ -1802,8 +1911,11 @@ on("change:char_constitution", (eventInfo) => {
         dis = parseInt(v["armor-disruption"]);
         setAttrs({
             Char_Life_Force:    parseInt(eventInfo.newValue)*10 + v.Char_Level + 100,
+            maxChar_Life_Force:    parseInt(eventInfo.newValue)*10 + v.Char_Level + 100,
             Disruption:         v.Char_Level + dis + (parseInt(eventInfo.newValue) + v.char_resistance)*5,
-            Pain:               v.Char_Level + (parseInt(eventInfo.newValue) + v.char_discipline)*10   
+            maxDisruption:         v.Char_Level + dis + (parseInt(eventInfo.newValue) + v.char_resistance)*5,
+            Pain:               v.Char_Level + (parseInt(eventInfo.newValue) + v.char_discipline)*10   ,
+            maxPain:               v.Char_Level + (parseInt(eventInfo.newValue) + v.char_discipline)*10
         })
     });
 });
@@ -1814,7 +1926,8 @@ on("change:char_resistance", (eventInfo) => {
         if(v["armor-disruption"]!=="")
         dis = parseInt(v["armor-disruption"]);
         setAttrs({
-            Disruption:         v.Char_Level + dis + (parseInt(eventInfo.newValue) + v.char_constitution)*5
+            Disruption:         v.Char_Level + dis + (parseInt(eventInfo.newValue) + v.char_constitution)*5,
+            maxDisruption:         v.Char_Level + dis + (parseInt(eventInfo.newValue) + v.char_constitution)*5
         })
     });
 });
@@ -1825,6 +1938,7 @@ on("change:char_discipline", (eventInfo) => {
         var CA = v.char_combat_arts + (parseInt(eventInfo.newValue) - parseInt(eventInfo.previousValue))*5
         setAttrs({
             Pain:         v.Char_Level + (parseInt(eventInfo.newValue) + v.char_constitution)*10,
+            maxPain:         v.Char_Level + (parseInt(eventInfo.newValue) + v.char_constitution)*10,
             char_weapon_arts:       WA,
             char_combat_arts:       CA 
         })
@@ -1862,16 +1976,26 @@ on("change:halfbreed", (eventInfo) =>{
         
         setAttrs({
             Char_Demon:     100 + ((eventInfo.newValue=="on") ? v.Char_Level * 9 : v.Char_Level*3),
+            maxChar_Demon:     100 + ((eventInfo.newValue=="on") ? v.Char_Level * 9 : v.Char_Level*3),
             Difficulty:     Diff,
             Age:            Age
         }, {silent: true})
     })
     console.log(eventInfo.newValue);
 });
+
+on("clicked:ecocombat", () => {
+    getAttrs(["combatstate"], v => {
+    
+        setAttrs({combatstate: v.combatstate == "EXIT COMBAT" ? "ENTER COMBAT" : "EXIT COMBAT"})
+        console.log(v.combatstate);
+    })
+
+});
 //equips weapon
 on("clicked:repeating_weapons:equip-primaryweapon clicked:repeating_weapons:equip-secondaryweapon", function(eventInfo) {
     // Check the current value of the hidden attribute.
-    
+    console.log(hippo);
     const rowid = eventInfo.sourceAttribute.split('_')[2];
     const weaponPriority = eventInfo.sourceAttribute.split('_')[3];//Secondary or Primary
     const warning = weaponPriority === "equip-primaryweapon" ? "primary" : "secondary";
@@ -2473,7 +2597,6 @@ on('clicked:endTurn', ()=>{
 });
 
 on('clicked:AddLevel', function() {
-    
     getAttrs(["Char_Level"], function(value){
         setAttrs({
             Char_Level: ((parseInt(value.Char_Level)+1) || 1)
@@ -2482,7 +2605,6 @@ on('clicked:AddLevel', function() {
 });
 
 on('clicked:Add10Level', function() {
-    
     getAttrs(["Char_Level"], function(value){
         setAttrs({
             Char_Level: ((parseInt(value.Char_Level)+10) || 10)
@@ -2532,13 +2654,20 @@ on('change:Char_Race', function(eventInfo) {
             catalyst_demon:     ((Math.floor(value.Char_Level/2)) || 0),
             catalyst_necro:     ((Math.floor(value.Char_Level/2)) || 0),
             Char_Life_Force:    parseInt(value.Char_Level) + 100 + (NewBase.Con* 10),
+            maxChar_Life_Force:    parseInt(value.Char_Level) + 100 + (NewBase.Con* 10),
             Char_Manna:         parseInt(value.Char_Level) + 100 + parseInt(value.Char_Manna_Training),
+            maxChar_Manna:         parseInt(value.Char_Level) + 100 + parseInt(value.Char_Manna_Training),
             Char_Demon:         0,
+            maxChar_Demon:      parseInt(value.Char_Level)*3 + 100,
+            maxChar_Spirit_Force: 200,
+            maxChar_Spirit_Force: 300,
             halfbreed:          "",
             spell_points:       (value.Char_Level*NewBase.SPG) + NewBase.SPB - ((value.Char_Level*OldBase.SPG) + OldBase.SPB - value.spell_points),
             skill_points:       (value.Char_Level*NewBase.SKG) + NewBase.SKB - ((value.Char_Level*OldBase.SKG) + OldBase.SKB - value.skill_points),
             Disruption:         parseInt(value.Char_Level) + dis + (NewBase.Res + NewBase.Con)*5,
+            maxDisruption:         parseInt(value.Char_Level) + dis + (NewBase.Res + NewBase.Con)*5,
             Pain:               parseInt(value.Char_Level) + (NewBase.Con + NewBase.Dis)*10,
+            maxPain:               parseInt(value.Char_Level) + (NewBase.Con + NewBase.Dis)*10,
             defend:             "",
             phasestep:          "",
             phasejump:          "",
@@ -2561,7 +2690,7 @@ on('change:Char_Race', function(eventInfo) {
 });
 
 on('change:Char_Level', function(eventInfo) {
-    getAttrs(["char_constitution","char_discipline","char_resistance","Char_Manna_Training","Char_Race","Age","armor-disruption","spell_points","skill_points"], function(value){
+    getAttrs(["char_constitution","char_discipline","char_resistance","Char_Manna_Training","Char_Race","Age","armor-disruption","halfbreed","spell_points","skill_points"], function(value){
         
         let Base = Adjust_Race(value.Char_Race);
         var dis = 0;
@@ -2576,11 +2705,16 @@ on('change:Char_Level', function(eventInfo) {
             catalyst_demon:     ((Math.floor(parseInt(eventInfo.newValue)/2)) || 0),
             catalyst_necro:     ((Math.floor(parseInt(eventInfo.newValue)/2)) || 0),
             Char_Life_Force:    parseInt(eventInfo.newValue) + 100 + (value.char_constitution * 10),
+            maxChar_Life_Force:    parseInt(eventInfo.newValue) + 100 + (value.char_constitution * 10),
             Char_Manna:         parseInt(eventInfo.newValue) + 100 + value.Char_Manna_Training,
+            maxChar_Manna:         parseInt(eventInfo.newValue) + 100 + value.Char_Manna_Training,
+            maxChar_Demon:      value.halfbreed == "" ? parseInt(value.Char_Level)*3 + 100 : parseInt(value.Char_Level)*9 + 100,
             spell_points:       value.spell_points + ((parseInt(eventInfo.newValue) - parseInt(eventInfo.previousValue))*Base.SPG),
             skill_points:       value.skill_points + ((parseInt(eventInfo.newValue) - parseInt(eventInfo.previousValue))*Base.SKG),
             Disruption:         parseInt(eventInfo.newValue) + dis + ((value.char_resistance + value.char_constitution) *5),
+            maxDisruption:         parseInt(eventInfo.newValue) + dis + ((value.char_resistance + value.char_constitution) *5),
             Pain:               parseInt(eventInfo.newValue) + (parseInt(value.char_discipline) + parseInt(value.char_constitution)) * 10,
+            maxPain:               parseInt(eventInfo.newValue) + (parseInt(value.char_discipline) + parseInt(value.char_constitution)) * 10,
             Age:                parseInt(value.Age) - (parseInt(eventInfo.newValue) - parseInt(eventInfo.previousValue))
         }, {silent:true});
         Adjust_Energy();
