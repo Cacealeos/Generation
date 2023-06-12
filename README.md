@@ -14,6 +14,8 @@
 - Manna manifests the components of humanity to yield power in the form of Catalysts: ==Mental==, ==Body==, ==Spirit==, and ==Memory==. These are used to create an `Aura`.
 - An `Aura` gives its user superhuman capabilites that are proportional to its catalysts virtues: ==Power==, ==Flight==, ==Speed==, and ==Endurance==.
 - Wield your Aura itself as a weapon and take up arms or use Manna's ability to commune with and command the universe. Such orders and negotiations are called `Magic`.
+
+
 ![Power](https://media.giphy.com/media/fiyQQLci4d1w6Njojo/giphy.gif)
 
 ## 【﻿Ｍａｎｎａ】
