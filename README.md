@@ -2,7 +2,7 @@
 # _- G E N E R A T I O N -_
 ---
 ###### _New TTRPG Format_
-#### _*Playtesting* : STORM TAMER - 2023_
+#### _*Playtesting* : X - 2023_
 
 ![Vortex](https://media.giphy.com/media/3o7aCQTyoPLEVwVtZK/giphy.gif)
 
