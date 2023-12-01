@@ -262,6 +262,259 @@ input:not([value="0"]) + .hits {
 
 /*************************************************************END COMBO SECTION*********************************************************************************/
 
+/*************************************************************SPELL SECTION**********************************************************************************/
+
+.spellcast-menuborder {
+  border-image-source: var(--borderimg);
+  border-image-slice: 300;
+  border-image-width: 45px;
+  border-image-outset: 5px;
+  border-width: 15px;
+  border-radius: 6%;
+  background: black;
+  margin:  10px;
+  /* -webkit-filter: hue-rotate(var(--huefilter2)) grayscale(var(--grayscale));
+    filter: hue-rotate(var(--huefilter2)) grayscale(var(--grayscale));*/
+  padding: 13px;
+  }
+
+.spellTabToggleTool {
+  position: absolute;
+  z-index: 21;
+}
+
+.spellcastBtn.spellcastBtn.spellcastBtn{
+  background: var(--neutral);
+  background-color: black;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  display: block;
+  opacity: 0;
+  position: relative;
+  border-width: 1px;
+  border-color: black;
+  width:  70px;
+  height: 70px;
+  left: 42%;
+  margin-bottom: 5%;
+}
+
+input[value="None"] ~ .spellcastBtn.spellcastBtn.spellcastBtn {
+  opacity: 0;
+}
+
+.spellcastgif:hover > .spellcastBtn.spellcastBtn.spellcastBtn{
+  opacity: 1;
+  transition: opacity .5s ease-out;
+}
+
+.spellcastgif:hover {
+  box-shadow: -5px 5px 3px var(--bgcolor) inset,
+  5px -5px 3px var(--bgcolor) inset;
+}
+
+.spellcastgif {
+  width: 102%;
+  height: 40%;
+  border-radius: 6%;
+  position: relative;
+  right: 1%;
+  display: block;
+  background-image: url('https://raw.githubusercontent.com/Cacealeos/Generation/master/BlueType1/bluecenter2.jpg');
+  background-size: contain;
+  background-position: top left, top right, bottom left, bottom right;
+  background-repeat: repeat;
+}
+
+input#info[type='radio']:checked ~ .spellcastgif,
+input#cast[type='radio']:checked ~ .spellcastInfo {
+  display: none;
+}
+
+.st_slot1 div.repcontrol,
+.st_slot2 div.repcontrol,
+.st_slot3 div.repcontrol,
+.st_slot4 div.repcontrol,
+.st_slot5 div.repcontrol,
+.st_slot6 div.repcontrol,
+.st_slot7 div.repcontrol {
+  position: absolute;
+}
+
+/*input[value="None"] ~ .spellcastgif {
+  background-image: url('https://raw.githubusercontent.com/Cacealeos/Generation/master/BlueType1/bluecenter2.jpg');
+  background-size: contain;
+  background-position: top left, top right, bottom left, bottom right;
+  background-repeat: repeat;
+}*/
+input[value="Elementalism"] ~ .spellcastgif {
+  background-image: url('https://raw.githubusercontent.com/Cacealeos/Generation/master/gifs/Elementalism.gif');
+  background-size: 100% 100%;
+
+  background-repeat: no-repeat;
+}
+input[value="Elementalism2"] ~ .spellcastgif {
+  background-image: url('https://raw.githubusercontent.com/Cacealeos/Generation/master/gifs/Elementalism2.gif');
+  background-size: 100% 100%;
+
+  background-repeat: no-repeat;
+}
+input[value="Elementalism3"] ~ .spellcastgif {
+  background-image: url('https://raw.githubusercontent.com/Cacealeos/Generation/master/gifs/Elementalism3.gif');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+input[value="Kinetics"] ~ .spellcastgif {
+  background-image: url('https://raw.githubusercontent.com/Cacealeos/Generation/master/gifs/Kinetics.gif');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+input[value="Kinetics2"] ~ .spellcastgif {
+  background-image: url('https://raw.githubusercontent.com/Cacealeos/Generation/master/gifs/Kinetics2.gif');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+input[value="Kinetics3"] ~ .spellcastgif {
+  background-image: url('https://raw.githubusercontent.com/Cacealeos/Generation/master/gifs/Kinetics3.gif');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+input[value="Plying Arts"] ~ .spellcastgif {
+  background-image: url('https://raw.githubusercontent.com/Cacealeos/Generation/master/gifs/Plying.gif');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+input[value="High Magic"] ~ .spellcastgif {
+  background-image: url('https://raw.githubusercontent.com/Cacealeos/Generation/master/gifs/High.gif');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+input[value="High Magic2"] ~ .spellcastgif {
+  background-image: url('https://raw.githubusercontent.com/Cacealeos/Generation/master/gifs/High2.gif');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+input[value="Enchanting"] ~ .spellcastgif {
+  background-image: url('https://raw.githubusercontent.com/Cacealeos/Generation/master/gifs/Enchanting.gif');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+input[value="Enchanting2"] ~ .spellcastgif {
+  background-image: url('https://raw.githubusercontent.com/Cacealeos/Generation/master/gifs/Enchanting2.gif');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+input[value="Elder Magic"] ~ .spellcastgif {
+  background-image: url('https://raw.githubusercontent.com/Cacealeos/Generation/master/gifs/Elder.gif');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+input[value="Deliverance"] ~ .spellcastgif {
+  background-image: url('https://raw.githubusercontent.com/Cacealeos/Generation/master/gifs/Deliverance.gif');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+input[value="Sealing"] ~ .spellcastgif {
+  background-image: url('https://raw.githubusercontent.com/Cacealeos/Generation/master/gifs/Sealing.gif');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+input[value="Transcendentalism"] ~ .spellcastgif {
+  background-image: url('https://raw.githubusercontent.com/Cacealeos/Generation/master/gifs/Transcendental.gif');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+input[value="Transcendentalism2"] ~ .spellcastgif {
+  background-image: url('https://raw.githubusercontent.com/Cacealeos/Generation/master/gifs/Transcendental2.gif');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+input[value="Arcane"] ~ .spellcastgif {
+  background-image: url('https://raw.githubusercontent.com/Cacealeos/Generation/master/gifs/Arcane.gif');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+input[value="Demonic Magic"] ~ .spellcastgif {
+  background-image: url('https://raw.githubusercontent.com/Cacealeos/Generation/master/gifs/demon.gif');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+input[value="Demonic Magic2"] ~ .spellcastgif {
+  background-image: url('https://raw.githubusercontent.com/Cacealeos/Generation/master/gifs/Demon2.gif');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+input[value="Ghosting Arts"] ~ .spellcastgif {
+  background-image: url('https://raw.githubusercontent.com/Cacealeos/Generation/master/gifs/Ghosting.gif');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+input[value="Ghosting Arts2"] ~ .spellcastgif {
+  background-image: url('https://raw.githubusercontent.com/Cacealeos/Generation/master/gifs/Ghosting2.gif');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+input[value="Alchemy"] ~ .spellcastgif {
+  background-image: url('https://raw.githubusercontent.com/Cacealeos/Generation/master/gifs/Alchemy.gif');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+input[value="Alchemy3"] ~ .spellcastgif {
+  background-image: url('https://raw.githubusercontent.com/Cacealeos/Generation/master/gifs/Alchemy3.gif');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+input[value="Sorcery"] ~ .spellcastgif {
+  background-image: url('https://raw.githubusercontent.com/Cacealeos/Generation/master/gifs/Sorcery.gif');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+input[value="Prayer"] ~ .spellcastgif {
+  background-image: url('https://raw.githubusercontent.com/Cacealeos/Generation/master/gifs/Prayer.gif');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+input[value="Godden Magic"] ~ .spellcastgif {
+  background-image: url('https://raw.githubusercontent.com/Cacealeos/Generation/master/gifs/Godden.gif');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+
+.spellcastName {
+  position: relative;
+  left: 10%;
+  background: linear-gradient(
+    to left,
+    rgba(0, 0, 0, 0),
+    var(--bgcolor),
+    rgba(0, 0, 0, 0)
+  );
+  text-align: center;
+  border: 0;
+  color: black;
+  width: 80%;
+  font-size: 32px;
+  text-shadow:
+     0 0 0 #000;
+  outline: none;
+  text-decoration: underline;
+  text-decoration-thickness: 1%;
+}
+
+.spellcastName.spellcastBranch {
+  font-size: 14px;
+  text-decoration: none;
+}
+
+
+
+/*disables roll20 logo
+.st_slot1 button[type=roll].spellcastBtn::before {
+    content: " ";
+}
+*/
 /*************************************************************INFO TAB SECTION**********************************************************************************/
 
 .infoTabBar {
@@ -271,7 +524,7 @@ input:not([value="0"]) + .hits {
   height: 27px;
   text-align: center;
   font-weight: bold;
-  top: 8%;
+  top: 7%;
   left: 3%;
   z-index: 45;
   font-family: Garamond;
@@ -289,16 +542,32 @@ input:not([value="0"]) + .hits {
   border-width: 2px;
 }
 
-.infoTab:hover {
+.NotesInfo {
+  width: 20%;
+  background:  radial-gradient(#e6db74, #a17f1a);
+  color: #272822;
+  text-shadow:
+     0 0 0 #000;
+  border-style: outset;
+  border-width: 2px;
+  border-color: #272822;
+  font-weight: bold;
+  font-family: Garamond;
+  font-size: 14px;
+}
+
+.infoTab:hover,
+.NotesInfo:hover {
   background: #272822;
   color: #e6db74;
+  border-color: #e6db74;
 }
 
 .infoTabDis {
   text-align: left;
   font-family: Georgia, serif;
   position: absolute;
-  top:  5%;
+  top:  15%;
   background:  #272822;
   color: #e6db74;
   font-size: 11px;
@@ -312,6 +581,7 @@ input:not([value="0"]) + .hits {
   display: none;
 }
 
+  input[value="true"] ~ .NotesInfoDis,
   .CharInfo:hover ~ .CharInfoDis,
   .CharInfoDis:hover ~ .CharInfoDis,
   .TurnInfo:hover ~ .TurnInfoDis,
@@ -319,6 +589,22 @@ input:not([value="0"]) + .hits {
   .CombatInfo:hover ~ .CombatInfoDis,
   .NotesInfo:hover ~ .NotesInfoDis {
     display: block;
+  }
+
+  .logarea {
+    width: 85%;
+    background: #272822;
+    color: #e6db74;
+    outline: none;
+    overflow: auto;
+    font-weight: bold;
+    font-family: Garamond;
+    font-size: 14px;
+    text-shadow:
+     0 0 0 #000;
+    border-color: #e6db74;
+    border-style: outset;
+    border-width: 2.5px;
   }
 
 /*************************************************************END INFO TAB SECTION**********************************************************************************/
@@ -883,8 +1169,9 @@ url('https://raw.githubusercontent.com/Cacealeos/Generation/master/SpiritBorder.
 
 .melee-arts, 
 .defense-arts {
-  flex-flow: column;
-  width: 50%;
+/*  flex-flow: column;*/
+  width: 100%;
+  display: block;
 }
 .menuborder {
   border-image-source: var(--borderimg);
@@ -892,11 +1179,11 @@ url('https://raw.githubusercontent.com/Cacealeos/Generation/master/SpiritBorder.
   border-image-width: 45px;
   border-image-outset: 5px;
   border-width: 15px;
-  border-radius: 10%;
+  border-radius: 6%;
   background-image: url('https://raw.githubusercontent.com/Cacealeos/Generation/master/BlueType1/bluecenter2.jpg');
-  background-size: cover;
+  background-size: contain;
   background-position: top left, top right, bottom left, bottom right;
-  background-repeat: inherit;
+  background-repeat: repeat;
   margin:  10px;
    -webkit-filter: hue-rotate(var(--huefilter2)) grayscale(var(--grayscale));;
     filter: hue-rotate(var(--huefilter2)) grayscale(var(--grayscale));
@@ -1035,6 +1322,7 @@ input.race:not([value="Magian"]) ~ button.race-2 > span.checked,
 input.race:not([value="Adept"]) ~ button.race-3 > span.checked,
 input.race:not([value="Arbiter"]) ~ button.race-4 > span.checked,
 input.race:not([value="Necrian"]) ~ button.race-5 > span.checked,
+input.race:not([value="Riahan"]) ~ button.race-6 > span.checked,
 input.moduletype-toggle:not([value="assault"]) ~ button.mod-1 > span.checked,
 input.moduletype-toggle:not([value="vigilant"]) ~ button.mod-2 > span.checked,
 input.moduletype-toggle:not([value="caster"]) ~ button.mod-3 > span.checked,
@@ -1042,7 +1330,8 @@ input.moduletype-toggle:not([value="universal"]) ~ button.mod-4 > span.checked,
 input.weapon-toggle:not([value="primary"]) ~ div.primaryweapon,
 input.weapon-toggle:not([value="secondary"]) ~ div.secondaryweapon,
 input.weapon-toggle:not([value="dual"]) ~ div.dualweapon,
-input.weapon-toggle:not([value="ranged"]) ~ div.rangedweapon {
+input.weapon-toggle:not([value="ranged"]) ~ div.rangedweapon,
+input.weapon-toggle:not([value="unarmed"]) ~ div.handtohandweapon {
   display: none;
 }
 
@@ -1098,6 +1387,7 @@ input.checkbox:not([value="1"]) ~ button.checkbox > span.checked {
 .battle-sect {
   display: flex;
   position: absolute;
+  width: 90%;
   left: 8%;
 }
 
@@ -1202,10 +1492,10 @@ input.hiddeneco[value="ENTER COMBAT"] ~ .ecobtn {
 /*#WeaponBlock:checked {
 
 }*/
-input#CombatBlock[type='radio']:checked ~ .weaponGGMeter,
+/*input#CombatBlock[type='radio']:checked ~ .weaponGGMeter,
 input#WeaponBlock[type='radio']:checked ~ .combatGGMeter  {
   display: none;
-}
+}*/
 
 .actCircle {
   border-radius: 15px;
@@ -1544,16 +1834,28 @@ button.mod > span.checked {
 }
 */
 
-/******************************************************************* TRAINING & TITLES & SPELLS & TECH TAB DISPLAY********************************************************************/
+/******************************************************************* TRAINING & TITLES & SPELLS & TECH TAB DISPLAY ********************************************************************/
 .st_slot1,
 .st_slot2,
 .st_slot3,
+.st_slot4,
+.st_slot5,
+.st_slot6,
+.st_slot7,
 .et_slot1,
 .et_slot2,
 .et_slot3,
+.et_slot4,
+.et_slot5,
+.et_slot6,
+.et_slot7,
 .mt_slot1,
 .mt_slot2,
 .mt_slot3,
+.mt_slot4,
+.mt_slot5,
+.mt_slot6,
+.mt_slot7,
 .tr_slot1,
 .tr_slot2,
 .tr_slot3,
@@ -1592,12 +1894,24 @@ input[value='minor'] ~ .train1 {
 #spellList[value="1"] ~ .st_slot1,
 #spellList[value="2"] ~ .st_slot2,
 #spellList[value="3"] ~ .st_slot3,
+#spellList[value="4"] ~ .st_slot4,
+#spellList[value="5"] ~ .st_slot5,
+#spellList[value="6"] ~ .st_slot6,
+#spellList[value="7"] ~ .st_slot7,
 #eTechList[value="1"] ~ .et_slot1,
 #eTechList[value="2"] ~ .et_slot2,
 #eTechList[value="3"] ~ .et_slot3,
+#eTechList[value="4"] ~ .et_slot4,
+#eTechList[value="5"] ~ .et_slot5,
+#eTechList[value="6"] ~ .et_slot6,
+#eTechList[value="7"] ~ .et_slot7,
 #mTechList[value="1"] ~ .mt_slot1,
 #mTechList[value="2"] ~ .mt_slot2,
 #mTechList[value="3"] ~ .mt_slot3,
+#mTechList[value="4"] ~ .mt_slot4,
+#mTechList[value="5"] ~ .mt_slot5,
+#mTechList[value="6"] ~ .mt_slot6,
+#mTechList[value="7"] ~ .mt_slot7,
 #titleList[value="1"] ~ .tt_slot1,
 #titleList[value="2"] ~ .tt_slot2,
 #titleList[value="3"] ~ .tt_slot3,
@@ -1620,12 +1934,24 @@ input[value='minor'] ~ .train1 {
 #spellList[value="1"] ~ #tab1,
 #spellList[value="2"] ~ #tab2,
 #spellList[value="3"] ~ #tab3,
+#spellList[value="4"] ~ #tab4,
+#spellList[value="5"] ~ #tab5,
+#spellList[value="6"] ~ #tab6,
+#spellList[value="7"] ~ #tab7,
 #eTechList[value="1"] ~ #tab1,
 #eTechList[value="2"] ~ #tab2,
 #eTechList[value="3"] ~ #tab3,
+#eTechList[value="4"] ~ #tab4,
+#eTechList[value="5"] ~ #tab5,
+#eTechList[value="6"] ~ #tab6,
+#eTechList[value="7"] ~ #tab7,
 #mTechList[value="1"] ~ #tab1,
 #mTechList[value="2"] ~ #tab2,
 #mTechList[value="3"] ~ #tab3,
+#mTechList[value="4"] ~ #tab4,
+#mTechList[value="5"] ~ #tab5,
+#mTechList[value="6"] ~ #tab6,
+#mTechList[value="7"] ~ #tab7,
 #titleList[value="1"] ~ #tab1,
 #titleList[value="2"] ~ #tab2,
 #titleList[value="3"] ~ #tab3,
@@ -1799,6 +2125,15 @@ input[value='on'] ~ .ether {
   display: block;
 }
 
+.graphicsbtn {
+  display: block;
+  position: absolute;
+  z-index: 25;
+}
+
+input[value='0'] ~ .graphics {
+  display: none;
+}
 
 /******************************************************************* END CATALYST SECTION ********************************************************************/
 
@@ -1957,8 +2292,574 @@ input.durbar[value="1"] ~ div.durbar {
 input.durbar[value="1"] ~ div.durbar:before {
         content: "~ 20%";
 }
+/******************************************************************* ICONS ************************************************************************************/
 
+.iconbutton {
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  display: inline-block;
+  background-color: #e6db74;
+  border-color: #e6db74;
+  border-width: 4px;
+  border-style: groove;
+  width: 10%;
+  height: 25px;
+}
+
+input[value="primary"] ~ button.mainhandIcon,
+input[value="ranged"] ~ button.secondaryIcon,
+input[value="dual"] ~ button.dualhandIcon,
+input[value="secondary"] ~ button.offhandIcon,
+input[value="unarmed"] ~ button.unarmedIcon,
+input[value="weapon"] ~ button.weaponArtsIcon,
+input[value="combat"] ~ button.combatArtsIcon,
+.iconbutton:hover {
+  border-color: lightcyan;
+  box-shadow: 0 0 10px 5px var(--bgcolor2),
+            inset 0 0 10px 5px var(--bgcolor2);
+}
+
+input[value="combat"] ~ .weaponGGMeter,
+input[value="weapon"] ~ .combatGGMeter,
+input[value='ranged'] ~ #comboButton  {
+  display: none;
+}
+
+
+.mainhandIcon {
+  background-image: url('https://raw.githubusercontent.com/Cacealeos/Generation/master/Icons/main.png');
+  
+}
+.offhandIcon {
+  background-image: url('https://raw.githubusercontent.com/Cacealeos/Generation/master/Icons/off.png');
+  
+}
+.secondaryIcon {
+  background-image: url('https://raw.githubusercontent.com/Cacealeos/Generation/master/Icons/secondary.png');
+  
+}
+.dualhandIcon {
+  background-image: url('https://raw.githubusercontent.com/Cacealeos/Generation/master/Icons/dual.png');
+  
+}
+.unarmedIcon {
+  background-image: url('https://raw.githubusercontent.com/Cacealeos/Generation/master/Icons/combatarts.png');
+  
+}
+.weaponArtsIcon {
+  background-image: url('https://raw.githubusercontent.com/Cacealeos/Generation/master/Icons/combat.png');
+  
+}
+.combatArtsIcon {
+  background-image: url('https://raw.githubusercontent.com/Cacealeos/Generation/master/Icons/combatarts.png');
+  
+}
+.blockIcon {
+  background-image: url('https://raw.githubusercontent.com/Cacealeos/Generation/master/Icons/block.png');
+  
+}
+
+.battleDisplay {
+  padding: 3px;
+  background: linear-gradient(
+    to left,
+    rgba(0, 0, 0, 0),
+    #00ffCC,
+/*    #00CC99,*/
+    rgba(0, 0, 0, 0)
+  ) !important;
+  border: none;
+  outline: none;
+  text-align: center;
+  color: black;
+/*  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;*/
+  width: 85%;
+  font-size: 14px;
+  text-decoration: underline;
+}
+
+.battleCapsule {
+  padding: 3px;
+  padding-left: 8px;
+/*  border-color: 
+    linear-gradient(
+      to right, 
+         #00ffCC,
+    #00CC99,
+      rgba(0, 0, 0, 0)
+    ) 5;*/
+  background: linear-gradient(
+    to right,
+    #14211b,
+    #14211b,
+    rgba(0, 0, 0, 0)
+  ) content-box,
+  linear-gradient(to left, transparent, transparent, #00ffCC, #00ffCC) border-box;
+  border-radius: 23px ;
+  color: mediumspringgreen;
+  width: 75%;
+  font-size: 14px;
+  display: block;
+  position: relative;
+  text-align: left;
+  left: 15%;
+}
+
+.battleCapsule > input {
+  position: absolute;
+  display: block;
+  top: 0%;
+  left: 30%;
+  padding-left: 5%;
+  background: linear-gradient(
+    to right,
+    #00ffCC,
+    #00ffCC,
+    #00ffCC,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0)
+  ) !important;
+  border-radius: 23px;
+  border: none;
+  /*border-style: ridge !important;
+  border-top: 0;
+  border-right: 0;
+  border-bottom: 0;
+  border-left: 12px;
+  border-color: #14211b;*/
+  text-align: center;
+  color: black;
+/*  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;*/
+  width: 70%;
+  font-size: 16px;
+  font-stretch: ultra-expanded;
+  font-weight: bold;
+  text-align: left;
+}
+
+.battleCapsule > b {
+  margin-left: 5%;
+
+}
+
+/******************************************************************* END ICONS ********************************************************************************/
 /******************************************************************* PROGRESS BAR WIDTH ETC. ********************************************************************/
+
+.battleBar {
+  background-image: url('https://raw.githubusercontent.com/Cacealeos/Generation/master/Icons/ProgressBarfull.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  transform:  scale(0.8) ;
+  display: block;
+  width: 100%;
+  height: 65px;
+  position: relative;
+}
+
+.battleBar > button {
+  width: 70%;
+  font-size: 14px;
+  display: block;
+  position: relative;
+  left: 13%;
+  top: 27%;
+}
+
+.battleGauge {
+  padding: 2%;
+  height: 14px;
+  position: relative;
+  width: 0%;
+  left: 5%;
+  margin-top: 3px;
+  border-radius: 10px;
+  height: 0px;
+  /*top: 25%;
+  opacity: 50%;
+  transition: width 4s, display 2s;
+  transition-timing-function: ease-in;
+  transition-delay: 1s;*/
+}
+
+.mainBaseGauge,
+.offBaseGauge,
+.dualBaseGauge,
+.unarmedBaseGauge,
+.mainAccGauge,
+.offAccGauge,
+.dualAccGauge,
+.unarmedAccGauge, 
+.mainEvaGauge,
+.offEvaGauge,
+.dualEvaGauge,
+.unarmedEvaGauge,
+.mainStressGauge,
+.offStressGauge,
+.dualStressGauge,
+.unarmedStressGauge,
+.mainGuardGauge,
+.offGuardGauge,
+.dualGuardGauge,
+.unarmedGuardGauge,
+.mainGuardDGauge,
+.offGuardDGauge,
+.dualGuardDGauge,
+.unarmedGuardDGauge,
+.mainDurGauge,
+.offDurGauge,
+.dualDurGauge,
+.unarmedDurGauge {
+  transition: width 2s, opacity 0.5s;
+  transition-timing-function: ease-in;
+  position: absolute;
+  opacity: 0;
+}
+
+.hoverBASE:hover > .mainBaseGauge,
+.hoverBASE:hover > .offBaseGauge,
+.hoverBASE:hover > .dualBaseGauge,
+.hoverBASE:hover > .unarmedBaseGauge,
+.hoverACC:hover > .mainAccGauge,
+.hoverACC:hover > .offAccGauge,
+.hoverACC:hover > .dualAccGauge,
+.hoverACC:hover > .unarmedAccGauge, 
+.hoverEVA:hover > .mainEvaGauge,
+.hoverEVA:hover > .offEvaGauge,
+.hoverEVA:hover > .dualEvaGauge,
+.hoverEVA:hover > .unarmedEvaGauge,
+.hoverSTRESS:hover > .mainStressGauge,
+.hoverSTRESS:hover > .offStressGauge,
+.hoverSTRESS:hover > .dualStressGauge,
+.hoverSTRESS:hover > .unarmedStressGauge,
+.hoverGUARD:hover > .mainGuardGauge,
+.hoverGUARD:hover > .offGuardGauge,
+.hoverGUARD:hover > .dualGuardGauge,
+.hoverGUARD:hover > .unarmedGuardGauge,
+.hoverGUARDD:hover > .mainGuardDGauge,
+.hoverGUARDD:hover > .offGuardDGauge,
+.hoverGUARDD:hover > .dualGuardDGauge,
+.hoverGUARDD:hover > .unarmedGuardDGauge,
+.hoverDUR:hover > .mainDurGauge,
+.hoverDUR:hover > .offDurGauge,
+.hoverDUR:hover > .dualDurGauge,
+.hoverDUR:hover > .unarmedDurGauge {
+  opacity: 1;
+  position: relative;
+  height: 2px;
+}
+
+.battleMeter[value="10"] + .mainBaseGauge,
+.battleMeter[value="10"] + .offBaseGauge,
+.battleMeter[value="10"] + .dualBaseGauge,
+.battleMeter[value="10"] + .unarmedBaseGauge,
+.battleMeter[value="10"] + .mainAccGauge,
+.battleMeter[value="10"] + .offAccGauge,
+.battleMeter[value="10"] + .dualAccGauge,
+.battleMeter[value="10"] + .unarmedAccGauge,
+.battleMeter[value="10"] + .mainEvaGauge,
+.battleMeter[value="10"] + .offEvaGauge,
+.battleMeter[value="10"] + .dualEvaGauge,
+.battleMeter[value="10"] + .unarmedEvaGauge,
+.battleMeter[value="10"] + .mainStressGauge,
+.battleMeter[value="10"] + .offStressGauge,
+.battleMeter[value="10"] + .dualStressGauge,
+.battleMeter[value="10"] + .unarmedStressGauge,
+.battleMeter[value="10"] + .mainGuardGauge,
+.battleMeter[value="10"] + .offGuardGauge,
+.battleMeter[value="10"] + .dualGuardGauge,
+.battleMeter[value="10"] + .unarmedGuardGauge,
+.battleMeter[value="10"] + .mainGuardDGauge,
+.battleMeter[value="10"] + .offGuardDGauge,
+.battleMeter[value="10"] + .dualGuardDGauge,
+.battleMeter[value="10"] + .unarmedGuardDGauge,
+.battleMeter[value="10"] + .mainDurGauge,
+.battleMeter[value="10"] + .offDurGauge,
+.battleMeter[value="10"] + .dualDurGauge,
+.battleMeter[value="10"] + .unarmedDurGauge {
+  width: 72%;
+  background: linear-gradient(#3c0497, rgba(0, 0, 0));
+}
+.battleMeter[value="9"] + .mainBaseGauge,
+.battleMeter[value="9"] + .offBaseGauge,
+.battleMeter[value="9"] + .dualBaseGauge,
+.battleMeter[value="9"] + .unarmedBaseGauge,
+.battleMeter[value="9"] + .mainAccGauge,
+.battleMeter[value="9"] + .offAccGauge,
+.battleMeter[value="9"] + .dualAccGauge,
+.battleMeter[value="9"] + .unarmedAccGauge,
+.battleMeter[value="9"] + .mainEvaGauge,
+.battleMeter[value="9"] + .offEvaGauge,
+.battleMeter[value="9"] + .dualEvaGauge,
+.battleMeter[value="9"] + .unarmedEvaGauge,
+.battleMeter[value="9"] + .mainStressGauge,
+.battleMeter[value="9"] + .offStressGauge,
+.battleMeter[value="9"] + .dualStressGauge,
+.battleMeter[value="9"] + .unarmedStressGauge,
+.battleMeter[value="9"] + .mainGuardGauge,
+.battleMeter[value="9"] + .offGuardGauge,
+.battleMeter[value="9"] + .dualGuardGauge,
+.battleMeter[value="9"] + .unarmedGuardGauge,
+.battleMeter[value="9"] + .mainGuardDGauge,
+.battleMeter[value="9"] + .offGuardDGauge,
+.battleMeter[value="9"] + .dualGuardDGauge,
+.battleMeter[value="9"] + .unarmedGuardDGauge,
+.battleMeter[value="9"] + .mainDurGauge,
+.battleMeter[value="9"] + .offDurGauge,
+.battleMeter[value="9"] + .dualDurGauge,
+.battleMeter[value="9"] + .unarmedDurGauge {
+  width: 64%;
+  background: linear-gradient(#600bec, rgba(0, 0, 0));
+}
+.battleMeter[value="8"] + .mainBaseGauge,
+.battleMeter[value="8"] + .offBaseGauge,
+.battleMeter[value="8"] + .dualBaseGauge,
+.battleMeter[value="8"] + .unarmedBaseGauge,
+.battleMeter[value="8"] + .mainAccGauge,
+.battleMeter[value="8"] + .offAccGauge,
+.battleMeter[value="8"] + .dualAccGauge,
+.battleMeter[value="8"] + .unarmedAccGauge,
+.battleMeter[value="8"] + .mainEvaGauge,
+.battleMeter[value="8"] + .offEvaGauge,
+.battleMeter[value="8"] + .dualEvaGauge,
+.battleMeter[value="8"] + .unarmedEvaGauge,
+.battleMeter[value="8"] + .mainStressGauge,
+.battleMeter[value="8"] + .offStressGauge,
+.battleMeter[value="8"] + .dualStressGauge,
+.battleMeter[value="8"] + .unarmedStressGauge,
+.battleMeter[value="8"] + .mainGuardGauge,
+.battleMeter[value="8"] + .offGuardGauge,
+.battleMeter[value="8"] + .dualGuardGauge,
+.battleMeter[value="8"] + .unarmedGuardGauge,
+.battleMeter[value="8"] + .mainGuardDGauge,
+.battleMeter[value="8"] + .offGuardDGauge,
+.battleMeter[value="8"] + .dualGuardDGauge,
+.battleMeter[value="8"] + .unarmedGuardDGauge,
+.battleMeter[value="8"] + .mainDurGauge,
+.battleMeter[value="8"] + .offDurGauge,
+.battleMeter[value="8"] + .dualDurGauge,
+.battleMeter[value="8"] + .unarmedDurGauge
+ {
+  width: 56%;
+  background: linear-gradient(#ec0b0b, rgba(0, 0, 0));
+}
+.battleMeter[value="7"] + .mainBaseGauge,
+.battleMeter[value="7"] + .offBaseGauge,
+.battleMeter[value="7"] + .dualBaseGauge,
+.battleMeter[value="7"] + .unarmedBaseGauge,
+.battleMeter[value="7"] + .mainAccGauge,
+.battleMeter[value="7"] + .offAccGauge,
+.battleMeter[value="7"] + .dualAccGauge,
+.battleMeter[value="7"] + .unarmedAccGauge,
+.battleMeter[value="7"] + .mainEvaGauge,
+.battleMeter[value="7"] + .offEvaGauge,
+.battleMeter[value="7"] + .dualEvaGauge,
+.battleMeter[value="7"] + .unarmedEvaGauge,
+.battleMeter[value="7"] + .mainStressGauge,
+.battleMeter[value="7"] + .offStressGauge,
+.battleMeter[value="7"] + .dualStressGauge,
+.battleMeter[value="7"] + .unarmedStressGauge,
+.battleMeter[value="7"] + .mainGuardGauge,
+.battleMeter[value="7"] + .offGuardGauge,
+.battleMeter[value="7"] + .dualGuardGauge,
+.battleMeter[value="7"] + .unarmedGuardGauge,
+.battleMeter[value="7"] + .mainGuardDGauge,
+.battleMeter[value="7"] + .offGuardDGauge,
+.battleMeter[value="7"] + .dualGuardDGauge,
+.battleMeter[value="7"] + .unarmedGuardDGauge,
+.battleMeter[value="7"] + .mainDurGauge,
+.battleMeter[value="7"] + .offDurGauge,
+.battleMeter[value="7"] + .dualDurGauge,
+.battleMeter[value="7"] + .unarmedDurGauge {
+  width: 49%;
+  background: linear-gradient(#ec640b, rgba(0, 0, 0));
+}
+.battleMeter[value="6"] + .mainBaseGauge,
+.battleMeter[value="6"] + .offBaseGauge,
+.battleMeter[value="6"] + .dualBaseGauge,
+.battleMeter[value="6"] + .unarmedBaseGauge,
+.battleMeter[value="6"] + .mainAccGauge,
+.battleMeter[value="6"] + .offAccGauge,
+.battleMeter[value="6"] + .dualAccGauge,
+.battleMeter[value="6"] + .unarmedAccGauge,
+.battleMeter[value="6"] + .mainEvaGauge,
+.battleMeter[value="6"] + .offEvaGauge,
+.battleMeter[value="6"] + .dualEvaGauge,
+.battleMeter[value="6"] + .unarmedEvaGauge,
+.battleMeter[value="6"] + .mainStressGauge,
+.battleMeter[value="6"] + .offStressGauge,
+.battleMeter[value="6"] + .dualStressGauge,
+.battleMeter[value="6"] + .unarmedStressGauge,
+.battleMeter[value="6"] + .mainGuardGauge,
+.battleMeter[value="6"] + .offGuardGauge,
+.battleMeter[value="6"] + .dualGuardGauge,
+.battleMeter[value="6"] + .unarmedGuardGauge,
+.battleMeter[value="6"] + .mainGuardDGauge,
+.battleMeter[value="6"] + .offGuardDGauge,
+.battleMeter[value="6"] + .dualGuardDGauge,
+.battleMeter[value="6"] + .unarmedGuardDGauge,
+.battleMeter[value="6"] + .mainDurGauge,
+.battleMeter[value="6"] + .offDurGauge,
+.battleMeter[value="6"] + .dualDurGauge,
+.battleMeter[value="6"] + .unarmedDurGauge {
+  width: 42%;
+  background: linear-gradient(#f1cc12, rgba(0, 0, 0));
+}
+.battleMeter[value="5"] + .mainBaseGauge,
+.battleMeter[value="5"] + .offBaseGauge,
+.battleMeter[value="5"] + .dualBaseGauge,
+.battleMeter[value="5"] + .unarmedBaseGauge,
+.battleMeter[value="5"] + .mainAccGauge,
+.battleMeter[value="5"] + .offAccGauge,
+.battleMeter[value="5"] + .dualAccGauge,
+.battleMeter[value="5"] + .unarmedAccGauge,
+.battleMeter[value="5"] + .mainEvaGauge,
+.battleMeter[value="5"] + .offEvaGauge,
+.battleMeter[value="5"] + .dualEvaGauge,
+.battleMeter[value="5"] + .unarmedEvaGauge,
+.battleMeter[value="5"] + .mainStressGauge,
+.battleMeter[value="5"] + .offStressGauge,
+.battleMeter[value="5"] + .dualStressGauge,
+.battleMeter[value="5"] + .unarmedStressGauge,
+.battleMeter[value="5"] + .mainGuardGauge,
+.battleMeter[value="5"] + .offGuardGauge,
+.battleMeter[value="5"] + .dualGuardGauge,
+.battleMeter[value="5"] + .unarmedGuardGauge,
+.battleMeter[value="5"] + .mainGuardDGauge,
+.battleMeter[value="5"] + .offGuardDGauge,
+.battleMeter[value="5"] + .dualGuardDGauge,
+.battleMeter[value="5"] + .unarmedGuardDGauge,
+.battleMeter[value="5"] + .mainDurGauge,
+.battleMeter[value="5"] + .offDurGauge,
+.battleMeter[value="5"] + .dualDurGauge,
+.battleMeter[value="5"] + .unarmedDurGauge {
+  width: 35%;
+  background: linear-gradient(#d3f112, rgba(0, 0, 0));
+}
+.battleMeter[value="4"] + .mainBaseGauge,
+.battleMeter[value="4"] + .offBaseGauge,
+.battleMeter[value="4"] + .dualBaseGauge,
+.battleMeter[value="4"] + .unarmedBaseGauge,
+.battleMeter[value="4"] + .mainAccGauge,
+.battleMeter[value="4"] + .offAccGauge,
+.battleMeter[value="4"] + .dualAccGauge,
+.battleMeter[value="4"] + .unarmedAccGauge,
+.battleMeter[value="4"] + .mainEvaGauge,
+.battleMeter[value="4"] + .offEvaGauge,
+.battleMeter[value="4"] + .dualEvaGauge,
+.battleMeter[value="4"] + .unarmedEvaGauge,
+.battleMeter[value="4"] + .mainStressGauge,
+.battleMeter[value="4"] + .offStressGauge,
+.battleMeter[value="4"] + .dualStressGauge,
+.battleMeter[value="4"] + .unarmedStressGauge,
+.battleMeter[value="4"] + .mainGuardGauge,
+.battleMeter[value="4"] + .offGuardGauge,
+.battleMeter[value="4"] + .dualGuardGauge,
+.battleMeter[value="4"] + .unarmedGuardGauge,
+.battleMeter[value="4"] + .mainGuardDGauge,
+.battleMeter[value="4"] + .offGuardDGauge,
+.battleMeter[value="4"] + .dualGuardDGauge,
+.battleMeter[value="4"] + .unarmedGuardDGauge,
+.battleMeter[value="4"] + .mainDurGauge,
+.battleMeter[value="4"] + .offDurGauge,
+.battleMeter[value="4"] + .dualDurGauge,
+.battleMeter[value="4"] + .unarmedDurGauge {
+  width: 28%;
+  background: linear-gradient(#56f112, rgba(0, 0, 0));
+}
+.battleMeter[value="3"] + .mainBaseGauge,
+.battleMeter[value="3"] + .offBaseGauge,
+.battleMeter[value="3"] + .dualBaseGauge,
+.battleMeter[value="3"] + .unarmedBaseGauge,
+.battleMeter[value="3"] + .mainAccGauge,
+.battleMeter[value="3"] + .offAccGauge,
+.battleMeter[value="3"] + .dualAccGauge,
+.battleMeter[value="3"] + .unarmedAccGauge,
+.battleMeter[value="3"] + .mainEvaGauge,
+.battleMeter[value="3"] + .offEvaGauge,
+.battleMeter[value="3"] + .dualEvaGauge,
+.battleMeter[value="3"] + .unarmedEvaGauge,
+.battleMeter[value="3"] + .mainStressGauge,
+.battleMeter[value="3"] + .offStressGauge,
+.battleMeter[value="3"] + .dualStressGauge,
+.battleMeter[value="3"] + .unarmedStressGauge,
+.battleMeter[value="3"] + .mainGuardGauge,
+.battleMeter[value="3"] + .offGuardGauge,
+.battleMeter[value="3"] + .dualGuardGauge,
+.battleMeter[value="3"] + .unarmedGuardGauge,
+.battleMeter[value="3"] + .mainGuardDGauge,
+.battleMeter[value="3"] + .offGuardDGauge,
+.battleMeter[value="3"] + .dualGuardDGauge,
+.battleMeter[value="3"] + .unarmedGuardDGauge,
+.battleMeter[value="3"] + .mainDurGauge,
+.battleMeter[value="3"] + .offDurGauge,
+.battleMeter[value="3"] + .dualDurGauge,
+.battleMeter[value="3"] + .unarmedDurGauge {
+  width: 21%;
+  background: linear-gradient(#30f112, rgba(0, 0, 0));
+}
+.battleMeter[value="2"] + .mainBaseGauge,
+.battleMeter[value="2"] + .offBaseGauge,
+.battleMeter[value="2"] + .dualBaseGauge,
+.battleMeter[value="2"] + .unarmedBaseGauge,
+.battleMeter[value="2"] + .mainAccGauge,
+.battleMeter[value="2"] + .offAccGauge,
+.battleMeter[value="2"] + .dualAccGauge,
+.battleMeter[value="2"] + .unarmedAccGauge,
+.battleMeter[value="2"] + .mainEvaGauge,
+.battleMeter[value="2"] + .offEvaGauge,
+.battleMeter[value="2"] + .dualEvaGauge,
+.battleMeter[value="2"] + .unarmedEvaGauge,
+.battleMeter[value="2"] + .mainStressGauge,
+.battleMeter[value="2"] + .offStressGauge,
+.battleMeter[value="2"] + .dualStressGauge,
+.battleMeter[value="2"] + .unarmedStressGauge,
+.battleMeter[value="2"] + .mainGuardGauge,
+.battleMeter[value="2"] + .offGuardGauge,
+.battleMeter[value="2"] + .dualGuardGauge,
+.battleMeter[value="2"] + .unarmedGuardGauge,
+.battleMeter[value="2"] + .mainGuardDGauge,
+.battleMeter[value="2"] + .offGuardDGauge,
+.battleMeter[value="2"] + .dualGuardDGauge,
+.battleMeter[value="2"] + .unarmedGuardDGauge,
+.battleMeter[value="2"] + .mainDurGauge,
+.battleMeter[value="2"] + .offDurGauge,
+.battleMeter[value="2"] + .dualDurGauge,
+.battleMeter[value="2"] + .unarmedDurGauge {
+  width: 14%;
+  background: linear-gradient(#12f14b, rgba(0, 0, 0));
+}
+.battleMeter[value="1"] + .mainBaseGauge,
+.battleMeter[value="1"] + .offBaseGauge,
+.battleMeter[value="1"] + .dualBaseGauge,
+.battleMeter[value="1"] + .unarmedBaseGauge,
+.battleMeter[value="1"] + .mainAccGauge,
+.battleMeter[value="1"] + .offAccGauge,
+.battleMeter[value="1"] + .dualAccGauge,
+.battleMeter[value="1"] + .unarmedAccGauge,
+.battleMeter[value="1"] + .mainEvaGauge,
+.battleMeter[value="1"] + .offEvaGauge,
+.battleMeter[value="1"] + .dualEvaGauge,
+.battleMeter[value="1"] + .unarmedEvaGauge,
+.battleMeter[value="1"] + .mainStressGauge,
+.battleMeter[value="1"] + .offStressGauge,
+.battleMeter[value="1"] + .dualStressGauge,
+.battleMeter[value="1"] + .unarmedStressGauge,
+.battleMeter[value="1"] + .mainGuardGauge,
+.battleMeter[value="1"] + .offGuardGauge,
+.battleMeter[value="1"] + .dualGuardGauge,
+.battleMeter[value="1"] + .unarmedGuardGauge,
+.battleMeter[value="1"] + .mainGuardDGauge,
+.battleMeter[value="1"] + .offGuardDGauge,
+.battleMeter[value="1"] + .dualGuardDGauge,
+.battleMeter[value="1"] + .unarmedGuardDGauge,
+.battleMeter[value="1"] + .mainDurGauge,
+.battleMeter[value="1"] + .offDurGauge,
+.battleMeter[value="1"] + .dualDurGauge,
+.battleMeter[value="1"] + .unarmedDurGauge {
+  width: 7%;
+  background: linear-gradient(#12f1ee, rgba(0, 0, 0));
+}
 
 .progressM,
 .progressDM,
