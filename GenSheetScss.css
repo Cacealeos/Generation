@@ -118,6 +118,120 @@ input:not([value="0"]) + button.errorBtn {
   font-size: 30px;
 }
 
+/*******************************************************MELEE ACTION SECTION*********************************************************************************/
+
+.magicBattleSection div.repcontrol,
+.techBattleSection div.repcontrol,
+.magicBattleSection,
+.meleeBattleSection,
+.techBattleSection {
+  display: none;
+}
+
+.meleeactiontoggle[value="Melee"] ~ .meleeBattleSection,
+.meleeactiontoggle[value="Magic"] ~ .magicBattleSection,
+.meleeactiontoggle[value="Techs"] ~ .techBattleSection {
+  display: block;
+}
+
+.magicbar {
+  display: flex;
+  background-image: url('https://raw.githubusercontent.com/Cacealeos/Generation/master/Icons/meleebar.png');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  width: 90%;
+  margin-left:  5%;
+  text-align:left ;
+}
+
+.magiccusor {
+  width: 9%;
+  background-image: url('https://raw.githubusercontent.com/Cacealeos/Generation/master/Icons/cursor1.png');
+  opacity: 0;
+  border-radius: 50%;
+  margin-left: 7%;
+  background-size: 100% 100%;
+}
+
+.magicbar:hover > .magiccusor {
+  display: block;
+  opacity: 1;
+  background-color: black;
+  box-shadow: -5px 5px 3px var(--bgcolor) inset,
+  5px -5px 3px var(--bgcolor) inset;
+}
+
+.magicbar:hover > .magicapplybtn {
+  text-decoration: underline;
+  font-weight: bold;
+  font-style: italic;
+  color: deeppink;
+}
+
+.magicbg {
+/*  background-image: url('https://raw.githubusercontent.com/Cacealeos/Generation/master/Icons/cursor1.png');*/
+/*  width: 20%;*/
+/*  transform: skewY(15deg);*/
+}
+
+.magicapplybtn {
+  width: 55%;
+  margin-left: 5%;
+  margin-right: 8%;
+  padding: 0;
+  border: none;
+  background: none;
+}
+
+.etechbar {
+  display: flex;
+  background-image: url('https://raw.githubusercontent.com/Cacealeos/Generation/master/Icons/meleebar.png');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  width: 90%;
+  margin-left:  5%;
+  text-align:left ;
+}
+
+.etechcusor {
+  width: 9%;
+  background-image: url('https://raw.githubusercontent.com/Cacealeos/Generation/master/Icons/cursor1.png');
+  opacity: 0;
+  border-radius: 50%;
+  margin-left: 7%;
+  background-size: 100% 100%;
+}
+
+.etechbar:hover > .etechcusor {
+  display: block;
+  opacity: 1;
+  background-color: black;
+  box-shadow: -5px 5px 3px var(--bgcolor) inset,
+  5px -5px 3px var(--bgcolor) inset;
+}
+
+.etechbar:hover > .etechapplybtn {
+  text-decoration: underline;
+  font-weight: bold;
+  font-style: italic;
+  color: deeppink;
+}
+
+.etechbg {
+/*  background-image: url('https://raw.githubusercontent.com/Cacealeos/Generation/master/Icons/cursor1.png');*/
+/*  width: 20%;*/
+/*  transform: skewY(15deg);*/
+}
+
+.etechapplybtn {
+  width: 55%;
+  margin-left: 5%;
+  margin-right: 8%;
+  padding: 0;
+  border: none;
+  background: none;
+}
+
 
 /*************************************************************COMBO SECTION*********************************************************************************/
 
@@ -262,28 +376,56 @@ input:not([value="0"]) + .hits {
 
 /*************************************************************END COMBO SECTION*********************************************************************************/
 
-/*************************************************************SPELL SECTION**********************************************************************************/
+/*************************************************************TECH SECTION*********************************************************************************/
 
-.spellcast-menuborder {
-  border-image-source: var(--borderimg);
-  border-image-slice: 300;
-  border-image-width: 45px;
-  border-image-outset: 5px;
-  border-width: 15px;
-  border-radius: 6%;
-  background: black;
-  margin:  10px;
-  /* -webkit-filter: hue-rotate(var(--huefilter2)) grayscale(var(--grayscale));
-    filter: hue-rotate(var(--huefilter2)) grayscale(var(--grayscale));*/
-  padding: 13px;
-  }
-
-.spellTabToggleTool {
-  position: absolute;
-  z-index: 21;
+.meleeTechTitle,
+.meleeTechinfo {
+  text-align: center;
+  padding-top: 2%;
+  padding-bottom: 2%;
 }
 
-.spellcastBtn.spellcastBtn.spellcastBtn{
+.meleeTechName, .energyTechName {
+  position: relative;
+  background: linear-gradient(
+    to left,
+    rgba(0, 0, 0, 0),
+    var(--bgcolor),
+    rgba(0, 0, 0, 0)
+  );
+  text-align: center;
+  border: 0;
+  color: black;
+  width: 80%;
+  font-size: 32px;
+  text-shadow:
+     0 0 0 #000;
+  outline: none;
+  text-decoration: underline;
+  text-decoration-thickness: 1%;
+}
+
+.energyTechType {
+  font-size: 14px;
+  text-decoration: none;
+}
+
+input#info[type='radio']:checked ~ .meleeTechInfo,
+input#detail[type='radio']:checked ~ .meleeTechTitle,
+input#info[type='radio']:checked ~ .EnergyTechInfo,
+input#detail[type='radio']:checked ~ .EnergyTechTitle  {
+  display: none;
+}
+
+input#Weapon[type="radio"]:checked ~ button.weaponArtsIcon,
+input#Combat[type="radio"]:checked ~ button.combatArtsIcon {
+  border-color: lightcyan;
+  box-shadow: 0 0 10px 5px var(--bgcolor2),
+            inset 0 0 10px 5px var(--bgcolor2);
+}
+
+/*.energytechBtn.energytechBtn.energytechBtn*/
+.energytechBtn {
   background: var(--neutral);
   background-color: black;
   background-size: cover;
@@ -300,16 +442,161 @@ input:not([value="0"]) + .hits {
   margin-bottom: 5%;
 }
 
-input[value="None"] ~ .spellcastBtn.spellcastBtn.spellcastBtn {
+.EnergyTechTitle {
+  width: 102%;
+  height: 40%;
+  border-radius: 6%;
+/*  position: relative;*/
+  text-align: center;
+  right: 1%;
+  display: block;
+  background-image: url('https://raw.githubusercontent.com/Cacealeos/Generation/master/BlueType1/bluecenter2.jpg');
+  background-size: contain;
+  background-position: top left, top right, bottom left, bottom right;
+  background-repeat: repeat;
+}
+
+input[value="None"] ~ .energytechBtn{
   opacity: 0;
 }
 
-.spellcastgif:hover > .spellcastBtn.spellcastBtn.spellcastBtn{
+.EnergyTechTitle:hover > .energytechBtn {
   opacity: 1;
   transition: opacity .5s ease-out;
 }
 
-.spellcastgif:hover {
+input[value="mental"] ~ .EnergyTechTitle {
+  background-image: url('https://raw.githubusercontent.com/Cacealeos/Generation/master/gifs/mentalTech.gif');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+input[value="body"] ~ .EnergyTechTitle {
+  background-image: url('https://raw.githubusercontent.com/Cacealeos/Generation/master/gifs/bodyTech.gif');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+input[value="spirit"] ~ .EnergyTechTitle {
+  background-image: url('https://raw.githubusercontent.com/Cacealeos/Generation/master/gifs/SpiritTech.gif');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+input[value="memory"] ~ .EnergyTechTitle {
+  background-image: url('https://raw.githubusercontent.com/Cacealeos/Generation/master/gifs/memoryTech.gif');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+input[value="demon"] ~ .EnergyTechTitle {
+  background-image: url('https://raw.githubusercontent.com/Cacealeos/Generation/master/gifs/demonTech.gif');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+input[value="necroforce"] ~ .EnergyTechTitle {
+  background-image: url('https://raw.githubusercontent.com/Cacealeos/Generation/master/gifs/necroTech.gif');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+
+/*input[value="body"] ~ .spellcastgif {
+  background-image: url('https://raw.githubusercontent.com/Cacealeos/Generation/master/gifs/Elder.gif');
+  background-repeat: no-repeat;
+  background-size: cover;
+}*/
+
+.mentalenergydefault,
+.bodyenergydefault,
+.spiritenergydefault,
+.memoryenergydefault,
+.demonenergydefault,
+.necroenergydefault {
+/*  color: deeppink;*/
+  text-align: center;
+  display: none;
+}
+
+input[value="mental"] ~ .mentalenergydefault,
+input[value="body"] ~ .bodyenergydefault,
+input[value="spirit"] ~ .spiritenergydefault,
+input[value="memory"] ~ .memoryenergydefault,
+input[value="demon"] ~ .demonenergydefault,
+input[value="necroforce"] ~ .necroenergydefault {
+  display: block;
+}
+
+input[value="mental"] ~ #mental,
+input[value="body"] ~ #body,
+input[value="spirit"] ~ #spirit,
+input[value="memory"] ~ #memory,
+input[value="demon"] ~ #demon,
+input[value="necroforce"] ~ #necro {
+  background: black;
+  font-weight: bold;
+  color: teal;
+  transition: all 0.2s ease-in;
+  filter: hue-rotate(var(--huefilter2));
+}
+
+
+/*************************************************************END TECH SECTION*********************************************************************************/
+
+/*************************************************************SPELL SECTION**********************************************************************************/
+
+.spellcast-menuborder,
+.energytech-menuborder {
+  border-image-source: var(--borderimg);
+  border-image-slice: 300;
+  border-image-width: 45px;
+  border-image-outset: 5px;
+  border-width: 15px;
+  border-radius: 6%;
+  background: black;
+  margin:  10px;
+  /* -webkit-filter: hue-rotate(var(--huefilter2)) grayscale(var(--grayscale));
+    filter: hue-rotate(var(--huefilter2)) grayscale(var(--grayscale));*/
+  padding: 13px;
+  width: auto;
+  }
+
+.spellTabToggleTool,
+.MeleeTabToggleTool,
+.EnergyTabToggleTool {
+  position: absolute;
+  z-index: 21;
+}
+
+/*.spellcastBtn.spellcastBtn.spellcastBtn{*/
+  .spellcastBtn {
+  background: var(--neutral);
+  background-color: black;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  display: block;
+  opacity: 0;
+  position: relative;
+  border-width: 1px;
+  border-color: black;
+  width:  70px;
+  height: 70px;
+  left: 42%;
+  margin-bottom: 5%;
+  z-index: 25;
+}
+
+input[value="None"] ~ .spellcastBtn {
+  opacity: 0;
+}
+
+.spellcastgif:hover > .spellcastBtn {
+  opacity: 1;
+  transition: opacity .5s ease-out;
+}
+
+.spellcastgif:hover,
+.meleeTechTitle:hover,
+.meleeTechInfo:hover,
+.EnergyTechTitle:hover,
+.EnergyTechInfo:hover {
   box-shadow: -5px 5px 3px var(--bgcolor) inset,
   5px -5px 3px var(--bgcolor) inset;
 }
@@ -318,7 +605,7 @@ input[value="None"] ~ .spellcastBtn.spellcastBtn.spellcastBtn {
   width: 102%;
   height: 40%;
   border-radius: 6%;
-  position: relative;
+/*  position: relative;*/
   right: 1%;
   display: block;
   background-image: url('https://raw.githubusercontent.com/Cacealeos/Generation/master/BlueType1/bluecenter2.jpg');
@@ -338,7 +625,21 @@ input#cast[type='radio']:checked ~ .spellcastInfo {
 .st_slot4 div.repcontrol,
 .st_slot5 div.repcontrol,
 .st_slot6 div.repcontrol,
-.st_slot7 div.repcontrol {
+.st_slot7 div.repcontrol,
+.et_slot1 div.repcontrol,
+.et_slot2 div.repcontrol,
+.et_slot3 div.repcontrol,
+.et_slot4 div.repcontrol,
+.et_slot5 div.repcontrol,
+.et_slot6 div.repcontrol,
+.et_slot7 div.repcontrol,
+.mt_slot1 div.repcontrol,
+.mt_slot2 div.repcontrol,
+.mt_slot3 div.repcontrol,
+.mt_slot4 div.repcontrol,
+.mt_slot5 div.repcontrol,
+.mt_slot6 div.repcontrol,
+.mt_slot7 div.repcontrol {
   position: absolute;
 }
 
@@ -1528,6 +1829,45 @@ input#WeaponBlock[type='radio']:checked ~ .combatGGMeter  {
   opacity: 0;
 }
 
+input[value="true"] ~ .economyLog {
+  display: block;
+}
+
+.economyLog {
+  position: absolute;
+/*  left: 30%;*/
+  top: 30%;
+  width: 75%;
+  display: none;
+  z-index: 30;
+  background:  radial-gradient(#e6db74, #a17f1a);
+  color: #272822;
+  text-shadow:
+     0 0 0 #000;
+  border-style: outset;
+  border-width: 2px;
+  border-color: #272822;
+  font-weight: bold;
+  font-family: Garamond;
+  font-size: 14px;
+}
+
+.economyLogBtn {
+  position: absolute;
+  left: 48%;
+  top: 15%;
+  font-size: 30px;
+  font-weight: bold;
+  border-radius: 12px;
+  background: black;
+  padding: 3px;
+}
+
+.economyLogBtn:hover {
+  color: black;
+  background: mediumspringgreen;
+}
+
 .economy-TTT {
   position: absolute;
   left: 10%;
@@ -2131,13 +2471,111 @@ input[value='on'] ~ .ether {
   z-index: 25;
 }
 
-input[value='0'] ~ .graphics {
+input[value='0'] + .graphics {
   display: none;
 }
 
 /******************************************************************* END CATALYST SECTION ********************************************************************/
 
+/******************************************************************* TOOL TIP SECTION ********************************************************************/
 
+.toolbtn {
+  display: block;
+  position: absolute;
+  left: 3%;
+  z-index: 25;
+}
+
+.ActiveToolDisplay {
+  display: block;
+}
+
+input[value='0'] + .tooldisplay {
+  display: none;
+}
+
+.tooldisplay {
+/*  display: none;*/
+  /*border-style: solid;
+  border-color: gray;
+  border-width: 12px;
+  border-radius: 12px;*/
+  box-shadow:  inset 5px 5px 70px black;
+  border-image-source: url('https://raw.githubusercontent.com/Cacealeos/Generation/master/Circles&Borders/metalborder.png');
+  border-image-slice: 300;
+  border-image-width: 45px;
+  border-image-outset: 12px;
+  border-width: 10px;
+  text-align: center;
+  background: #272822;
+  width: 35%;
+  top:  5%;
+  left: 30%;
+  position: absolute;
+  z-index: 50;
+}
+
+.tooldisplay .ActiveToolDisplay {
+  display: block;
+}
+
+.toolinfo {
+  color:  #e6db74;
+  font-size: 18px;
+  text-align: center;
+  padding: 20%;
+}
+
+.toolheader {
+  font-size: 36px;
+  font-weight: bold;
+  width: 100%;
+  text-align: center;
+  background: radial-gradient(#e6db74, #a17f1a);
+  color: #272822;
+  box-shadow:  inset 5px 5px 15px black;
+}
+
+.toolfooter {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  font-size: 20px;
+  text-align: center;
+  background: #272822;
+  color: deeppink;
+  box-shadow:  inset 5px 5px 45px black;
+}
+
+.toolclosebtn {
+  border: none;
+  background: none;
+  float: right;
+  padding: 5px;
+  font-weight: bold;
+  font-size: 28px;
+}
+
+.tooltracker {
+  border-color: whitesmoke;
+  width: 20%;
+  color: deeppink;
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
+
+.tooltracker > span {
+  color: white;
+}
+
+.toolsbackwards, .toolsforwards {
+  display: block;
+  border: none;
+  background: none;
+
+  font-weight: bold;
+  font-size: 28px;
+}
 
 /******************************************************************* COOLDOWN BARS ********************************************************************/
 
@@ -2349,7 +2787,7 @@ input[value='ranged'] ~ #comboButton  {
 }
 .weaponArtsIcon {
   background-image: url('https://raw.githubusercontent.com/Cacealeos/Generation/master/Icons/combat.png');
-  
+  margin-right: 5%; /*  used for spacing between weapon and combat buttons in melee tech and battle tab - Jan 2024*/
 }
 .combatArtsIcon {
   background-image: url('https://raw.githubusercontent.com/Cacealeos/Generation/master/Icons/combatarts.png');
@@ -2403,7 +2841,7 @@ input[value='ranged'] ~ #comboButton  {
   display: block;
   position: relative;
   text-align: left;
-  left: 15%;
+  left: 20%;
 }
 
 .battleCapsule > input {
@@ -2428,7 +2866,6 @@ input[value='ranged'] ~ #comboButton  {
   border-bottom: 0;
   border-left: 12px;
   border-color: #14211b;*/
-  text-align: center;
   color: black;
 /*  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;*/
   width: 70%;
@@ -2440,7 +2877,40 @@ input[value='ranged'] ~ #comboButton  {
 
 .battleCapsule > b {
   margin-left: 5%;
+}
 
+.battleCapsuleAdjustor {
+  position: absolute;
+  display: block;
+  width: 30%;
+  color: black;
+  outline: none;
+  border: none;
+  background: none;
+  font-size: 16px;
+  font-stretch: ultra-expanded;
+  font-weight: bold;
+  text-align: right;
+  top: 0%;
+  left: 45%;
+  color: red;
+}
+
+.battleCapsuleAdjustor:hover {
+  color: lightcyan;
+  text-shadow: 0 0 14px lightcyan;
+  /*box-shadow: 0 0 10px 5px mediumspringgreen,
+            inset 0 0 10px 5px mediumspringgreen;*/
+}
+
+.battleAdjustor {
+  outline: none;
+  border: none;
+  background: none;
+  font-size: 16px;
+  font-stretch: ultra-expanded;
+  font-weight: bold;
+  text-align: right;
 }
 
 /******************************************************************* END ICONS ********************************************************************************/
