@@ -1736,7 +1736,7 @@
                         <br><br>
                         
                         <button type='roll' style="font-size: 24px;" title="Main Hand Weapon"
-                        value= "&{template:default}{{name=Melee}}{{Wielding=@{primaryweapon}}}{{Employing=@{weapon_style}}}{{Hits=[[floor([[(@{primaryweapon_acc}+@{accadjust}-?{Target's Evasion})/100]])]]}}{{Extra Hits=[[{ceil([[([[(@{primaryweapon_acc}+@{accadjust}-?{Target's Evasion})%100]]-[[1d100]])/100]])}]]}}{{Base=@{primaryweapon_base}+@{baseadjust}(+@{primaryweapon-positive-scaling}/-@{primaryweapon-negative-scaling})}}{{Total Damage=[[([[floor([[(@{primaryweapon_acc}+@{accadjust}-?{Target's Evasion})/100]])]]+[[{ceil([[([[(@{primaryweapon_acc}+@{accadjust}-?{Target's Evasion})%100]]-[[1d100]])/100]])}]])*{[[([[@{primaryweapon_base}+@{baseadjust}]]+({([[@{power}]]-[[?{Target's Endurance|0|1|2|3|4|5|6|7|8|9|10}]]),0}kh1*[[@{primaryweapon-positive-scaling}]])+({([[@{power}]]-[[?{Target's Endurance}]]),0}kl1*[[@{primaryweapon-negative-scaling}]]))]],0}kh1]]}}"
+                        value= "&{template:melee}{{name=MELEE}}{{Wielding=@{primaryweapon}}}{{Employing=@{weapon_style}}}{{Hits=[[floor([[(@{primaryweapon_acc}+@{accadjust}-?{Target's Evasion})/100]])]]}}{{Extra Hits=[[{ceil([[([[(@{primaryweapon_acc}+@{accadjust}-?{Target's Evasion})%100]]-[[1d100]])/100]])}]]}}{{Base=@{primaryweapon_base}+@{baseadjust}(+@{primaryweapon-positive-scaling}/-@{primaryweapon-negative-scaling})}}{{Total Damage=[[([[floor([[(@{primaryweapon_acc}+@{accadjust}-?{Target's Evasion})/100]])]]+[[{ceil([[([[(@{primaryweapon_acc}+@{accadjust}-?{Target's Evasion})%100]]-[[1d100]])/100]])}]])*{[[([[@{primaryweapon_base}+@{baseadjust}]]+({([[@{power}]]-[[?{Target's Endurance|0|1|2|3|4|5|6|7|8|9|10}]]),0}kh1*[[@{primaryweapon-positive-scaling}]])+({([[@{power}]]-[[?{Target's Endurance}]]),0}kl1*[[@{primaryweapon-negative-scaling}]]))]],0}kh1]]}}"
                         class="battleDisplay">
                             <span name='attr_primaryweapon'></span>
                         </button>
@@ -1828,7 +1828,7 @@
                         <br><br>
                         
                         <button type='roll' style="font-size: 24px;" title="Off Hand Weapon"
-                        value="&{template:default}{{name=Melee}}{{Wielding=@{secondaryweapon}}}{{Employing=@{weapon_style}}}{{Hits=[[floor([[(@{secondaryweapon_acc}+@{accadjust}-?{Target's Evasion})/100]])]]}}{{Extra Hits=[[{ceil([[([[(@{secondaryweapon_acc}+@{accadjust}-?{Target's Evasion})%100]]-[[1d100]])/100]])}]]}}{{Base=@{secondaryweapon_base}+@{baseadjust}}(+@{secondaryweapon-positive-scaling}/-@{secondaryweapon-negative-scaling})}}{{Total Damage=[[([[floor([[(@{secondaryweapon_acc}+@{accadjust}-?{Target's Evasion})/100]])]]+[[{ceil([[([[(@{secondaryweapon_acc}+@{accadjust}-?{Target's Evasion})%100]]-[[1d100]])/100]])}]])*{[[([[@{secondaryweapon_base}+@{baseadjust}]]+({([[@{power}]]-[[?{Target's Endurance|0|1|2|3|4|5|6|7|8|9|10}]]),0}kh1*[[@{secondaryweapon-positive-scaling}]])+({([[@{power}]]-[[?{Target's Endurance}]]),0}kl1*[[@{secondaryweapon-negative-scaling}]]))]],0}kh1]]}}"
+                        value="&{template:melee}{{name=MELEE}}{{Wielding=@{secondaryweapon}}}{{Employing=@{weapon_style}}}{{Hits=[[floor([[(@{secondaryweapon_acc}+@{accadjust}-?{Target's Evasion})/100]])]]}}{{Extra Hits=[[{ceil([[([[(@{secondaryweapon_acc}+@{accadjust}-?{Target's Evasion})%100]]-[[1d100]])/100]])}]]}}{{Base=@{secondaryweapon_base}+@{baseadjust}}(+@{secondaryweapon-positive-scaling}/-@{secondaryweapon-negative-scaling})}}{{Total Damage=[[([[floor([[(@{secondaryweapon_acc}+@{accadjust}-?{Target's Evasion})/100]])]]+[[{ceil([[([[(@{secondaryweapon_acc}+@{accadjust}-?{Target's Evasion})%100]]-[[1d100]])/100]])}]])*{[[([[@{secondaryweapon_base}+@{baseadjust}]]+({([[@{power}]]-[[?{Target's Endurance|0|1|2|3|4|5|6|7|8|9|10}]]),0}kh1*[[@{secondaryweapon-positive-scaling}]])+({([[@{power}]]-[[?{Target's Endurance}]]),0}kl1*[[@{secondaryweapon-negative-scaling}]]))]],0}kh1]]}}"
                         class="battleDisplay">
                             <span name='attr_secondaryweapon'></span>
                         </button>
@@ -1919,7 +1919,7 @@
                         <br><br>
                         
                         <button type='roll' style="font-size: 24px;" title="Off Hand Weapon"
-                        value="&{template:default}{{name=Melee}}{{Wielding=@{primaryweapon} & @{secondaryweapon}}}{{Employing=@{weapon_style}}}{{Hits=[[floor([[(@{dualweapon_acc}+@{accadjust}-?{Target's Evasion})/100]])]]}}{{Extra Hits=[[{ceil([[([[(@{dualweapon_acc}+@{accadjust}-?{Target's Evasion})%100]]-[[1d100]])/100]])}]]}}{{Base=(@{dualweapon_base}+@{baseadjust})(+@{dualweapon-positive-scaling}/-@{dualweapon-negative-scaling})}}{{Total Damage=[[([[floor([[(@{dualweapon_acc}+@{accadjust}-?{Target's Evasion})/100]])]]+[[{ceil([[([[(@{dualweapon_acc}+@{accadjust}-?{Target's Evasion})%100]]-[[1d100]])/100]])}]])*{[[([[@{dualweapon_base}]]+({([[@{power}]]-[[?{Target's Endurance|0|1|2|3|4|5|6|7|8|9|10}]]),0}kh1*[[@{dualweapon-positive-scaling}]])+({([[@{power}]]-[[?{Target's Endurance}]]),0}kl1*[[@{dualweapon-negative-scaling}]]))]],0}kh1]]}}"
+                        value="&{template:melee}{{name=MELEE}}{{Wielding=@{primaryweapon} & @{secondaryweapon}}}{{Employing=@{weapon_style}}}{{Hits=[[floor([[(@{dualweapon_acc}+@{accadjust}-?{Target's Evasion})/100]])]]}}{{Extra Hits=[[{ceil([[([[(@{dualweapon_acc}+@{accadjust}-?{Target's Evasion})%100]]-[[1d100]])/100]])}]]}}{{Base=(@{dualweapon_base}+@{baseadjust})(+@{dualweapon-positive-scaling}/-@{dualweapon-negative-scaling})}}{{Total Damage=[[([[floor([[(@{dualweapon_acc}+@{accadjust}-?{Target's Evasion})/100]])]]+[[{ceil([[([[(@{dualweapon_acc}+@{accadjust}-?{Target's Evasion})%100]]-[[1d100]])/100]])}]])*{[[([[@{dualweapon_base}]]+({([[@{power}]]-[[?{Target's Endurance|0|1|2|3|4|5|6|7|8|9|10}]]),0}kh1*[[@{dualweapon-positive-scaling}]])+({([[@{power}]]-[[?{Target's Endurance}]]),0}kl1*[[@{dualweapon-negative-scaling}]]))]],0}kh1]]}}"
                         class="battleDisplay">
                             <span name='attr_primaryweapon'></span> & <span name='attr_secondaryweapon'></span>
                         </button>
@@ -2008,7 +2008,7 @@
                         <br><br>
                         
                         <button type='roll' style="font-size: 24px;" title="Ranged Weapon"
-                        value="&{template:default}{{name=Ranged}}{{Wielding=@{rangedweapon}}}{{Base=@{ranged_base}(+@{ranged_pscaling}/-@{ranged_nscaling})}}{{Total Damage=[[[[@{ranged_hits}]]*{[[{[[([[@{ranged_base}]]+({([[?{Ranged Power|0|1|2|3|4|5|6|7|8|9|10}]]-[[?{Target's Endurance|0|1|2|3|4|5|6|7|8|9|10}]]),0}kh1*[[@{ranged_pscaling}]])+({([[?{Ranged Power}]]-[[?{Target's Endurance}]]),0}kl1*[[@{ranged_nscaling}]]))]],0}kh1]]}]]}}"                    
+                        value="&{template:ranged}{{name=RANGED}}{{Wielding=@{rangedweapon}}}{{Base=@{ranged_base}(+@{ranged_pscaling}/-@{ranged_nscaling})}}{{Hits=@{ranged_hits}}}{{Total Damage=[[[[@{ranged_hits}]]*{[[{[[([[@{ranged_base}]]+({([[?{Ranged Power|0|1|2|3|4|5|6|7|8|9|10}]]-[[?{Target's Endurance|0|1|2|3|4|5|6|7|8|9|10}]]),0}kh1*[[@{ranged_pscaling}]])+({([[?{Ranged Power}]]-[[?{Target's Endurance}]]),0}kl1*[[@{ranged_nscaling}]]))]],0}kh1]]}]]}}"                    
                         class='battleDisplay'>
                             <span name='attr_rangedweapon'></span>
                     
@@ -2042,7 +2042,7 @@
                         <br><br>
                         
                         <button type='roll' style="font-size: 24px;" title="Unarmed Attack"
-                        value="&{template:default}{{name=Melee}}{{Wielding=Unarmed}}{{Employing=@{combat_style}}}{{Hits=[[floor([[(@{combat_acc}-?{Target's Evasion})/100]])]]}}{{Extra Hits=[[{ceil([[([[(@{combat_acc}-?{Target's Evasion})%100]]-[[1d100]])/100]])}]]}}{{Base=@{combat_base}(+@{combat_base}/-5)}}{{Total Damage=[[([[floor([[(@{combat_acc}-?{Target's Evasion})/100]])]]+[[{ceil([[([[(@{combat_acc}-?{Target's Evasion})%100]]-[[1d100]])/100]])}]])*{[[([[@{combat_base}]]+({([[@{power}]]-[[?{Target's Endurance|0|1|2|3|4|5|6|7|8|9|10}]]),0}kh1*[[@{combat_base}]])+({([[@{power}]]-[[?{Target's Endurance}]]),0}kl1*5))]],0}kh1]]}}"
+                        value="&{template:melee}{{name=MELEE}}{{Wielding=Unarmed}}{{Employing=@{combat_style}}}{{Hits=[[floor([[(@{combat_acc}-?{Target's Evasion})/100]])]]}}{{Extra Hits=[[{ceil([[([[(@{combat_acc}-?{Target's Evasion})%100]]-[[1d100]])/100]])}]]}}{{Base=@{combat_base}(+@{combat_base}/-5)}}{{Total Damage=[[([[floor([[(@{combat_acc}-?{Target's Evasion})/100]])]]+[[{ceil([[([[(@{combat_acc}-?{Target's Evasion})%100]]-[[1d100]])/100]])}]])*{[[([[@{combat_base}]]+({([[@{power}]]-[[?{Target's Endurance|0|1|2|3|4|5|6|7|8|9|10}]]),0}kh1*[[@{combat_base}]])+({([[@{power}]]-[[?{Target's Endurance}]]),0}kl1*5))]],0}kh1]]}}"
                     
                         class='battleDisplay'>
                             <span name="attr_combat_style"></span>
@@ -3704,6 +3704,7 @@
                         </select>
                         <br>
                         <textarea name="attr_etech-flavor" placeholder="Flavor Text..." style='height: 5%; width: 90%'></textarea>
+                        <textarea name="attr_etech-info" placeholder="Info..." style='height: 5%; width: 90%'></textarea>
                     </div>
                 </fieldset>
             </div>
@@ -3767,6 +3768,7 @@
                         </select>
                         <br>
                         <textarea name="attr_etech-flavor" placeholder="Flavor Text..." style='height: 5%; width: 90%'></textarea>
+                        <textarea name="attr_etech-info" placeholder="Info..." style='height: 5%; width: 90%'></textarea>
                     </div>
                 </fieldset>
             </div>
@@ -3830,6 +3832,7 @@
                         </select>
                         <br>
                         <textarea name="attr_etech-flavor" placeholder="Flavor Text..." style='height: 5%; width: 90%'></textarea>
+                        <textarea name="attr_etech-info" placeholder="Info..." style='height: 5%; width: 90%'></textarea>
                     </div>
                 </fieldset>
             </div>
@@ -3893,6 +3896,7 @@
                         </select>
                         <br>
                         <textarea name="attr_etech-flavor" placeholder="Flavor Text..." style='height: 5%; width: 90%'></textarea>
+                        <textarea name="attr_etech-info" placeholder="Info..." style='height: 5%; width: 90%'></textarea>
                     </div>
                 </fieldset>
             </div>
@@ -3956,6 +3960,7 @@
                         </select>
                         <br>
                         <textarea name="attr_etech-flavor" placeholder="Flavor Text..." style='height: 5%; width: 90%'></textarea>
+                        <textarea name="attr_etech-info" placeholder="Info..." style='height: 5%; width: 90%'></textarea>
                     </div>
                 </fieldset>
             </div>
@@ -4019,6 +4024,7 @@
                         </select>
                         <br>
                         <textarea name="attr_etech-flavor" placeholder="Flavor Text..." style='height: 5%; width: 90%'></textarea>
+                        <textarea name="attr_etech-info" placeholder="Info..." style='height: 5%; width: 90%'></textarea>
                     </div>
                 </fieldset>
             </div>
@@ -4082,6 +4088,7 @@
                         </select>
                         <br>
                         <textarea name="attr_etech-flavor" placeholder="Flavor Text..." style='height: 5%; width: 90%'></textarea>
+                        <textarea name="attr_etech-info" placeholder="Info..." style='height: 5%; width: 90%'></textarea>
                     </div>
                 </fieldset>
             </div>
@@ -4742,7 +4749,7 @@
             <div class='train3'>
                 <span class="label-general">CORE TRAINING</span>
                 <div style="display: inline">
-                    <input type="hidden" name='attr_coreSlot' id="coreList" />
+                    <input type="hidden" name='attr_coreSlot' id="coreList" value=1/>
                     <button type="action" name="act_core_slot1" class='semi' id="tab1">1</button>
                     <button type="action" name="act_core_slot2" class='semi' id="tab2">2</button>
                     <button type="action" name="act_core_slot3" class='semi' id="tab3">3</button>
@@ -4790,7 +4797,7 @@
             <div class='train2'>
                 <span class="label-general">TITLES</span>
                 <div style="display: inline">
-                    <input type="hidden" name='attr_titleSlot' id="titleList" />
+                    <input type="hidden" name='attr_titleSlot' id="titleList" value=1/>
                     <button type="action" name="act_title_slot1" class='semi' id="tab1">1</button>
                     <button type="action" name="act_title_slot2" class='semi' id="tab2">2</button>
                     <button type="action" name="act_title_slot3" class='semi' id="tab3">3</button>
@@ -4854,7 +4861,7 @@
             <div class='train1'>
                 <span class="label-general">MINOR TRAINING</span>
                 <div style="display: inline">
-                    <input type="hidden" name='attr_trainingSlot' id="trainingList" />
+                    <input type="hidden" name='attr_trainingSlot' id="trainingList" value=1/>
                     <button type="action" name="act_training_slot1" class='semi selected' id="tab1">1</button>
                     <button type="action" name="act_training_slot2" class='semi selected' id="tab2">2</button>
                     <button type="action" name="act_training_slot3" class='semi selected' id="tab3">3</button>
@@ -5045,21 +5052,91 @@
 
 </div>
 <rolltemplate class="sheet-rolltemplate-spell">
-    <div class="template-container">
-        <div class="template-header"></div>
-        <div class="template-row"><span>Spell: </span>{{computed::Spell}}</div>
-        <div class="template-row"><span>Cost: </span>{{computed::Cost}}</div>
-        <div class="template-row"><span>TTT: </span>{{computed::TTT}}</div>
-        <div class="template-row"><span>Info: </span>{{computed::Info}}</div>
+    <div class="template-container-spell">
+        <div class="template-header-spell">{{computed::Spell}}</div>
+        <div class="template-chart-spell">
+            <div class="template-row-spell">
+                <span class='template-span-spell'>Cost: {{computed::Cost}}</span>
+                <span class='template-span-spell'>TTT: {{computed::TTT}}</span>
+            </div>
+            <div class="template-row-spell">
+                <span class='template-span-spell'>Base: {{computed::Base}}</span>
+                <span class='template-span-spell'>Scaling: {{computed::Scaling}}</span>
+            </div>
+        </div>
+        <div class="template-row-spellflavor">
+            <span class='template-span-spell'>{{computed::Flavor}}</span>
+            <br>
+            <br>
+            <span class='template-span-spell'>{{computed::Info}}</span>
+        </div>
     </div>
 </rolltemplate>
 <rolltemplate class="sheet-rolltemplate-etech">
-    <div class="template-container">
-        <div class="template-header"></div>
-        <div class="template-row"><span>Tech: </span>{{computed::Tech}}</div>
-        <div class="template-row"><span>Cost: </span>{{computed::Cost}}</div>
-        <div class="template-row"><span>TTT: </span>{{computed::TTT}}</div>
-        <div class="template-row"><span>Info: </span>{{computed::Info}}</div>
+    <div class="template-container-etech">
+        <div class="template-header-etech">{{computed::Tech}}</div>
+        <div class="template-chart-etech">
+            <div class="template-row-etech">
+                <span class='template-span-etech'>Cost: {{computed::Cost}}</span>
+                <span class='template-span-etech'>TTT: {{computed::TTT}}</span>
+            </div>
+            <div class="template-row-etech">
+                <span class='template-span-etech'>Base: {{computed::Base}}</span>
+                <span class='template-span-etech'>Scaling: {{computed::Scaling}}</span>
+            </div>
+        </div>
+        <div class="template-row-etechflavor">
+            <span class='template-span-etech'>{{computed::Flavor}}</span>
+            <br>
+            <br>
+            <span class='template-span-etech'>{{computed::Info}}</span>
+        </div>
+    </div>
+</rolltemplate>
+<rolltemplate class="sheet-rolltemplate-melee">
+    <div class="template-container-melee">
+        <div class="template-header-melee">{{name}}</div>
+        <div class="template-chart-melee">
+        
+            <span class='template-span-melee'>Wield: {{Wielding}}</span>
+            <span class='template-span-melee'>Employing: {{Employing}}</span>
+            <br>
+            <br>
+            <span class='template-span-melee'>Hits: {{Hits}}</span>
+            <span class='template-span-melee'>Extra Hits: {{Extra Hits}}</span>
+            
+        </div>
+        <div class="template-row-meleeflavor"><span class='template-span-melee'>Base: {{Base}}</span></div>
+        <div class="template-row-meleeinfo"><span class='template-span-melee'>Total: {{Total Damage}}</span></div>
+    </div>
+</rolltemplate>
+<rolltemplate class="sheet-rolltemplate-ranged">
+    <div class="template-container-ranged">
+        <div class="template-header-ranged">{{name}}</div>
+        <div class="template-chart-ranged">
+            <div class="template-row-ranged">
+                <span class='template-span-ranged'>Wield: {{Wielding}}</span>
+                <span class='template-span-ranged'>Hits: {{Hits}}</span>
+                <span class='template-span-ranged'>Base: {{Base}}</span>
+            </div>
+        </div>
+        <div class="template-row-rangedinfo"><span class='template-span-ranged'>Total: {{Total Damage}}</span></div>
+    </div>
+</rolltemplate>
+<rolltemplate class="sheet-rolltemplate-combo">
+    <div class="template-container-combo">
+        <div class="template-header-combo">{{name}}</div>
+        <div class="template-chart-combo">
+            <div class="template-row-combo">
+                <span class='template-span-combo'>Chain: {{computed::Chain}}</span>
+                <span class='template-span-combo'>Hits: {{computed::Hits}}</span>
+                <span class='template-span-combo'>Bonus: {{computed::Bonus}}</span>
+                <span class='template-span-combo'>Cost: {{computed::Dur}}</span>
+            </div>
+        </div>
+        <div class="template-row-comboflavor">
+            <span class='template-span-combo'>Total: {{computed::Total}}</span>
+        </div>
     </div>
 </rolltemplate>
 <rolltemplate class="sheet-rolltemplate-test">
@@ -5303,8 +5380,7 @@ const actionButtons = ["action","defensive","interact"]
 actionButtons.forEach(value => {
     on(`clicked:${value}Action`, () => {
         getAttrs([`${value}-limit`], v => {
-            if(v[`${value}-limit`] > 0)
-            setAttrs({[`${value}-limit`]: v[`${value}-limit`] - 1} )
+            setAttrs({[`${value}-limit`]: parseInt(v[`${value}-limit`]) > 0 ? parseInt(v[`${value}-limit`]) - 1 : 1})
         })
     })
 });
@@ -5574,7 +5650,14 @@ on("sheet:opened", ()=> {
     getAttrs(["Char_Race","blockToggle","sheetTab","tools","totaltools"], v => {
         
         let initiate = {
-            defensiveType:      "energy"
+            defensiveType:      "energy",
+            trainingSlot:       1,
+            peSlot:             1,
+            titleSlot:          1,
+            coreSlot:           1,
+            spellTabSlot:       1,
+            eTechTabSlot:       1,
+            mTechTabSlot:       1
         }
         
         if(v.Char_Race ==="")
@@ -5615,8 +5698,8 @@ on("sheet:opened", ()=> {
         if(v.sheetTab ==="")
         initiate.sheetTab = "battle"
         
-        if(v.tools === 0)
-        initiate.tools = 1
+        if(parseInt(v.tools) !== 1)
+        initiate.tools = parseInt(Math.floor(Math.random() * 10))
         
         ToolTipGenerator();
         
@@ -5812,7 +5895,7 @@ on("clicked:tools", ()=> {
        
         const newRowId = generateRowID();
         let state = true;
-        if(value.tools === 0) //1 = on, so pressing the button while its on turns it off
+        if(value.tools !== 1) //1 = on, so pressing the button while its on turns it off
             state = false
         setAttrs({
             tools: state ? 0 : 1,
@@ -6270,10 +6353,12 @@ on("clicked:repeating_errorstack:dismiss", function(eventInfo) {
 
 on("clicked:repeating_personalities:disassociate", function(eventInfo) {
     const rowid = eventInfo.sourceAttribute.split('_')[2];
+    const newRowId = generateRowID();
     
-    getAttrs([`repeating_personalities_${rowid}_person`,'personality'], v => {
+    getAttrs([`repeating_personalities_${rowid}_person`,`repeating_personalities_${rowid}_passive-text`,'personality'], v => {
         setAttrs({
-            personality: v[`repeating_personalities_${rowid}_person`] === v.personality ? "Normal" : v[`repeating_personalities_${rowid}_person`]
+            personality: v[`repeating_personalities_${rowid}_person`] === v.personality ? "Normal" : v[`repeating_personalities_${rowid}_person`],
+            ["repeating_errorStack_" + newRowId + "_error"]:    "Personality Changed: " + v.personality + " (" + v[`repeating_personalities_${rowid}_passive-text`] + ")"
         })
     })
 });
@@ -6293,7 +6378,7 @@ spellLists.forEach(tab => {
             // `${spellConcat}_${rowid}_spells-cast-time`,
             `${spellConcat}_${rowid}_spells-ttt`,
             `${spellConcat}_${rowid}_spells-flavor`,
-            // `${spellConcat}_${rowid}_spells-text`,
+            `${spellConcat}_${rowid}_spells-text`,
             "Char_Manna","adTTT",'action-limit']
             
         console.log(spells)
@@ -6322,25 +6407,45 @@ spellLists.forEach(tab => {
             
             let apply = {
                 Char_Manna: parseInt(value.Char_Manna) - parseInt(value[`${spellConcat}_${rowid}_spells-cost`]),
-                economy: value.economy, //Economy turned off
+                //economy: value.economy, //Economy turned off
                 adTTT: parseInt(value.adTTT) + parseInt(value[`${spellConcat}_${rowid}_spells-ttt`]),
                 [`${spellConcat}_${rowid}_spells-warning`]: "",
                 ['action-limit']:           value['action-limit'] - 1
             };
             
-            console.log(value[`${spellConcat}_${rowid}_spells-name`])
+            //regx for filtering out the base and scaling in a spell's info if present
+            var regexBase = /base(?:\:|)\s*(\d+)/gi;
+            var regexScaling = /scaling(?:\:|)\s*(\d+\s*(?:(?:\/|:)\s*\d+)?)/gi;
             
-            startRoll( "&{template:spell} {{Spell=[[0]]}} {{Cost=[[0]]}} {{TTT=[[0]]}} {{Info=[[0]]}}",
+            var info = value[`${spellConcat}_${rowid}_spells-text`];
+
+            // Extracting the numbers
+            var Basematches = [];
+            var Scalematches = [];
+            
+            var matchBase;
+            while (matchBase = regexBase.exec(info)) {
+                Basematches.push(matchBase[1]);
+            }
+            var matchScaling;
+            while (matchScaling = regexScaling.exec(info)) {
+                Scalematches.push(matchScaling[1]);
+            }
+            
+            startRoll( "&{template:spell} {{Spell=[[0]]}} {{Cost=[[0]]}} {{TTT=[[0]]}} {{Base=[[0]]}} {{Scaling=[[0]]}} {{Flavor=[[0]]}} {{Info=[[0]]}}",
             (results) => {
                 
                 //{{name=@{spells-name}}}{{School=@{spells-school}}}{{Branch=@{spells-branch}}}{{Mastery=@{spells-mastery}}}{{Potency=@{spells-potency}}}{{Manna Cost=@{spells-cost}}}{{Cast Time=@{spells-cast-time}}}{{TTT Cost=@{spells-ttt}}}{{Flavor=@{spells-flavor}}}
                 finishRoll(
                     results.rollId,
                     {
-                        Spell:   value[`${spellConcat}_${rowid}_spells-name`] ,
-                        Cost:  value[`${spellConcat}_${rowid}_spells-cost`] ,
-                        TTT:  value[`${spellConcat}_${rowid}_spells-ttt`] ,
-                        Info:  value[`${spellConcat}_${rowid}_spells-flavor`]
+                        Spell:      value[`${spellConcat}_${rowid}_spells-name`] ,
+                        Cost:       value[`${spellConcat}_${rowid}_spells-cost`] ,
+                        TTT:        value[`${spellConcat}_${rowid}_spells-ttt`] ,
+                        Flavor:      "\"" + value[`${spellConcat}_${rowid}_spells-flavor`] + "\"",
+                        Info:       value[`${spellConcat}_${rowid}_spells-text`],
+                        Scaling:    Scalematches || 0,
+                        Base:       Basematches || 0
                     }
                 );
             })
@@ -6362,52 +6467,7 @@ spellLists.forEach(tab => {
     })
     });
 });
-//original function
-//on("clicked:repeating_spells:applyspell", function(eventInfo) {
-    
-//     const rowid = eventInfo.sourceAttribute.split('_')[2];
-    
-//     getAttrs([`repeating_spells_${rowid}_spells-cost`,
-//     `repeating_spells_${rowid}_spells-cast-time`,
-//     `repeating_spells_${rowid}_spells-ttt`,
-//     "Char_Manna","economy","adTTT"], function(value) {
-        
-//         Object.values(value).forEach(V => {
-//             if(V ==="" || typeof V ==="undefined")
-//             {
-//                 setAttrs({[`repeating_spells_${rowid}_spells-warning`]: "Character or Spell is incomplete."});
-//                     return
-//             }
-//         })
-        
-//         if(value[`repeating_spells_${rowid}_spells-cost`] > value.Char_Manna)
-//         {
-//             setAttrs({[`repeating_spells_${rowid}_spells-warning`]: "Insufficient Manna supply."});
-//                 return
-//         }
-        
-//         let apply = {
-//             Char_Manna: value.Char_Manna - value[`repeating_spells_${rowid}_spells-cost`],
-//             economy: value.economy,
-//             adTTT: parseInt(value.adTTT) + parseInt(value[`repeating_spells_${rowid}_spells-ttt`]),
-//             [`repeating_spells_${rowid}_spells-warning`]: ""
-//         };
-        
-//         if(value[`repeating_spells_${rowid}_spells-cast-time`] >= value.economy)
-//         {
-//             if(value[`repeating_spells_${rowid}_spells-cast-time`] < 100)
-//             {
-//                 apply[`repeating_spells_${rowid}_spells-warning`] = "WARNING. 0 REMAINING TURN ECONOMY.";
-//                 apply.economy = 0;
-//             }
-//             else
-//                 apply[`repeating_spells_${rowid}_spells-warning`] = "WARNING. Spell will take more than one turn to cast. Increment MANUALLY.";
-//         }else
-//         apply.economy = value.economy - value[`repeating_spells_${rowid}_spells-cast-time`];
-        
-//         setAttrs(apply);
-//     })
-// });
+
 const eTechList = ["1","2","3","4","5","6","7"]
 //apply cost for each tecnhique
 eTechList.forEach(tab => {
@@ -6421,9 +6481,10 @@ eTechList.forEach(tab => {
         const rowid = eventInfo.sourceAttribute.split('_')[2];
         const Etechs = [`${techConcat}_${rowid}_etech-name`,
             `${techConcat}_${rowid}_etech-cost`,
-            `${techConcat}_${rowid}_etech-tcost`,
+            // `${techConcat}_${rowid}_etech-tcost`,
             `${techConcat}_${rowid}_etech-ttt`,
             `${techConcat}_${rowid}_etech-flavor`,
+            `${techConcat}_${rowid}_etech-info`,
             "Char_Manna",'action-limit']
         
     getAttrs(Etechs, function(value) {
@@ -6435,8 +6496,6 @@ eTechList.forEach(tab => {
                     return
             }
         })
-        
-        console.log(value)
         
         if(parseInt(value['action-limit'])<1)
         {
@@ -6452,23 +6511,43 @@ eTechList.forEach(tab => {
         
         let apply = {
             Char_Manna: value.Char_Manna - parseInt(value[`${techConcat}_${rowid}_etech-cost`]),
-            economy: value.economy, //TURN ECONOMY DISABLED
+            //economy: value.economy, //TURN ECONOMY DISABLED
             // [`${techConcat}_${rowid}_etech-warning`]: "",
-            ["repeating_errorStack_" + newRowId + "_error"]: value[`${techConcat}_${rowid}_etech-name`] + "used. (" + value[`${techConcat}_${rowid}_etech-cost`] + ")",
+            ["repeating_errorStack_" + newRowId + "_error"]: value[`${techConcat}_${rowid}_etech-name`] + " used. (" + value[`${techConcat}_${rowid}_etech-cost`] + ")",
             ['action-limit']:       value['action-limit'] - 1
         };
         
-        startRoll( "&{template:etech} {{Tech=[[0]]}} {{Cost=[[0]]}} {{TTT=[[0]]}} {{Info=[[0]]}}",
+        var regexBase = /base(?:\:|)\s*(\d+)/gi;
+        var regexScaling = /scaling(?:\:|)\s*(\d+\s*(?:(?:\/|:)\s*\d+)?)/gi;
+        var info = value[`${techConcat}_${rowid}_etech-info`];
+        // Extracting the numbers
+        var Basematches = [];
+        var Scalematches = [];
+        
+        var matchBase;
+        while (matchBase = regexBase.exec(info)) {
+            Basematches.push(matchBase[1]);
+        }
+        var matchScaling;
+        while (matchScaling = regexScaling.exec(info)) {
+            Scalematches.push(matchScaling[1]);
+        }
+            
+        
+        startRoll( "&{template:etech} {{Tech=[[0]]}} {{Cost=[[0]]}} {{TTT=[[0]]}} {{Base=[[0]]}} {{Scaling=[[0]]}} {{Flavor=[[0]]}} {{Info=[[0]]}}",
             (results) => {
                 
             //{{name=@{spells-name}}}{{School=@{spells-school}}}{{Branch=@{spells-branch}}}{{Mastery=@{spells-mastery}}}{{Potency=@{spells-potency}}}{{Manna Cost=@{spells-cost}}}{{Cast Time=@{spells-cast-time}}}{{TTT Cost=@{spells-ttt}}}{{Flavor=@{spells-flavor}}}
                 finishRoll(
                     results.rollId,
                     {
-                        Tech:   value[`${techConcat}_${rowid}_etech-name`] ,
-                        Cost:  value[`${techConcat}_${rowid}_etech-cost`] ,
-                        TTT:  value[`${techConcat}_${rowid}_etech-ttt`] ,
-                        Info:  value[`${techConcat}_${rowid}_etech-flavor`]
+                        Tech:       value[`${techConcat}_${rowid}_etech-name`] ,
+                        Cost:       value[`${techConcat}_${rowid}_etech-cost`] ,
+                        TTT:        value[`${techConcat}_${rowid}_etech-ttt`] ,
+                        Flavor:     value[`${techConcat}_${rowid}_etech-flavor`],
+                        Info:       value[`${techConcat}_${rowid}_etech-info`],
+                        Base:       Basematches || 0,
+                        Scaling:    Scalematches || 0
                     }
                 );
             })
@@ -6491,50 +6570,7 @@ eTechList.forEach(tab => {
     })
 });
 });
-//original function
-//on("clicked:repeating_energytech:applyetech", function(eventInfo) {
-    
-//     const rowid = eventInfo.sourceAttribute.split('_')[2];
-    
-//     getAttrs([`repeating_energytech_${rowid}_etech-cost`,
-//     `repeating_energytech_${rowid}_etech-tcost`,
-//     "Char_Manna","economy"], function(value) {
-        
-//         Object.values(value).forEach(V => {
-//             if(V ==="" || typeof V ==="undefined")
-//             {
-//                 setAttrs({[`repeating_energytech_${rowid}_etech-warning`]: "Character or Tech is incomplete."});
-//                     return
-//             }
-//         })
-        
-//         if(value[`repeating_energytech_${rowid}_etech-cost`] > value.Char_Manna)
-//         {
-//             setAttrs({[`repeating_energytech_${rowid}_etech-warning`]: "Insufficient Manna supply."});
-//                 return
-//         }
-        
-//         let apply = {
-//             Char_Manna: value.Char_Manna - value[`repeating_energytech_${rowid}_etech-cost`],
-//             economy: value.economy,
-//             [`repeating_energytech_${rowid}_etech-warning`]: ""
-//         };
-        
-//         if(value[`repeating_energytech_${rowid}_etech-tcost`] >= value.economy)
-//         {
-//             if(value[`repeating_energytech_${rowid}_etech-tcost`] <= 100)
-//             {
-//                 apply[`repeating_energytech_${rowid}_etech-warning`] = "WARNING. 0 REMAINING TURN ECONOMY.";
-//                 apply.economy = 0;
-//             }
-//             else
-//                 apply[`repeating_energytech_${rowid}_etech-warning`] = "WARNING. Technique will take more than one turn to perform. Increment MANUALLY.";
-//         }else
-//         apply.economy = value.economy - value[`repeating_energytech_${rowid}_etech-tcost`];
-        
-//         setAttrs(apply);
-//     })
-// });
+
 const mTechList = ["1","2","3","4","5","6","7"]
 //updates progress bars for meleetechs
 mTechList.forEach(tab => {
@@ -6712,66 +6748,7 @@ mTechList.forEach(tab => {
     }) //single tech execution. Used for stances and def
 
 });
-//original function
-//on("clicked:repeating_meleetech:execute", function(eventInfo) {
-//   const rowid = eventInfo.sourceAttribute.split('_')[2];
-   
-//   getAttrs([`repeating_meleetech_${rowid}_meleetech-cost`,"combo_counter",`primary-weapon`, `secondary-weapon`,`primaryweapon-rem-dur`,`primaryweapon-max-dur`,`repeating_meleetech_${rowid}_tech-bar`], function(value){
-//         //the repeating section only has one input for cost but...
-//         //combat techniques always have a cooldown whereas weapon tech use DURABILITY
-//         //However, This means that weapon tech will always have at least 10 meleetech-cost
-//         //using this, we seperate the execute button to either start a cooldown progress bar or subtract the cost from DURABILITY bar
-//         if(value[`repeating_meleetech_${rowid}_meleetech-cost`]==="")
-//         {
-//             setAttrs({
-//                     techwarning: "WARNING: Tech Incomplete"
-//                 });
-//                 return
-//         }
-//         if(value[`repeating_meleetech_${rowid}_meleetech-cost`] > 9)//weapon tech tree
-//         {
-//             if(value[`primary-weapon`]==="" && value[`secondary-weapon`]==="")
-//             {
-//                 setAttrs({
-//                     techwarning: "WARNING:  No weapon Equipped!"
-//                 });
-//                 return
-//             }else if(parseInt(value[`repeating_meleetech_${rowid}_meleetech-cost`]) > parseInt(value[`primaryweapon-rem-dur`]))
-//             {
-//                 setAttrs({
-//                     techwarning: "WARNING:  Weapon will break if tech is used!"
-//                 });
-//                 return
-//             }//END IF ELSE
-            
-//             setAttrs({
-//                 [`primaryweapon-rem-dur`]:     value[`primaryweapon-rem-dur`] - value[`repeating_meleetech_${rowid}_meleetech-cost`],
-//                 [`weapon-rem-dur`]:     value[`primaryweapon-rem-dur`] - value[`repeating_meleetech_${rowid}_meleetech-cost`],
-//                 [`dur-bar`]:            Math.floor(((value[`primaryweapon-rem-dur`] - value[`repeating_meleetech_${rowid}_meleetech-cost`])/value[`primaryweapon-max-dur`])*5 + 1),
-//                 combo_counter:          parseInt(value.combo_counter) + 1 || 1,
-//                 techwarning:            ""
-//             });
-//             console.log(Math.floor(((value[`primaryweapon-rem-dur`] - value[`repeating_meleetech_${rowid}_meleetech-cost`])/value[`primaryweapon-max-dur`])*5 + 1));
-//             return
-//         }
-//         if(parseInt(value[`repeating_meleetech_${rowid}_meleetech-cost`]) < 10)//combat tech tree
-//         {
-//             if(value[`repeating_meleetech_${rowid}_tech-bar`]!=="" && value[`repeating_meleetech_${rowid}_tech-bar`] > 0)
-//             {
-//                 console.log(value[`repeating_meleetech_${rowid}_tech-bar`]);
-//                 setAttrs({
-//                     techwarning: "WARNING:  Tech in Cooldown"
-//                 });
-//                 return
-//             }
-//             setAttrs({
-//                 [`repeating_meleetech_${rowid}_tech-bar`]: value[`repeating_meleetech_${rowid}_meleetech-cost`],
-//                 combo_counter:          parseInt(value.combo_counter) + 1 || 1,
-//                 techwarning:            ""
-//             });
-//         }
-//     }); 
-// });
+
 on('clicked:combomenu', () => InitiateCombo());
 
 on('clicked:perform', () => {
@@ -6809,7 +6786,7 @@ on('clicked:perform', () => {
         
         getAttrs(foo, v => {
    
-            startRoll("&{template:test} {{Endurance=[[?{Target's Endurance|0|1|2|3|4|5|6|7|8|9|10}]]}} {{name=Combo!}} ({([[@{power}]]-[[?{Target's Endurance}]]),0}kh1*[[@{primaryweapon-positive-scaling}]])+({([[@{power}]]-[[?{Target's Endurance}]]),0}kl1*[[@{primaryweapon-negative-scaling}]]))]],0}kh1]]}} {{Hits=[[0]]}} {{Chain=[[0]]}} {{Dur=[[0]]}} {{Bonus=[[0]]}} {{Total=[[0]]}} ", 
+            startRoll("&{template:combo} {{Endurance=[[?{Target's Endurance|0|1|2|3|4|5|6|7|8|9|10}]]}} {{name=COMBO}} ({([[@{power}]]-[[?{Target's Endurance}]]),0}kh1*[[@{primaryweapon-positive-scaling}]])+({([[@{power}]]-[[?{Target's Endurance}]]),0}kl1*[[@{primaryweapon-negative-scaling}]]))]],0}kh1]]}} {{Hits=[[0]]}} {{Chain=[[0]]}} {{Dur=[[0]]}} {{Bonus=[[0]]}} {{Total=[[0]]}} ", 
             (results) => {
                 //const total = results.results.roll1.result -- {{roll1=[[1d20]]}}
     
@@ -6976,7 +6953,7 @@ on("clicked:equip-armor", () => {
     
     getSectionIDs('repeating_armor', idArray => {
         //console.log(idArray); //debugging
-        
+        const newRowId = generateRowID();
         const foo = [];
         let Mods = {
             modtitle1:  "",
@@ -7027,7 +7004,10 @@ on("clicked:equip-armor", () => {
             idArray.forEach(id => {
                 
                 if(typeof v[`repeating_armor_${id}_modulewarning`] !== "undefined"){
-                setAttrs({["armor-equipwarning"]:     "Module Error - Cannot Equip"});
+                setAttrs({
+                    ["armor-equipwarning"]:     "Module Error - Cannot Equip",
+                    ["repeating_errorStack_" + newRowId + "_error"]: "Armor Equip failure."
+                });
                 return
                 }
             
@@ -7046,6 +7026,7 @@ on("clicked:equip-armor", () => {
             Mods['armor-current-dur'] = parseInt(v['equippedarmor-current-dur']);
             Mods['armor-totalttt'] += parseInt(v["armor-basettt"]);
             Mods['Disruption'] = parseInt(v["armor-disruption"]) + parseInt(v["Char_Level"]) + (parseInt(v["char_resistance"]) + parseInt(v["char_constitution"]))*5;
+            Mods["repeating_errorStack_" + newRowId + "_error"] = "Armor Successfully equiped."
             setAttrs(Mods);
             console.log(Mods['Disruption']);
         });
@@ -7439,10 +7420,9 @@ ToolTipGenerator=function(current = 0)
             totaltool:      MAX_TOOL_NUMBER
             
         }, {silent:true})
+        return
     }
-    
     return info;
-    
 }
 
 InitiateCombo=function()

@@ -1,5 +1,4 @@
-/*In the CSS file, all class-names must have a.-prefix in their name, or Roll20 won't recognize the classes.
-In the HTML file, this prefix is not needed. */
+
 :root {
   --body: url('https://raw.githubusercontent.com/Cacealeos/roll20-character-sheets/master/Generation/Circles&Borders/BodyCircle.png');
   --mental: url('https://raw.githubusercontent.com/Cacealeos/roll20-character-sheets/master/Generation/Circles&Borders/MindCircle.png');
@@ -258,7 +257,9 @@ input:not([value="0"]) + button.errorBtn {
   border-image-width: 25px;
   border-image-outset: 10px;
   border-image-source: url('https://raw.githubusercontent.com/Cacealeos/Generation/master/Particles/eletricborder.png');
-  
+  /*background-image: url('https://raw.githubusercontent.com/Cacealeos/Generation/master/gifs/giphy1.gif');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;*/
 }
 /** removes add/modify box to repeating sections in display menu ***/
 .combomenu div.repcontrol {
@@ -448,7 +449,7 @@ input#Combat[type="radio"]:checked ~ button.combatArtsIcon {
   border-radius: 6%;
 /*  position: relative;*/
   text-align: center;
-  right: 1%;
+/*  right: 1%;*/
   display: block;
   background-image: url('https://raw.githubusercontent.com/Cacealeos/Generation/master/BlueType1/bluecenter2.jpg');
   background-size: contain;
@@ -606,7 +607,7 @@ input[value="None"] ~ .spellcastBtn {
   height: 40%;
   border-radius: 6%;
 /*  position: relative;*/
-  right: 1%;
+/*  right: 1%;*/
   display: block;
   background-image: url('https://raw.githubusercontent.com/Cacealeos/Generation/master/BlueType1/bluecenter2.jpg');
   background-size: contain;
@@ -908,7 +909,440 @@ input[value="Godden Magic"] ~ .spellcastgif {
     border-width: 2.5px;
   }
 
-/*************************************************************END INFO TAB SECTION**********************************************************************************/
+/* ------------------------------------------------------------------------- END INFO TAB SECTION ------------------------------------------------------------------------- */
+
+/* ------------------------------------------------------------------------- ROLL TEMPLATE SECTION ------------------------------------------------------------------------- */
+
+.sheet-rolltemplate-spell .sheet-template-container-spell {
+  box-shadow:  inset 5px 5px 70px black;
+  /*border-image-source: url('https://raw.githubusercontent.com/Cacealeos/Generation/master/Circles&Borders/metalborder.png');
+  border-image-slice: 30%;*/
+  /*border-image-width: 10px;
+  border-image-outset: 8px;*/
+  border-width: 10px;
+  border-style: ridge;
+  border-color: #0F6EC0;
+  border-radius: 10%;
+  color: whitesmoke;
+  overflow: hidden;
+}
+
+/*<span class='sheet-template-span-spell'>*/
+
+.sheet-rolltemplate-spell .inlinerollresult {
+/*  background-color: transparent;*/
+  color: DarkOrange;
+}
+
+.sheet-rolltemplate-darkmode.sheet-rolltemplate-spell {
+  --primary-dark: transparent;
+
+}
+/*
+.sheet-rolltemplate-spell.sheet-rolltemplate-darkmode {
+  --primary-dark: transparent;
+
+}*/
+
+/*.sheet-rolltemplate-spell .sheet-template-header-spell + span.inlinerollresult {
+  background-color: transparent !important;
+  border: none !important;
+}
+*/
+.sheet-rolltemplate-spell .sheet-template-header-spell {
+  background-image: url('https://raw.githubusercontent.com/Cacealeos/Generation/master/BlueType1/bluewallside4.jpg');
+  padding: 10%;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  text-align: center;
+  border-style: solid;
+  border-color: #0F6EC0;
+  border-top: 10px;
+  border-left: 0px;
+  border-right: 0px;
+  font-size: 15px;
+}
+
+.sheet-rolltemplate-spell .sheet-template-chart-spell {
+  background-image: url('https://raw.githubusercontent.com/Cacealeos/Generation/master/BlueType1/bluewallside8.jpg');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+/*  border-width: 10px;*/
+  border-style: ridge;
+  border-color: #0F6EC0;
+  border-top: 10px;
+  border-left: 0px;
+  border-right: 0px;
+  padding: 5%;
+  display: flex;
+  font-size: 11px;
+  text-align: center;
+}
+/*
+.sheet-rolltemplate-spell .sheet-template-row-spell {
+  background-image: url('https://raw.githubusercontent.com/Cacealeos/Generation/master/BlueType1/bluewallside4.jpg');
+}*/
+
+
+/*.sheet-rolltemplate-spell .sheet-template-row-spellinfo {
+  background-image: url('https://raw.githubusercontent.com/Cacealeos/Generation/master/BlueType1/bluewallside.jpg');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  text-align: center;
+  padding: 10%;
+  font-size: 13px;
+}*/
+
+.sheet-rolltemplate-spell .sheet-template-row-spellflavor {
+  background-image: url('https://raw.githubusercontent.com/Cacealeos/Generation/master/BlueType1/bluewallmiddle.jpg');
+  background-size: 100% 100%;
+  padding: 15%;
+  font-size: 13px;
+  text-align: center;
+  background-repeat: no-repeat;
+  color: whitesmoke;
+}
+
+.sheet-rolltemplate-etech .sheet-template-container-etech {
+  box-shadow:  inset 5px 5px 70px black;
+  /*border-image-source: url('https://raw.githubusercontent.com/Cacealeos/Generation/master/Circles&Borders/metalborder.png');
+  border-image-slice: 30%;*/
+  /*border-image-width: 10px;
+  border-image-outset: 8px;*/
+  border-width: 10px;
+  border-style: ridge;
+  border-color: #0F6EC0;
+  border-radius: 10%;
+  color: whitesmoke;
+  overflow: hidden;
+  filter: hue-rotate(280deg);
+/*   drop-shadow(8px 8px 10px DarkGreen );*/
+}
+
+/*<span class='sheet-template-span-etech'>*/
+
+.sheet-rolltemplate-etech .inlinerollresult {
+/*  background-color: transparent;*/
+  color: DarkOrange;
+}
+
+.sheet-rolltemplate-darkmode.sheet-rolltemplate-etech {
+  --primary-dark: transparent;
+
+}
+
+.sheet-rolltemplate-etech .sheet-template-header-etech {
+  background-image: url('https://raw.githubusercontent.com/Cacealeos/Generation/master/BlueType1/bluewallside4.jpg');
+  padding: 10%;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  text-align: center;
+  border-style: solid;
+  border-color: #0F6EC0;
+  border-top: 10px;
+  border-left: 0px;
+  border-right: 0px;
+  font-size: 15px;
+}
+
+.sheet-rolltemplate-etech .sheet-template-chart-etech {
+  background-image: url('https://raw.githubusercontent.com/Cacealeos/Generation/master/BlueType1/bluewallside8.jpg');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+/*  border-width: 10px;*/
+  border-style: ridge;
+  border-color: #0F6EC0;
+  border-top: 10px;
+  border-left: 0px;
+  border-right: 0px;
+  padding: 5%;
+  display: flex;
+  font-size: 11px;
+  text-align: center;
+}
+/*
+.sheet-rolltemplate-etech .sheet-template-row-etech {
+  background-image: url('https://raw.githubusercontent.com/Cacealeos/Generation/master/BlueType1/bluewallside4.jpg');
+}*/
+
+
+/*.sheet-rolltemplate-etech .sheet-template-row-etechinfo {
+  background-image: url('https://raw.githubusercontent.com/Cacealeos/Generation/master/BlueType1/bluewallmiddle.jpg');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  text-align: center;
+  padding: 10%;
+  font-size: 13px;
+}*/
+
+.sheet-rolltemplate-etech .sheet-template-row-etechflavor {
+  background-image: url('https://raw.githubusercontent.com/Cacealeos/Generation/master/BlueType1/bluewallmiddle.jpg');
+  background-size: 100% 100%;
+  padding: 15%;
+  font-size: 13px;
+  text-align: center;
+  background-repeat: no-repeat;
+  color: whitesmoke;
+}
+
+.sheet-rolltemplate-melee .sheet-template-container-melee {
+  box-shadow:  inset 5px 5px 70px black;
+  /*border-image-source: url('https://raw.githubusercontent.com/Cacealeos/Generation/master/Circles&Borders/metalborder.png');
+  border-image-slice: 30%;*/
+  /*border-image-width: 10px;
+  border-image-outset: 8px;*/
+  border-width: 10px;
+  border-style: ridge;
+  border-color: #0F6EC0;
+  border-radius: 10%;
+  color: whitesmoke;
+  overflow: hidden;
+  filter: hue-rotate(140deg);
+/*   drop-shadow(8px 8px 10px DarkGreen );*/
+}
+
+/*<span class='sheet-template-span-melee'>*/
+
+.sheet-rolltemplate-melee .inlinerollresult {
+/*  background-color: transparent;*/
+  color: DarkOrange;
+}
+
+.sheet-rolltemplate-darkmode.sheet-rolltemplate-melee {
+  --primary-dark: transparent;
+
+}
+
+.sheet-rolltemplate-melee .sheet-template-header-melee {
+  background-image: url('https://raw.githubusercontent.com/Cacealeos/Generation/master/BlueType1/bluewallside4.jpg');
+  padding: 10%;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  text-align: center;
+  border-style: solid;
+  border-color: #0F6EC0;
+  border-top: 10px;
+  border-left: 0px;
+  border-right: 0px;
+  font-size: 15px;
+  color: DarkOrange;
+  font-weight: bold;
+}
+
+.sheet-rolltemplate-melee .sheet-template-chart-melee {
+  background-image: url('https://raw.githubusercontent.com/Cacealeos/Generation/master/BlueType1/bluewallside8.jpg');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+/*  border-width: 10px;*/
+  border-style: ridge;
+  border-color: #0F6EC0;
+  border-top: 10px;
+  border-left: 0px;
+  border-right: 0px;
+  padding: 5%;
+  display: flex;
+  font-size: 11px;
+  text-align: center;
+}
+/*
+.sheet-rolltemplate-melee .sheet-template-row-melee {
+  background-image: url('https://raw.githubusercontent.com/Cacealeos/Generation/master/BlueType1/bluewallside4.jpg');
+}*/
+
+
+.sheet-rolltemplate-melee .sheet-template-row-meleeinfo {
+  background-image: url('https://raw.githubusercontent.com/Cacealeos/Generation/master/BlueType1/bluewallside.jpg');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  text-align: center;
+  padding: 10%;
+  font-size: 13px;
+}
+
+.sheet-rolltemplate-melee .sheet-template-row-meleeflavor {
+  background-image: url('https://raw.githubusercontent.com/Cacealeos/Generation/master/BlueType1/bluewallside.jpg');
+  background-size: 100% 100%;
+  padding: 10%;
+  font-size: 13px;
+  text-align: center;
+  background-repeat: no-repeat;
+  color: DarkOrange;
+}
+
+.sheet-rolltemplate-ranged .sheet-template-container-ranged {
+  box-shadow:  inset 5px 5px 70px black;
+  /*border-image-source: url('https://raw.githubusercontent.com/Cacealeos/Generation/master/Circles&Borders/metalborder.png');
+  border-image-slice: 30%;*/
+  /*border-image-width: 10px;
+  border-image-outset: 8px;*/
+  border-width: 10px;
+  border-style: ridge;
+  border-color: #0F6EC0;
+  border-radius: 10%;
+  color: whitesmoke;
+  overflow: hidden;
+  filter: hue-rotate(140deg);
+/*   drop-shadow(8px 8px 10px DarkGreen );*/
+}
+
+.sheet-rolltemplate-ranged .sheet-template-span-ranged {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.sheet-rolltemplate-ranged .inlinerollresult {
+/*  background-color: transparent;*/
+  color: DarkOrange;
+}
+
+.sheet-rolltemplate-darkmode.sheet-rolltemplate-ranged {
+  --primary-dark: transparent;
+
+}
+
+.sheet-rolltemplate-ranged .sheet-template-header-ranged {
+  background-image: url('https://raw.githubusercontent.com/Cacealeos/Generation/master/BlueType1/bluewallside4.jpg');
+  padding: 10%;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  text-align: center;
+  border-style: solid;
+  border-color: #0F6EC0;
+  border-top: 10px;
+  border-left: 0px;
+  border-right: 0px;
+  font-size: 15px;
+  color: DarkOrange;
+  font-weight: bold;
+
+}
+
+.sheet-rolltemplate-ranged .sheet-template-chart-ranged {
+  background-image: url('https://raw.githubusercontent.com/Cacealeos/Generation/master/BlueType1/bluewallside8.jpg');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+/*  border-width: 10px;*/
+  border-style: ridge;
+  border-color: #0F6EC0;
+  border-top: 10px;
+  border-left: 0px;
+  border-right: 0px;
+  padding: 5%;
+  display: flex;
+  font-size: 11px;
+  text-align: center;
+}
+/*
+.sheet-rolltemplate-ranged .sheet-template-row-ranged {
+  background-image: url('https://raw.githubusercontent.com/Cacealeos/Generation/master/BlueType1/bluewallside4.jpg');
+}*/
+
+
+.sheet-rolltemplate-ranged .sheet-template-row-rangedinfo {
+  background-image: url('https://raw.githubusercontent.com/Cacealeos/Generation/master/BlueType1/bluewallside.jpg');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  text-align: center;
+  padding: 10%;
+  font-size: 13px;
+}
+
+.sheet-rolltemplate-ranged .sheet-template-row-rangedflavor {
+  background-image: url('https://raw.githubusercontent.com/Cacealeos/Generation/master/BlueType1/bluewallside.jpg');
+  background-size: 100% 100%;
+  padding: 10%;
+  font-size: 13px;
+  text-align: center;
+  background-repeat: no-repeat;
+  color: whitesmoke;
+}
+
+.sheet-rolltemplate-combo .sheet-template-container-combo {
+  box-shadow:  inset 5px 5px 70px black;
+  /*border-image-source: url('https://raw.githubusercontent.com/Cacealeos/Generation/master/Circles&Borders/metalborder.png');
+  border-image-slice: 30%;*/
+  /*border-image-width: 10px;
+  border-image-outset: 8px;*/
+  border-width: 10px;
+  border-style: ridge;
+  border-color: #0F6EC0;
+  border-radius: 10%;
+  color: whitesmoke;
+  overflow: hidden;
+  filter: hue-rotate(70deg);
+/*   drop-shadow(8px 8px 10px DarkGreen );*/
+}
+
+/*<span class='sheet-template-span-combo'>*/
+
+.sheet-rolltemplate-combo .inlinerollresult {
+/*  background-color: transparent;*/
+  color: DarkOrange;
+}
+
+.sheet-rolltemplate-darkmode.sheet-rolltemplate-combo {
+  --primary-dark: transparent;
+
+}
+
+.sheet-rolltemplate-combo .sheet-template-header-combo {
+  background-image: url('https://raw.githubusercontent.com/Cacealeos/Generation/master/BlueType1/bluewallside4.jpg');
+  padding: 10%;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  text-align: center;
+  border-style: solid;
+  border-color: #0F6EC0;
+  border-top: 10px;
+  border-left: 0px;
+  border-right: 0px;
+  font-size: 15px;
+  color: DarkOrange;
+  font-weight: bold;
+}
+
+.sheet-rolltemplate-combo .sheet-template-chart-combo {
+  background-image: url('https://raw.githubusercontent.com/Cacealeos/Generation/master/BlueType1/bluewallside8.jpg');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+/*  border-width: 10px;*/
+  border-style: ridge;
+  border-color: #0F6EC0;
+  border-top: 10px;
+  border-left: 0px;
+  border-right: 0px;
+  padding: 5%;
+  display: flex;
+  font-size: 11px;
+  text-align: center;
+}
+/*
+.sheet-rolltemplate-combo .sheet-template-row-combo {
+  background-image: url('https://raw.githubusercontent.com/Cacealeos/Generation/master/BlueType1/bluewallside4.jpg');
+}*/
+
+
+.sheet-rolltemplate-combo .sheet-template-row-comboinfo {
+  background-image: url('https://raw.githubusercontent.com/Cacealeos/Generation/master/BlueType1/bluewallside.jpg');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  text-align: center;
+  padding: 10%;
+  font-size: 13px;
+}
+
+.sheet-rolltemplate-combo .sheet-template-row-comboflavor {
+  background-image: url('https://raw.githubusercontent.com/Cacealeos/Generation/master/BlueType1/bluewallside.jpg');
+  background-size: 100% 100%;
+  padding: 10%;
+  font-size: 13px;
+  text-align: center;
+  background-repeat: no-repeat;
+  color: whitesmoke;
+}
+
+
+/*************************************************************END ROLL TEMPLATE SECTION**********************************************************************************/
 /*************************************************************TRANSITION SECTION**********************************************************************************/
 
 #mentaltheme[value="Mental"] ~ .App {
@@ -1465,8 +1899,8 @@ url('https://raw.githubusercontent.com/Cacealeos/Generation/master/SpiritBorder.
   /* box-shadow:  inset 0 0 25px 30px var(--bgcolor2); */
   z-index:  20;
 }
-/*************************************************************** END TRANSITIONS ************************************************************************/
-/*************************************************************GENERAL SECTION**********************************************************************************/
+/* ---------------------------------------------------------------------------END TRANSITIONS -----------------------------------------------------------------------  */
+/*--------------------------------------------------------------------------------------- GENERAL SECTION --------------------------------------------------------------------------------------- */
 
 .melee-arts, 
 .defense-arts {
@@ -1643,9 +2077,7 @@ input.weapon-toggle:not([value="unarmed"]) ~ div.handtohandweapon {
 
 }
 
-/* Configure the button styling. This example makes it look like a checkbox. *
-CURRENTLY UNUSED April -2023
-*/
+/* Configure the button styling. This example makes it look like a checkbox. CURRENTLY UNUSED April -2023 */
 button.toggle, button.checkbox {
   padding: 0;
   border: solid 1px .a8a8a8;
@@ -1676,6 +2108,8 @@ input.toggle:not([value="1"]) ~ button.toggle > span.checked {
 input.checkbox:not([value="1"]) ~ button.checkbox > span.checked {
   display: none;
 }
+
+
 /*************************************************************END GENERAL SECTION**********************************************************************************/
 /****************************************************************STAT SECTION *************************************************************************************/
 
@@ -2486,11 +2920,11 @@ input[value='0'] + .graphics {
   z-index: 25;
 }
 
-.ActiveToolDisplay {
+/*.ActiveToolDisplay {
   display: block;
-}
+}*/
 
-input[value='0'] + .tooldisplay {
+input:not([value='1']) + .tooldisplay {
   display: none;
 }
 
